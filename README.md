@@ -1,6 +1,6 @@
 # Welcome to Unrecognized Statistical Office!
 
-![alt text](https://github.com/skowront/SymulatorNSP2021/blob/master/mainAppView.jpg)
+![alt text](https://github.com/skowront/SymulatorNSP2021/blob/main/mainAppView.jpg)
 
 ## Background
 
