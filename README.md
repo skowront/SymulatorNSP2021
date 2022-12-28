@@ -38,11 +38,7 @@ Inside the app you can edit the config. For most of the part it has self explana
 *Q: Why do it for some useless properties that we can not query?
 A: Maybe some day the app will be extended, but the most important is that we want to simulate GUS database, which is quite huge. Of course this app does not represent the full database, but based on experience affected parts of original database could look and consume resources exactly like this simple environment.*
 
-Keep in mind that there are 2 pairs of error-simulating properties.
-
-- *EthnicityErrorRate* - fraction of entries that will be affected by on purpose errors for ethnicity property 
-
-- *EthnicityErrorRateMaxImpact* - we will choose random indexes from the ethnicity property entry string and we will choose random letters to substitute the original ones. This process will be done exactly *EthnicityErrorRateMaxImpact* times for 1 entry that was earlier selected by *EthnicityErrorRate*.
+Keep in mind that there is a pair of error-simulating properties.
 
 - *NationalityErrorRate* - fraction of entries that will be affected by on purpose errors for nationality property
 
