@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutContent" xml:space="preserve">
+    <value>Projek został zainicjowany przez Stowarzyszenie REGIOS by pokazać nieefektywność Głównego Urzędu Statystycznego (GUS) w Polsce. W przeciwieństwie do GUS-u wierzymy w transparentność i dlatego udostępniamy kod źródłowy aplikacji na repozytorium Github.</value>
+  </data>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>O projekcie</value>
+  </data>
+  <data name="ApplicationContact" xml:space="preserve">
+    <value>Twórca aplikacji: tomasz.skowron@regios.org.pl</value>
+  </data>
+  <data name="BackgroundDescription" xml:space="preserve">
+    <value>W 2021 roku, w Polsce, Główny Urząd Statystyczny przeprowadził Narodowy Spis Powszechny. Jednakże nie opublikowali wyników o strukturze narodowo-etnicznej przez ponad rok po zakończeniu spisu. Pojawiły się tylko pewne szczątkowe dane w czwartym kwartale 2022, które wykorzystano do stworzenia tej aplikacji. Na tej stronie zobaczysz ile razy szybsza jest twoja przeglądarka od całego biura GUS, które nie poradziło sobie z analizą wyników przez ponad rok!</value>
+  </data>
+  <data name="BackgroundHeader" xml:space="preserve">
+    <value>Wprowadzenie</value>
+  </data>
+  <data name="BrowserLimitExplanation" xml:space="preserve">
+    <value>Niestety przeglądarkowa wersja aplikacji wspiera do 1 mln wygenerowanych rekordów. W dalszych krokach możesz wybrać, by przeanalizować więcej rekordów niż liczba wygenerowanych, z tym, że w wersji przeglądarkowej będzie to po prostu wielokrotne wykonanie kwerend na tych samych danych. Wersja Symulatora NSP dla komputerów PC (z Windows) nie ma takiego ograniczenia, zapraszamy do zapoznania się z nią.</value>
+  </data>
+  <data name="BrowserLimitHeader" xml:space="preserve">
+    <value>Osiągnięto limit przeglądarki!</value>
+  </data>
+  <data name="BrowserLimitOneThread" xml:space="preserve">
+    <value>Niestety w tej chwili aplikacja przeglądarkowa wspiera maksymalnie 1 wątek. Jeśli chcesz przetestować swój komputer wykorzystując wielowątkowść procesora zapoznaj się z wersją Symulatora NSP dla komputerów PC (z Windows).</value>
+  </data>
+  <data name="CheckOutMoreHeader" xml:space="preserve">
+    <value>Pamiętaj, to tylko przeglądarka!</value>
+  </data>
+  <data name="CheckOutMoreValue" xml:space="preserve">
+    <value>Kiedy testowaliśmy wersję Symulatora NSP dla komputerów PC (z Windows) osiągnęliśmy 38mln zapytań w mniej niż 5 sekund! Zachęcamy do zapoznania się z pełną wersją Symulatora NSP dla przeglądarek oraz Symulatorem NSP dla komputerów PC (z Windows), gdzie możesz skonfigurować sposób generowania rekordów, zbadać wydajność algorytmów wykorzystujących odległości edycyjne (Levensteina i Hamminga) do klasyfikowania rekordów z błędami do dostępnych opcji.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zmknij</value>
+  </data>
+  <data name="ContactLabel" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="GDPRContact" xml:space="preserve">
+    <value>RODO: rodo@regios.org.pl</value>
+  </data>
+  <data name="GUSForPCLabel" xml:space="preserve">
+    <value>Symulator NSP dla Windows</value>
+  </data>
+  <data name="GUSOnlineLabel" xml:space="preserve">
+    <value>Symulator NSP Online (pełna wersja)</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Wskazówka</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="LeaderboardLabel" xml:space="preserve">
+    <value>Tabela wyników</value>
+  </data>
+  <data name="MediaContact" xml:space="preserve">
+    <value>Media: biuro@regios.org.pl</value>
+  </data>
+  <data name="NextLabel" xml:space="preserve">
+    <value>Następny</value>
+  </data>
+  <data name="OtherContact" xml:space="preserve">
+    <value>Inne: biuro@regios.org.pl</value>
+  </data>
+  <data name="PreviousLabel" xml:space="preserve">
+    <value>Poprzedni</value>
+  </data>
+  <data name="QueryAmountRemark" xml:space="preserve">
+    <value>Start small, go big! Pamiętaj, że aplikacje przeglądarkowe są wolniejsze niż standardowe programy wykonywalne, które instalujesz na komputerze. Zapoznaj się z wersją Symulatora NSP dla komputerów PC (z Windows) i zobacz prawdziwą moc obliczeniową współczesnych maszyn. Jednakże zarówno w przeglądarce, jak i aplikacji dla Windows twój komputer i tak zostawi GUS w tyle.</value>
+  </data>
+  <data name="RecommendedPopulationSize" xml:space="preserve">
+    <value>Dla przeglądarek rekomendujemy wygenerowanie co najmniej 10000 rekordów.</value>
+  </data>
+  <data name="SelectQueryAmountDescription" xml:space="preserve">
+    <value>Wybierz liczbę rekordów do przefiltrowania</value>
+  </data>
+  <data name="SubmitYourResults" xml:space="preserve">
+    <value>Wyślij do tablicy wyników</value>
+  </data>
+  <data name="ThisCanTakeAWhile" xml:space="preserve">
+    <value>To może chwilę potrwać.</value>
+  </data>
+  <data name="ThisCanTakeAWhileExplanation" xml:space="preserve">
+    <value>Odpytanie 38 mln rekordów w przeglądarce zajmie kilka minut. To samo można osiągnąć w ciągu sekund z aplikacją Symulatora NSP dla komputerów PC (z Windows), nie zapomnij, żeby się z nią zapoznać.</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>Symulator NSP 2021</value>
+  </data>
+  <data name="WelcomeHeader" xml:space="preserve">
+    <value>Witamy na stronie Symulatora NSP 2021!</value>
+  </data>
+  <data name="WelcomeSubHeader" xml:space="preserve">
+    <value>Tu sprawdzisz o ile szybszy jest twój komputer od Głównego Urzędu Statystycznego (GUS).</value>
+  </data>
+  <data name="GithubREPOLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021</value>
+  </data>
+  <data name="UnhandledErrorMessage" xml:space="preserve">
+    <value>Wystąpił błąd, przepraszamy! Przeładuj stronę...</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Odśwież</value>
+  </data>
+  <data name="ServerUnavailable" xml:space="preserve">
+    <value>Serwer niedostępny</value>
+  </data>
+  <data name="TryAgainLater" xml:space="preserve">
+    <value>Spróbuj ponownie później...</value>
+  </data>
+  <data name="Tu sprawdzisz o ile szybszy jest twój komputer od Głównego Urzędu Statystycznego (GUS)." xml:space="preserve">
+    <value>Tu sprawdzisz o ile szybszy jest twój komputer od Głównego Urzędu Statystycznego (GUS)</value>
+  </data>
+</root>

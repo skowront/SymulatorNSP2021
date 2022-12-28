@@ -1,0 +1,43 @@
+﻿<RadzenText Text="@Resource.TransparencyModeResultsExplanation" TextAlign="TextAlign.Justify" Style="font-style:italic"></RadzenText>
+@if (FittingResults.Count()==0)
+{
+    <HintComponent HintText="@Resource.TransparenceModePrerequisites" Style="margin-bottom:10px"></HintComponent>
+}
+@if (FittingResults.Count() >= 100)
+{
+    <HintComponent HintText="@Resource.TransparencyModeResultsLimitation" Style="margin-bottom:10px"></HintComponent>
+}
+<div class="row">
+    <div class="col-6 d-flex">
+        <RadzenIcon Icon="calculate" Style="color:var(--rz-text-color)"></RadzenIcon>
+        <RadzenText Text="@Resource.TotalNumberOfRecords"></RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenText>@FittingResults.Count()</RadzenText>
+    </div>
+</div>
+<RadzenDataGrid TItem="FittingResult" Data="@FittingResults" AllowColumnResize="true">
+    <Columns>
+        <RadzenDataGridColumn TItem="FittingResult" Property="Success" Title="@Resource.Result">
+            <Template Context="data">
+                @if(data.Success==true)
+                {
+                    <RadzenText Text="@Resource.Success" Style="color:var(--rz-success-light)"></RadzenText>
+                }
+                else
+                {
+                    <RadzenText Text="@Resource.Failure" Style="color:var(--rz-danger-light)"></RadzenText>
+                }
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="FittingResult" Property="Original" Title="@Resource.Original"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="FittingResult" Property="Fit" Title="@Resource.ClassifiedAs"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="FittingResult" Property="Distance" Title="@Resource.EditingDistance"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="FittingResult" Property="Algorithm" Title="@Resource.Algorithm"></RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+@code {
+    [Parameter]
+    public IEnumerable<FittingResult> FittingResults { get; set; } = new List<FittingResult>();
+}

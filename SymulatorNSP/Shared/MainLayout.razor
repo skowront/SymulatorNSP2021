@@ -1,0 +1,80 @@
+﻿@inherits LayoutComponentBase
+@using SymulatorNSP.Pages
+@inject IStringLocalizer<WebsiteLoc> wloc
+@inject IStringLocalizer<Resource> rloc
+@inject DialogService DialogService
+<RadzenDialog></RadzenDialog>
+<RadzenNotification></RadzenNotification>
+<RadzenTooltip></RadzenTooltip>
+
+<div class="row">
+    <div class="col-lg-12">
+        <RadzenLayout class="rz-shadow-3">
+            <RadzenHeader>
+                <div class="row">
+                    <div class="d-flex align-items-center">
+                        <RadzenSidebarToggle Click="@(() => sidebar1Expanded = !sidebar1Expanded)" />
+                        <RadzenLabel Text="@wloc[nameof(WebsiteLoc.WebsiteTitle)]" />
+                        <LanguageSelectorMenu Style="margin-left:auto; margin-right:25px;"></LanguageSelectorMenu>
+                    </div>
+                </div>
+            </RadzenHeader>
+            <div hidden="@sidebar1Expanded">
+                <NavMenu></NavMenu>
+            </div>
+            <RadzenBody Style="background:var(--rz-base-700)">
+                @Body
+            </RadzenBody>
+            @*    <main>
+
+            <article class="content px-4">
+            @Body
+            </article>
+            </main>*@
+            <RadzenFooter>
+                <div class="row opacity-75">
+                    <div class="col-md-4 text-center align-self-center">
+                        <RadzenText Text="@rloc[nameof(Resource.GDPRAdminTitle)]" Style="display:block; height:100%;"></RadzenText>
+                        <RadzenText Style="display:block; height:100%;">
+                            <a href="https://www.regios.org.pl" style="text-decoration:none; color:var(--rz-primary)">@rloc[nameof(Resource.GDPRAdmin)]</a>
+                        </RadzenText>
+                    </div>
+                    <div class="col-md-4 align-self-center text-center">
+                        <RadzenText>
+                            © 2022 Copyright:
+                        </RadzenText>
+                        <a href="https://www.github.com/skowront" style="text-decoration:none">
+                            <RadzenText Style="color:var(--rz-primary)">Tomasz Skowron</RadzenText>
+                        </a>
+                    </div>
+                    <div class="col-md-4 text-center align-self-center">
+                        <a href="https://regios.org.pl/index.php/rodo/" style="text-decoration:none">
+                            <RadzenText Text="@rloc[nameof(Resource.GDRPLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+                        </a>
+                        <a href="https://regios.org.pl/index.php/polityka-prywatnosci/" style="text-decoration:none">
+                            <RadzenText Text="@rloc[nameof(Resource.GDPRPrivacyPolicyLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+                        </a>
+                    </div>
+                </div>
+            </RadzenFooter>
+        </RadzenLayout>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+@code {
+    private void ShowLanguageSelector()
+    {
+        DialogService.OpenAsync<LanguageSelector>("");
+    }
+
+    bool sidebar1Expanded = true;
+}

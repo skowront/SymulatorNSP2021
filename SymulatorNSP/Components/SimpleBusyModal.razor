@@ -1,0 +1,15 @@
+﻿@inject DialogService DialogService
+<div>
+    <div class="row">
+        <RadzenText TextAlign="TextAlign.Justify" Text="@Message"></RadzenText>
+    </div>
+    <div class="d-flex justify-content-end">
+        <RadzenButton Variant="Variant.Outlined" Text="@WebsiteLoc.Close" Icon="close" Click="@((a)=>{Close();})"></RadzenButton>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Message { get; set; }
+
+    private void Close() => DialogService.Close();
+}

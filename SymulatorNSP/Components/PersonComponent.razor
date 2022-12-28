@@ -1,0 +1,31 @@
+﻿
+
+<RadzenCard Class="rz-background-color-primary-lighter rz-shadow-0 rz-border-radius-0" style="margin: 0px; padding: 2rem;">
+    <RadzenText TextStyle="TextStyle.H6" Class="rz-color-primary-light"><strong>@Resource.Person</strong></RadzenText>
+    <div class="row">
+        <div class="col-sm-6">
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Name</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1" Text="@(Model?.Name)"></RadzenText>
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Surname</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@(Model?.Surname)</b></RadzenText>
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Religion</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@(Model?.Religion)</b></RadzenText>
+        </div>
+        <div class="col-sm-6">
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Nationality</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@Model?.Nationality</b></RadzenText>
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Address</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@(Model?.Address)</b></RadzenText>
+            <RadzenText TextStyle="TextStyle.Overline" Class="rz-color-primary-light d-flex mt-3 mb-0">@Resource.Job</RadzenText>
+            <RadzenText TextStyle="TextStyle.Body1"><b>@Model?.Job</b></RadzenText>
+        </div>
+    </div>
+</RadzenCard>
+
+@code {
+    [Parameter]
+    public Person Model { get; set; }
+
+
+    
+}

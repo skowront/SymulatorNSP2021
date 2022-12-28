@@ -1,0 +1,53 @@
+﻿@using SymulatorNSP.GUI.Core.ViewModels;
+@inject IStringLocalizer<Resource> loc
+
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryStart)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <label>@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.StartTime)</label>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryEnd)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <label>@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.EndTime)</label>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryExecutionTime)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <label>@string.Format("{0:c}",ViewModel.ExecutionTime)</label>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryValue)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <label>@ViewModel.Value</label>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryResultsCount)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <label>@ViewModel.Result</label>
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public QueryViewModel ViewModel
+    {
+        get; set;
+    } = new QueryViewModel();
+}

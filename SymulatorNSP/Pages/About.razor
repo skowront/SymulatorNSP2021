@@ -1,0 +1,19 @@
+﻿@page "/about"
+@inject IStringLocalizer<WebsiteLoc> wloc
+
+<PageTitle>@wloc[nameof(WebsiteLoc.AboutLabel)]</PageTitle>
+
+<RadzenText TextStyle="TextStyle.H4">@WebsiteLoc.AboutLabel</RadzenText>
+
+<RadzenText>@WebsiteLoc.AboutContent</RadzenText>
+
+<RadzenLink Path="@(WebsiteLoc.GithubREPOLink)" target="_blank" Style="color:var(--rz-primary)">
+    <div class="row d-inline p-0 m-0">
+        <i class="fa fa-github d-inline m-0 p-0" style="color:var(--rz-primary)"></i>
+        <RadzenText Text="Github" Style="display:inline; margin-bottom:0px; padding:0; color:var(--rz-primary)"></RadzenText>
+    </div>
+</RadzenLink>
+
+@code {
+
+}

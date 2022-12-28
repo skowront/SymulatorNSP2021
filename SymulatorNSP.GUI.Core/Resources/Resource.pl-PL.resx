@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="Algorithm" xml:space="preserve">
+    <value>Algorytm</value>
+  </data>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Przeglądarka</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="ChooseRandom" xml:space="preserve">
+    <value>Wybierz losowo</value>
+  </data>
+  <data name="ClassifiedAs" xml:space="preserve">
+    <value>Zaklasyfikowany jako</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wyczyść</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Zatwierdź</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Gratulacje!</value>
+  </data>
+  <data name="CreationProgressUpdate" xml:space="preserve">
+    <value>Utworzono {0} z {1}.</value>
+  </data>
+  <data name="Credits" xml:space="preserve">
+    <value>Tomasz Skowron</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Ustaw oczekiwaną wielkość populacji</value>
+  </data>
+  <data name="DesiredPopulationCountRangeError" xml:space="preserve">
+    <value>Populacja musi być z zakresu 0 do 100000000</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Ustaw metodę obliczania odległości edycyjnej</value>
+  </data>
+  <data name="DistanceExaplanation" xml:space="preserve">
+    <value>Niektóre osoby mogą mieć literówkę w swoim wpisie. Na przykład w narodowości "niemiecka" mogło być "ni3miecka". Tutaj możesz wybrać algoryrm, który będzie tolerował błędy (do kilku zmienionych znaków). Wybierz "-" jeśli interesują cię tylko rekordy dokładnie pasujące do opcji, co wyłączy tolerancję. Wyszukując "nieustalona" w filtrze sprawdzisz ile z rekordów nie pasowało do żadnej opcji i nie udało się ich zaklasyfikować nawet z wykorzystanym algorytmem (te musiałyby być zaklasyfikowane manualnie). To jest, oczywiście, tylko prosty przykład algorytmów, które mogą automatyzować proces klasyfikacji rekordów. W scenariuszach rzeczywistych stosuje się algorytmy nienadzorowanego uczenia maszynowego, które nie tylko potrafią same klasyfikować rekordy, ale także tworzyć grupy, których nie przewidziano wcześniej (np. narodowość warszawska). Jeśli chcesz się dowiedzieć więcej, zapoznaj się z "algoryrmami nienadzorowanego uczenia maszynowego".</value>
+  </data>
+  <data name="EditingDistance" xml:space="preserve">
+    <value>Dystans edycyjny</value>
+  </data>
+  <data name="EnterFileName" xml:space="preserve">
+    <value>Wpisz nazwę pliku</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="EthnicityErrorRate" xml:space="preserve">
+    <value>Procent błędów etniczności:</value>
+  </data>
+  <data name="EthnicityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalna liczba literówek:</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Wykonaj zapytanie</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>Czas wykonywania zapytania</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Porażka</value>
+  </data>
+  <data name="FinishStep" xml:space="preserve">
+    <value>Zakończ krok</value>
+  </data>
+  <data name="FitFailure" xml:space="preserve">
+    <value>BŁĄD: Oryginał {0} nie mógł być zaklasyfikowany. Najmniejszy dystans edycyjny wyniósł: {2} dla opcji {1} przy wykorzystaniu algorytmu {3}</value>
+  </data>
+  <data name="FitSuccess" xml:space="preserve">
+    <value>SUKCES: Oryginał {0} został zaklasyfikowany jako {1}. Odległość edycyjna wyniosła {2} dla algorytmu {3}</value>
+  </data>
+  <data name="GDPRAdmin" xml:space="preserve">
+    <value>Regios Association (KRS: 0000976963) www.regios.org.pl</value>
+  </data>
+  <data name="GDPRAdminTitle" xml:space="preserve">
+    <value>Administrator danych osobowych</value>
+  </data>
+  <data name="GDPRPrivacyPolicyLabel" xml:space="preserve">
+    <value>Polityka prywatności</value>
+  </data>
+  <data name="GDRPLabel" xml:space="preserve">
+    <value>RODO</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generuj populację</value>
+  </data>
+  <data name="GeneratePopulationFirst" xml:space="preserve">
+    <value>Najpierw wygeneruj populację!</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Konfiguracja generowania</value>
+  </data>
+  <data name="GenerationConfigurationDescription" xml:space="preserve">
+    <value>W zależności od wygenerowanych rekordów, czas wykonywania zapytań może się różnić. Każdy rekord ma kilka własności (Imię, Nazwisko, etc.) a każda własność ma wartość (Smith, Ramirez,...), której długość może mieć wpływ na wydajność. Możesz zmienić listę wartości, z których będzie korzystał generator i prawdopodobieństwo z jakim zostaną wylosowane. Konfiguracja zawiera też właności, które określają szansę na błąd i wpływ błędu na liczbę literówek dla własności jaką jest narodowość. Zmień te własności według uznania.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Zawód</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Wczytaj populację</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>Plik nie został załadowany</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>PLik został załadowany</value>
+  </data>
+  <data name="LogPopulationSample" xml:space="preserve">
+    <value>Podejrzyj próbkę populacji</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logi</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Więcej</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Imię</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Narodowość</value>
+  </data>
+  <data name="NationalityErrorRate" xml:space="preserve">
+    <value>Procent błędów w narodowości</value>
+  </data>
+  <data name="NationalityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalna liczba literówek w narodowości</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Pseudonim</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>Liczba rekordów spełniających warunek|Liczba wszystkich</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>lub</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>Oryginał</value>
+  </data>
+  <data name="PerformanceFactor" xml:space="preserve">
+    <value>Współczynnik wydajności</value>
+  </data>
+  <data name="PerformanceFactorExplanation" xml:space="preserve">
+    <value>Bazując na twoim czasie wykonania zapytania i liczbie rekordów, które przeanalizowałeś, obliczyliśmy współczynnik wydajności w porównaniu z czasem jaki GUS potrzebował na podanie wyników. Współczynnik jest obliczany relatywnie do liczby rekordów, z którymi mierzył się GUS, czyli jeśli twój czas wyniósł 5 sekund dla 1 mln rekordów to podzielimy go przez ~38.</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Osoba</value>
+  </data>
+  <data name="PersonStringified" xml:space="preserve">
+    <value>Imię: {0} 
+Nazwisko: {1} 
+Adres: {2}
+Religia: {3} 
+Narodowość: {4} 
+Zawód: {5} </value>
+  </data>
+  <data name="QueriedRecordsCount" xml:space="preserve">
+    <value>Liczba przeanalizowanych rekordów</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Zapytania</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Koniec zapytania</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Zapytanie o etniczność</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Czas wykonywania zapytania</value>
+  </data>
+  <data name="QueryLimitThousandSamples" xml:space="preserve">
+    <value>Nie możesz wypisać więcej niż 1000 próbek!</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Zapytanie o narodowość</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Zapytane o narodowość i etniczność</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Liczba rekordów spełniających warunek | Liczba wszystkich</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Początek zapytania</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Filtr zapytania</value>
+  </data>
+  <data name="RealLifeComparisonStringCotent" xml:space="preserve">
+    <value>Przeanalizowałeś {0} rekordów w {1} sekund. Główne Urząd Statystyczny potrzebował {2} sekund żeby sprawdić ~38 mln rekordów. Brawo, jesteś {3} razy szybszy!</value>
+  </data>
+  <data name="RealLifeComparisonStringTitle" xml:space="preserve">
+    <value>Gratulacje!</value>
+  </data>
+  <data name="RecordKey" xml:space="preserve">
+    <value>Klucz</value>
+  </data>
+  <data name="RecordKeyExplanation" xml:space="preserve">
+    <value>Jeśli to twój pierwszy raz kiedy wysyłasz wynik, to ten klucz zostanie wykorzystany do ochrony twojego rekordu przed nadpisaniem. W przeciwnym razie podaj ten sam klucz, którego używałeś poprzednio, aby poprawić wynik spod tego Pseudonimu.</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religia</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Wynik</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz populację</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Plik nie został zapisany</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Plik został zapisany</value>
+  </data>
+  <data name="SendResultsToLeaderboard" xml:space="preserve">
+    <value>Wyślij do tablicy wyników</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Podziel się</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Źródło</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Krok 1. Generuj Populację</value>
+  </data>
+  <data name="Step10" xml:space="preserve">
+    <value>Krok 10. Wyślij wyniki do tablicy wyników</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Krok 2. Podejrzyj próbkę populacji</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Krok 3. Wykonaj zapytania</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Krok 4. (Opcjonalny) Zmień konfigurację</value>
+  </data>
+  <data name="Step4Finish" xml:space="preserve">
+    <value>Ukończ krok 4</value>
+  </data>
+  <data name="Step4nExplanation" xml:space="preserve">
+    <value>Spróbuj wykonać zmiany w konfiguracji. Dodaj opcje do generowanych obiektów, zmień szansę na błąd i wpływ błędu. Później możesz użyć różnych algorytmów edycyjnych do automatyzacji klasyfikowania wpisów do istniejących opcji.</value>
+  </data>
+  <data name="Step4p1" xml:space="preserve">
+    <value>Krok 4.1 (Opcjonalny) Zmień szansę na błąd</value>
+  </data>
+  <data name="Step4p1Explanation" xml:space="preserve">
+    <value>Możesz zmienić szansę na literówkę w rekordzie. W ten sposób zasymulujesz rzeczywisty scenariusz, w którym wpis mógł niepasować do istniejących opcji. Zmieniając maksymalny wypływ błędu określisz ile znaków może zostać zmienionych w tym procesie. Pamiętaj, że funkcje klasyfikujące z tej aplikacji mają ustlony sztywny próg tolerancji wynoszący 3. Rekordy, które mają więcej niż 2 zmienione znaki pozostaną nieklasyfikowalne automatycznie.</value>
+  </data>
+  <data name="Step4p2" xml:space="preserve">
+    <value>Krok 4.2 (Opcjonalny) Zmień konfigurację</value>
+  </data>
+  <data name="Step4p2Explanation" xml:space="preserve">
+    <value>Tutaj możesz zmienić szczegóły konfiguracj. Są zaprezentowane w formacie JSON. Upewnij się, że nie odklikujesz pola edycyjnego jeśli zawiera ono błędy. Błędna konfiguracja zostanie odrzucona wraz z wszystkimi zmianami. Aby uniknąć błędów formatowania skorzystaj z zewnętrznych narzędzi jak: https://jsonformatter.curiousconcept.com/</value>
+  </data>
+  <data name="Step4p3" xml:space="preserve">
+    <value>Krok 4.3 (Opcjonalny) Zmień liczbę wątków procesora</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Krok 5. (Opcjonalny) Ponownie wygeneruj populację</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Krok 6. (Opcjonalny) Włącz tryb transparentny</value>
+  </data>
+  <data name="Step7" xml:space="preserve">
+    <value>Krok 7. (Opcjonalny) Wybierz algorytm edycyjny</value>
+  </data>
+  <data name="Step8" xml:space="preserve">
+    <value>Krok 8. (Opcjonalny) Podejrzyj próbkę populacji</value>
+  </data>
+  <data name="Step9" xml:space="preserve">
+    <value>Krok 9. (Opcjonalny) Wykonaj zapytania ze zmienioną konfiguracją</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Wyślij</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nazwisko</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Wątki</value>
+  </data>
+  <data name="TotalNumberOfRecords" xml:space="preserve">
+    <value>Liczba rekordów</value>
+  </data>
+  <data name="TransparenceModePrerequisites" xml:space="preserve">
+    <value>Tryb transparentny pokaże Ci wyniki jeśli spełnisz wszystkie poniższe warunki: Szansa na błąd w narodowości jest większa od zera, twoje rekordy mają literówki (mogą nie mieć, jeśli twoja populacja i szansa na błąd są małe), maksymalna liczba literówek w narodowości jest większa od zera, tryb transparentny jest włączony, wykorzystujesz algorytm Levensteina lub Hamminga (jeśli korzystasz z "-" nie będzie żadnych rekordów do pokazania, bo klasyfikujesz tylko dokładne dopasowania).</value>
+  </data>
+  <data name="TransparenctModeOFF" xml:space="preserve">
+    <value>Tryb transparentny wyłączony!</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Tryb transparentny</value>
+  </data>
+  <data name="TransparencyModeExplanation" xml:space="preserve">
+    <value>Tryb transparentny pokaże Ci informacje o dopasowaniach rekordów z literówkami (które konfigurowałeś w poprzednich krokach). Pamiętaj, że ten tryb może negatywnie wpłynąć na czas wykonywania zapytań.</value>
+  </data>
+  <data name="TransparencyModeON" xml:space="preserve">
+    <value>Tryb transparentny włączony!</value>
+  </data>
+  <data name="TransparencyModeResults" xml:space="preserve">
+    <value>Wyniki trybu transparentnego</value>
+  </data>
+  <data name="TransparencyModeResultsExplanation" xml:space="preserve">
+    <value>Te wyniki pokazują jak algorytm może radzić sobie z niestandardowymi odpowiedziami użytkownika do istniejących opcji. Niektórzy zobaczą lepsze, a inni gorsze dopasowania, bo algorytmy Levensteina i Hamminga należą do najprostszych z najprostszych. Istnieje wiele innych algoryrtmów, które nie tylko potrafią klasyfikować dane, ale także tworzyć nowe grupy danych. Tym samym jeśli GUS nie przewidział narodowości "opolskiej", czy "wilamowskiej", taki algorytm sam mógłby utworzyć grupy, które GUS musiałby tylko zatwierdzić lub odrzucić.</value>
+  </data>
+  <data name="TransparencyModeResultsLimitation" xml:space="preserve">
+    <value>Na potrzeby optymalizacji lista może zawierać do 100 wpisów, nawet jeśli samych przykładów dopasowań wygenerowano więcej.</value>
+  </data>
+  <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
+    <value>To wpłynie na czas wykonywania zapytań!</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nieznane</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Witamy w Nieustalonym Urzędzie Statystycznym!</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Aplikacja na Windows</value>
+  </data>
+</root>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutContent" xml:space="preserve">
+    <value>Projec was initiated by REGIOS Association to show the innefficiency of Central Statistical Office (GUS) in Poland. Unlike GUS we believe in full transparency and we share the source code of the application on a Github Repository.</value>
+  </data>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ApplicationContact" xml:space="preserve">
+    <value>Application developer: tomasz.skowron@regios.org.pl</value>
+  </data>
+  <data name="BackgroundDescription" xml:space="preserve">
+    <value>In 2021 in Poland Central Statistical Office (GUS) performed a National Census (NSP). However they did not publish any results about ethnic and national structure for more than a year after the census was closed. It is worth noting that some information was published by GUS in Q4 2022 and it was used to create a default configuration for SymulatorNSP application. 
+
+On this website you can check how much faster your browser is than whole GUS office, that could not manage to calculate those results for more than a year.</value>
+  </data>
+  <data name="BackgroundHeader" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="BrowserLimitExplanation" xml:space="preserve">
+    <value>Unfortunately browser version supports up to 1.000.000 generated records. Later you may choose to query more records, but in browser version it will be done using the same dataset, just multiple times. For full experience without this limitation please check out the PC version of NSP Simulator 2022.</value>
+  </data>
+  <data name="BrowserLimitHeader" xml:space="preserve">
+    <value>Browser limit reached!</value>
+  </data>
+  <data name="BrowserLimitOneThread" xml:space="preserve">
+    <value>Unfortunately at the moment the application supports only 1 thread for the browser. If you want to test your performance with multiple threads chech out the PC version.</value>
+  </data>
+  <data name="CheckOutMoreHeader" xml:space="preserve">
+    <value>Remember that this is just a browser!</value>
+  </data>
+  <data name="CheckOutMoreValue" xml:space="preserve">
+    <value>While testing the Windows version of NSP Simulator 2021, we managed to query 38 mln results in less than 5 seconds! Also feel free to explore our advanced NSP Simulator Online, where you can configure the way that records are generated, add errors into the records, and explore performance of the searching algorithm when discance calculating methods (Levenstein and Hamming) are used to bucket misspelled strings into available options.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="ContactLabel" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="GDPRContact" xml:space="preserve">
+    <value>GDPR: rodo@regios.org.pl</value>
+  </data>
+  <data name="GithubREPOLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021</value>
+  </data>
+  <data name="GUSForPCLabel" xml:space="preserve">
+    <value>Windows NSP Simulator</value>
+  </data>
+  <data name="GUSOnlineLabel" xml:space="preserve">
+    <value>Online NSP Simulator (full version)</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Hint</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LeaderboardLabel" xml:space="preserve">
+    <value>Leaderboard</value>
+  </data>
+  <data name="MediaContact" xml:space="preserve">
+    <value>Media: biuro@regios.org.pl</value>
+  </data>
+  <data name="NextLabel" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="OtherContact" xml:space="preserve">
+    <value>Other: biuro@regios.org.pl</value>
+  </data>
+  <data name="PreviousLabel" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="QueryAmountRemark" xml:space="preserve">
+    <value>Start small, go big! Remember that browser applications are a lot slower than standard executables. We highly recommend to go with 1 mln records for starters. Remember to check out Symulator NSP for Windows later and see the true power of moder computation. In both cases you will, most likely, leave GUS behind.</value>
+  </data>
+  <data name="RecommendedPopulationSize" xml:space="preserve">
+    <value>For browsers we recommend to generate at least 10000 records.</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ResourcesDescription" xml:space="preserve">
+    <value>ResourcesDescription</value>
+  </data>
+  <data name="ResourcesHeader" xml:space="preserve">
+    <value>ResourcesHeader</value>
+  </data>
+  <data name="SelectQueryAmountDescription" xml:space="preserve">
+    <value>Select number of rows to be queried</value>
+  </data>
+  <data name="ServerUnavailable" xml:space="preserve">
+    <value>Server unavailable</value>
+  </data>
+  <data name="Step1Description" xml:space="preserve">
+    <value>Step1Description</value>
+  </data>
+  <data name="Step2Description" xml:space="preserve">
+    <value>Step2Description</value>
+  </data>
+  <data name="Step2Header" xml:space="preserve">
+    <value>Step2Header</value>
+  </data>
+  <data name="Step3Description" xml:space="preserve">
+    <value>Step3Description</value>
+  </data>
+  <data name="Step3Header" xml:space="preserve">
+    <value>Step3Header</value>
+  </data>
+  <data name="Steps1Header" xml:space="preserve">
+    <value>Steps1Header</value>
+  </data>
+  <data name="SubmitYourResults" xml:space="preserve">
+    <value>Submit your results to leaderboard</value>
+  </data>
+  <data name="ThisCanTakeAWhile" xml:space="preserve">
+    <value>This can take a while.</value>
+  </data>
+  <data name="ThisCanTakeAWhileExplanation" xml:space="preserve">
+    <value>Querying 38 mln records with a browser can take several minutes. The same can be done in seconds if you will use our NSP Simulator for Windows PC. Remember to check it out later.</value>
+  </data>
+  <data name="TryAgainLater" xml:space="preserve">
+    <value>Try again later...</value>
+  </data>
+  <data name="UnhandledErrorMessage" xml:space="preserve">
+    <value>An error has occurred, sorry! Please reload the page...</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>NSP Simulator 2021</value>
+  </data>
+  <data name="WelcomeHeader" xml:space="preserve">
+    <value>Welcome to NSP Simulator 2021 site!</value>
+  </data>
+  <data name="WelcomeSubHeader" xml:space="preserve">
+    <value>Here you can check how much faster is your PC than Central Statistical Office (GUS) in Poland.</value>
+  </data>
+</root>

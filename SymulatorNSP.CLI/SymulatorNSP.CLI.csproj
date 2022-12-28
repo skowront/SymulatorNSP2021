@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Copyright> Copyright (c) Tomasz Skowron 2022</Copyright>
+    <PackageProjectUrl>https://github.com/skowront/SymulatorNSP</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SymulatorNSP.Core\SymulatorNSP.Core.csproj" />
+    <ProjectReference Include="..\SymulatorNSP.GUI.Core\SymulatorNSP.GUI.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Algorithm" xml:space="preserve">
+    <value>Algorithm</value>
+  </data>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ChooseRandom" xml:space="preserve">
+    <value>Choose random</value>
+  </data>
+  <data name="ClassifiedAs" xml:space="preserve">
+    <value>Classified as</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
+  </data>
+  <data name="CreationProgressUpdate" xml:space="preserve">
+    <value>Created {0} out of {1}.</value>
+  </data>
+  <data name="Credits" xml:space="preserve">
+    <value>Tomasz Skowron</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Set desired population count</value>
+  </data>
+  <data name="DesiredPopulationCountRangeError" xml:space="preserve">
+    <value>Expected population be between 0 and 100000000</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Select difference calculation method</value>
+  </data>
+  <data name="DistanceExaplanation" xml:space="preserve">
+    <value>Some people might have an error in their entries. For example misspelling in nationality like "german" they might have an entry "g3rman". Here you can select an algorithm that will tolerate errors (up to a few characters changed). Select "-" if you want to see only exact matches in the query matching process and disable any tolerance to errors. By searching "unrecognized" in filter field for a specific query you can check how many entries had too big differences from options defined in generator configuration and would need to be manually classified to a group. Try doing the queries with and without Editing Distance calculation algorithms and see what you will get. This is just a simple example of what we can achieve with modern computing power and algorithms. In real life scenarios it is not a problem to automatically sort, bucket and minimize the amount of outliers for manual classifications. If you want to learn more check out unsupervised machine learning algorithms.</value>
+  </data>
+  <data name="EditingDistance" xml:space="preserve">
+    <value>Editing distance</value>
+  </data>
+  <data name="EnterFileName" xml:space="preserve">
+    <value>Enter file name</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="EthnicityErrorRate" xml:space="preserve">
+    <value>Ethnicity - error rate:</value>
+  </data>
+  <data name="EthnicityMaxErrorImpact" xml:space="preserve">
+    <value>Ethnicity - maximum number of affected letters:</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Execute query</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>Execution time</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="FinishStep" xml:space="preserve">
+    <value>FinishStep</value>
+  </data>
+  <data name="FitFailure" xml:space="preserve">
+    <value>ERROR: Original {0} could not be classified. Smallest editing distance was equal to: {2} for option {1} and the algorithm used {3}</value>
+  </data>
+  <data name="FitSuccess" xml:space="preserve">
+    <value>SUCCESS Original {0} was classified as {1}. Editing distance was equal to: {2} and the algorithm used {3}</value>
+  </data>
+  <data name="GDPRAdmin" xml:space="preserve">
+    <value>Regios Association (KRS: 0000976963) www.regios.org.pl</value>
+  </data>
+  <data name="GDPRAdminTitle" xml:space="preserve">
+    <value>Data Administrator</value>
+  </data>
+  <data name="GDPRPrivacyPolicyLabel" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="GDRPLabel" xml:space="preserve">
+    <value>GDPR</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generate population</value>
+  </data>
+  <data name="GeneratePopulationFirst" xml:space="preserve">
+    <value>Please generate population first!</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Generation Configuration</value>
+  </data>
+  <data name="GenerationConfigurationDescription" xml:space="preserve">
+    <value>Depending on the records that are randomly generated you will get various query execution times. Each record has a few properties (eg. Name, Surname, Nationality...) and each property value (eg. Smith or De-La-Rosa-Ramirez) length will also impact the execution times. You can change the list of property values that will be available to the generator and probability with which they will be chosen.  Configurations also contain some properties that simulate (real-life scenario) misspelings in Nationality property values for the generated population. Feel free to change these preset values and edit the configuration in next steps.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load population</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>File was not loaded</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>File loaded successfully</value>
+  </data>
+  <data name="LogPopulationSample" xml:space="preserve">
+    <value>Log population sample</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="NationalityErrorRate" xml:space="preserve">
+    <value>Nationality - error rate</value>
+  </data>
+  <data name="NationalityMaxErrorImpact" xml:space="preserve">
+    <value>Nationality - maximum number of affected letters</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Nickname</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>Number of records</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="PerformanceFactor" xml:space="preserve">
+    <value>Performance factor</value>
+  </data>
+  <data name="PerformanceFactorExplanation" xml:space="preserve">
+    <value>Based on your execution time and records count we calculate a fair performance factor relative to GUS computation time. It is relative to number of records that GUS had to calculate, so if your query was done in 5 sec for 1 mln records, your factor will be divided by ~(1/38).</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="PersonStringified" xml:space="preserve">
+    <value>Name: {0} 
+Surname: {1} 
+Address: {2}
+Religion: {3} 
+Nationality: {4} 
+Job: {5} </value>
+  </data>
+  <data name="QueriedRecordsCount" xml:space="preserve">
+    <value>Number of records queried</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Query end</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Query by ethnicity</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Query execution time</value>
+  </data>
+  <data name="QueryLimitThousandSamples" xml:space="preserve">
+    <value>You can't print more than 1000 samples!</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Query by nationality</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Query in both nationality and ethnicity</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Number of matches | Total</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Query start</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Query filter</value>
+  </data>
+  <data name="RealLifeComparisonStringCotent" xml:space="preserve">
+    <value>You queried {0} records and counted them all in {1} seconds. Central Statistical Office needed more than {2} seconds to query ~38 mln records. Congratulations you are {3} times faster!</value>
+  </data>
+  <data name="RealLifeComparisonStringTitle" xml:space="preserve">
+    <value>Congratulations!</value>
+  </data>
+  <data name="RecordKey" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="RecordKeyExplanation" xml:space="preserve">
+    <value>If this is your first submission this key will be used to protect your record from being overwritten. Otherwise please enter the same Nickname and Key pair to overrwrite your previous result in the leaderboard.</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religion</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save population</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>File was not saved</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>File saved successfully</value>
+  </data>
+  <data name="SendResultsToLeaderboard" xml:space="preserve">
+    <value>Send result to leaderboard</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Share</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Step 1. Generate population</value>
+  </data>
+  <data name="Step10" xml:space="preserve">
+    <value>Step 10. Share your results</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Step 2. View sample population record</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Step 3. Perform queries</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Step 4. (Optional) Change configuration</value>
+  </data>
+  <data name="Step4Finish" xml:space="preserve">
+    <value>Finish step 4</value>
+  </data>
+  <data name="Step4nExplanation" xml:space="preserve">
+    <value>Please feel free to make changes to the configuration. You can add options for generating objects, change error chance and error impact for nationality property to simulate real life scenario. Later you can use difference calculating algorithms to automate process of bucketing entries with errors into available options.</value>
+  </data>
+  <data name="Step4p1" xml:space="preserve">
+    <value>Step 4.1 (Optional) Change error rate</value>
+  </data>
+  <data name="Step4p1Explanation" xml:space="preserve">
+    <value>You can change the error rate of nationality in the records. That way you can simulate real-life scenario. By changing error rate you change the chance that a generated record will contain a misspelling. By changing the impact parameter you specify what is the maximum number of misspelled characters. Keep in mind that bucketing function that calculates editing distance in further steps has a hardcoded limit of 2 misspelled characters. Any record with more than 2 characters that do not match any option will remain unbucketable.</value>
+  </data>
+  <data name="Step4p2" xml:space="preserve">
+    <value>Step 4.2 (Optional) Change configuration details</value>
+  </data>
+  <data name="Step4p2Explanation" xml:space="preserve">
+    <value>Here you can edit all the details of the configuration. It is presented as JSON object. Make sure that you unfocus from editor only when the configuration contains no formatting errors. Any changes will be lost if you change to any other preset configuration or if the configuration was incorrect. To avoid format errors try using any external tool like: https://jsonformatter.curiousconcept.com/</value>
+  </data>
+  <data name="Step4p3" xml:space="preserve">
+    <value>Step 4.3 (Optional) Change number of CPU threads</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Step 5. (Optional) Regenerate population with custom configuration</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Step 6. (Optional) Enable transparency mode</value>
+  </data>
+  <data name="Step7" xml:space="preserve">
+    <value>Step 7. (Optional ) Select editing distance calculation method</value>
+  </data>
+  <data name="Step8" xml:space="preserve">
+    <value>Step 8. (Optional) View sample population record</value>
+  </data>
+  <data name="Step9" xml:space="preserve">
+    <value>Step 9. (Optional) Query with custom configuration</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Surname</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Threads</value>
+  </data>
+  <data name="TotalNumberOfRecords" xml:space="preserve">
+    <value>Total number of records</value>
+  </data>
+  <data name="TransparenceModePrerequisites" xml:space="preserve">
+    <value>Transparency mode will show results if you meet all these conditions: NationalityErrorRate is bigger than zero, your records do contain misspellings (they might not have misspellings if your error rate and generated population size were small), NationalityMaxImpact is bigger than 0, TransparencyMode is enabled and you are using either Levenstein or Hamming algorithm (if none of them is in use, then there are no results to be shown, because only exact ones are classified).</value>
+  </data>
+  <data name="TransparenctModeOFF" xml:space="preserve">
+    <value>Transparency mode is nof OFF!</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Transparency mode</value>
+  </data>
+  <data name="TransparencyModeExplanation" xml:space="preserve">
+    <value>Transparent mode will show you information about automatic fitting of error-like entries (the ones misspelings if you configured ErrorRate and ErrorMaxImpact in previous steps). Keep in mind that, it might negatively impact the application performance and query execution time.</value>
+  </data>
+  <data name="TransparencyModeON" xml:space="preserve">
+    <value>Transparency mode is now ON!</value>
+  </data>
+  <data name="TransparencyModeResults" xml:space="preserve">
+    <value>Transparency mode results</value>
+  </data>
+  <data name="TransparencyModeResultsExplanation" xml:space="preserve">
+    <value>These results show how an algorithm can deal with custom user input and automatically classify misspelled string to existing bucket. Sometimes you will experience better fits and sometimes they will not be absolutely correct, but Levenstein and Hamming algorithms are the simplest of simplest. There are lots of algorithms that not only can classify data, but also themselves create groups for new data. So for example if GUS has not forseen that "european" or "opolean" or "wilamovian" nationality can be an option  these algorithms could create these buckets themselves - all that would be left for GUS would be to accept or decline such a group.</value>
+  </data>
+  <data name="TransparencyModeResultsLimitation" xml:space="preserve">
+    <value>For optimization purposes this list may contain up to 100 fitting results, even though the querying process might have generated more.</value>
+  </data>
+  <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
+    <value>This will impact execution time!</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome to Unrecognized Statistical Office!</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Windows Application</value>
+  </data>
+</root>

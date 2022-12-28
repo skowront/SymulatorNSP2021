@@ -1,0 +1,12 @@
+﻿
+
+
+@code {
+    List<string> Logs = new List<string>();
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+        this.Logs.Add("a");
+    }
+}

@@ -1,0 +1,385 @@
+﻿<mah:MetroWindow x:Class="SymulatorNSP.Startup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SymulatorNSP.Startup" 
+        xmlns:viewmodels="clr-namespace:SymulatorNSP.GUI.WPF.WPFViewModels;assembly=SymulatorNSP.GUI.WPF"
+        xmlns:converters="clr-namespace:SymulatorNSP.Startup.Converters"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeextension"
+        xmlns:lexp="clr-namespace:WPFLocalizeExtension.Providers;assembly=WPFLocalizeextension"
+        lexp:ResxLocalizationProvider.DefaultAssembly="SymulatorNSP.Startup"
+        lexp:ResxLocalizationProvider.DefaultDictionary="SR"
+        xmlns:flags="clr-namespace:FamFamFam.Flags.Wpf;assembly=FamFamFam.Flags.Wpf"
+        xmlns:flagsCustomized="clr-namespace:SymulatorNSP.GUI.Core.FamFamFamFlags;assembly=SymulatorNSP.GUI.Core"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewmodels:GUSViewModel, IsDesignTimeCreatable=True}"
+        WindowState="Maximized"
+        Title="Symulator NSP" Height="1000" Width="800" MinHeight="600" MinWidth="800">
+    <Window.Resources>
+        <flags:CountryIdToFlagImageSourceConverter x:Key="CountryIdToFlagImageSourceConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisConverter"/>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="0">
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="{lex:Loc Welcome}" Grid.Row="0" FontWeight="Bold" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}" HorizontalAlignment="Center"></TextBlock>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step1}" IsExpanded="True" Grid.Row="1">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{lex:Loc DesiredPopulationCount}"></TextBlock>
+                        <TextBox  Text="{Binding DesiredPopulationCount,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"></TextBox>
+                        <DockPanel Grid.Row="3" LastChildFill="False" HorizontalAlignment="Center" Margin="3">
+                            <Button Content="{lex:Loc Generate}" Command="{Binding GenerateCommand}" Margin="2" IsEnabled="{Binding IsNotGenerating}" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            <Button Content="{lex:Loc SymulatorNSP.GUI.Core:Resource:Save}" Command="{Binding SaveCommand}" Margin="2" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            <Button Content="{lex:Loc SymulatorNSP.GUI.Core:Resource:Load}" Command="{Binding LoadCommand}" Margin="2" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                        </DockPanel>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step2}" IsExpanded="True"  Grid.Row="2">
+                    <StackPanel>
+                        <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:LogPopulationSample}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:NumberOfRecords}" Grid.ColumnSpan="3" Margin="0,0,239,0"></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding PopulationSampleLogCount}"></TextBox>
+                                    <Button Grid.Column="2" Content="{lex:Loc ExecuteQuery}" Command="{Binding LogPopulationSampleCommand}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:Or}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:ChooseRandom}" Grid.ColumnSpan="3"></TextBlock>
+                                    <Button Grid.Column="2" Content="{lex:Loc ExecuteQuery}" Command="{Binding SelectRandomPersonCommand}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                                </Grid>
+                                <TextBlock Grid.Column="0" Text="{Binding RandomPerson}" Grid.ColumnSpan="3"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step3}" IsExpanded="True"  Grid.Row="3">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{lex:Loc QueryNationality}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                            <StackPanel Grid.Row="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="0" Text="{lex:Loc QueryStart}"></TextBlock>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding NationalityQuery.StartTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="1" Text="{lex:Loc QueryEnd}"></TextBlock>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NationalityQuery.EndTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="2" Text="{lex:Loc QueryExecutionTime}"></TextBlock>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding NationalityQuery.ExecutionTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="3" Text="{lex:Loc QueryResultsCount}"></TextBlock>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding NationalityQuery.Result, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding AvailableNationalities}" SelectedItem="{Binding NationalityQuery.Value, Mode=TwoWay}" HorizontalAlignment="Stretch"></ComboBox>
+                                    <TextBlock Grid.Row="4" Text="{lex:Loc QueryValue}"></TextBlock>
+                                </Grid>
+                                <Button Content="{lex:Loc ExecuteQuery}" Command="{Binding ExecuteNationalityQuery}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step4}" Grid.Row="4">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="{lex:Loc GenerationConfiguration}"></TextBlock>
+                            <ComboBox Grid.Row="1" ItemsSource="{Binding AvailableGenerationConfigurations}" SelectedValue="{Binding SelectedGenerationConfiguration}">
+
+                            </ComboBox>
+                            <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step4p1}" Grid.Row="2">
+                                <StackPanel>
+                                    <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step4p1Explanation}" FontWeight="Light" FontSize="11" FontStyle="Italic" TextWrapping="Wrap"></TextBlock>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                            <RowDefinition></RowDefinition>
+                                            <RowDefinition></RowDefinition>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:NationalityErrorRate}"></TextBlock>
+                                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding NationalityErrorRate}" HorizontalAlignment="Right"></TextBox>
+                                        <TextBlock Grid.Row="1" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:NationalityMaxErrorImpact}"></TextBlock>
+                                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding NationalityMaxImpact}" HorizontalAlignment="Right"></TextBox>
+                                        <!--<TextBlock Grid.Row="2" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:EthnicityErrorRate}"></TextBlock>-->
+                                        <!--<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding EthnicityErrorRate}" HorizontalAlignment="Right"></TextBox>-->
+                                        <!--<TextBlock Grid.Row="3" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:EthnicityMaxErrorImpact}"></TextBlock>-->
+                                        <!--<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding EthnicityMaxImpact}" HorizontalAlignment="Right"></TextBox>-->
+                                    </Grid>
+                                </StackPanel>
+                            </Expander>
+                            <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step4p2}" Grid.Row="3">
+                                <TextBox Text="{Binding GenerationConfiguration}"></TextBox>
+                            </Expander>
+                            <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step4p3}" Grid.Row="4">
+                                <ComboBox ItemsSource="{Binding AvailableThreadsList}" SelectedValue="{Binding RequestedThreads}">
+
+                                </ComboBox>
+                            </Expander>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step5}" Grid.Row="5">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="{lex:Loc DesiredPopulationCount}"></TextBlock>
+                        <TextBox  Text="{Binding DesiredPopulationCount,UpdateSourceTrigger=LostFocus,Mode=TwoWay}"></TextBox>
+                        <DockPanel Grid.Row="3" LastChildFill="False" HorizontalAlignment="Center" Margin="3">
+                            <Button Content="{lex:Loc Generate}" Command="{Binding GenerateCommand}" Margin="2" IsEnabled="{Binding IsNotGenerating}" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            <Button Content="{lex:Loc SymulatorNSP.GUI.Core:Resource:Save}" Command="{Binding SaveCommand}" Margin="2" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            <Button Content="{lex:Loc SymulatorNSP.GUI.Core:Resource:Load}" Command="{Binding LoadCommand}" Margin="2" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                        </DockPanel>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step6}" Grid.Row="6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{lex:Loc TransparencyMode}" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+                        <CheckBox Grid.Column="2" HorizontalAlignment="Right" IsChecked="{Binding TransparencyMode}" Grid.RowSpan="2"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:TransparencyModeExplanation}" TextWrapping="Wrap"  FontWeight="Light" FontSize="11" FontStyle="Italic"></TextBlock>
+                    </Grid>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step7}" Grid.Row="7">
+                    <Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{lex:Loc Queries}" Grid.Row="0" Grid.ColumnSpan="2" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                            <TextBlock Grid.Row="1" Text="{lex:Loc DistanceCalculationMethod}"></TextBlock>
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <ComboBox ItemsSource="{Binding AvailableDistanceCalculators}" SelectedItem="{Binding SelectedDistanceCalculator}"></ComboBox>
+                            </Grid>
+                            <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:DistanceExaplanation}" FontWeight="Light" FontSize="11" FontStyle="Italic" TextWrapping="Wrap"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step8}" Grid.Row="8">
+                    <StackPanel>
+                        <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:LogPopulationSample}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:NumberOfRecords}" Grid.ColumnSpan="3" Margin="0,0,239,0"></TextBlock>
+                                    <TextBox Grid.Column="1" Text="{Binding PopulationSampleLogCount}"></TextBox>
+                                    <Button Grid.Column="2" Content="{lex:Loc ExecuteQuery}" Command="{Binding LogPopulationSampleCommand}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:Or}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:ChooseRandom}" Grid.ColumnSpan="3"></TextBlock>
+                                    <Button Grid.Column="2" Content="{lex:Loc ExecuteQuery}" Command="{Binding SelectRandomPersonCommand}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                                </Grid>
+                                <TextBlock Grid.Column="0" Text="{Binding RandomPerson}" Grid.ColumnSpan="3"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step9}" Grid.Row="9">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{lex:Loc QueryNationality}" Style="{StaticResource MahApps.Styles.TextBlock.HamburgerMenuHeader}"></TextBlock>
+                            <StackPanel Grid.Row="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Row="0" Text="{lex:Loc QueryStart}"></TextBlock>
+                                    <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding NationalityQuery.StartTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="1" Text="{lex:Loc QueryEnd}"></TextBlock>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding NationalityQuery.EndTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="2" Text="{lex:Loc QueryExecutionTime}"></TextBlock>
+                                    <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding NationalityQuery.ExecutionTime, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="3" Text="{lex:Loc QueryResultsCount}"></TextBlock>
+                                    <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding NationalityQuery.Result, Mode=TwoWay}" HorizontalAlignment="Right"></TextBlock>
+                                    <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding AvailableNationalities}" SelectedItem="{Binding NationalityQuery.Value, Mode=TwoWay}" HorizontalAlignment="Stretch"></ComboBox>
+                                    <TextBlock Grid.Row="4" Text="{lex:Loc QueryValue}"></TextBlock>
+                                </Grid>
+                                <Button Content="{lex:Loc ExecuteQuery}" Command="{Binding ExecuteNationalityQuery}" HorizontalAlignment="Right" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}"></Button>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="{lex:Loc SymulatorNSP.GUI.Core:Resource:Step10}" Grid.Row="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="0" Command="{Binding ShareResultCommand}" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}" HorizontalAlignment="Stretch">
+                            <TextBlock Text="{lex:Loc SymulatorNSP.GUI.Core:Resource:SendResultsToLeaderboard}"></TextBlock>
+                        </Button>
+                        <Button Grid.Column="1" Content="{lex:Loc OpenLeaderboard}" Command="{Binding OpenLeaderboardCommand}" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"></Button>
+                    </Grid>
+                </Expander>
+            </Grid>
+        </ScrollViewer>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{lex:Loc Logs}" ScrollViewer.VerticalScrollBarVisibility="Visible"></TextBlock>
+                <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible">
+                    <TextBlock  Text="{Binding Log}"></TextBlock>
+                </ScrollViewer>
+                <Button Grid.Row="2" Content="{lex:Loc Clear}" Command="{Binding ClearLogsCommand}" Style="{StaticResource MahApps.Styles.Button.MetroSquare.Accent}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"></Button>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="{lex:Loc Language}"></TextBlock>
+                <ComboBox VerticalAlignment="Top" Grid.Row="1" Height="25" SelectedValue="{Binding CountryLanguage}" ItemsSource="{Binding Source={x:Static flagsCustomized:CountryData.AllCountries}}" UseLayoutRounding="True" SelectedIndex="12" Margin="0,0,0,0">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate DataType="flags:CountryData">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image Source="{Binding Path=Iso2, Converter={StaticResource CountryIdToFlagImageSourceConverter}}" Stretch="None" Width="25" Height="20" RenderOptions.BitmapScalingMode="HighQuality" VerticalAlignment="Center" />
+                                <TextBlock Text="{Binding Path=Name}" Margin="5,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="{Binding Version}" HorizontalAlignment="Center" Grid.ColumnSpan="2" Foreground="Gray"></TextBlock>
+            <TextBlock Text="{Binding Copyright}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="Gray"></TextBlock>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>

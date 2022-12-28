@@ -1,0 +1,7 @@
+﻿<hr class="nspSeparator"  style="@($"border-top-style:{LineStyle};opacity:{Opacity};border-top-color:{Color}")"/>
+
+@code {
+    [Parameter] public string LineStyle { get; set; } = "solid";
+    [Parameter] public string Opacity { get; set; } = "100%";
+    [Parameter] public string Color { get; set; } = "100%";
+}

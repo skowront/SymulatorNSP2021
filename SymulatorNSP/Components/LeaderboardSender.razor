@@ -1,0 +1,193 @@
+﻿@using SymulatorNSP.GUI.Core.ViewModels;
+@inject NavigationManager NavigationManager
+@inject ILeaderboardService LeaderboardService
+@inject IStringLocalizer<SymulatorNSP.GUI.Core.Resources.Resource> loc
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<div style="min-width:175px">
+    <div>
+        <div class="row">
+            <RadzenText TextAlign="TextAlign.Justify">@SymulatorNSP.GUI.Core.ViewModels.GUSViewModel.GetComparisonString(this.Query)</RadzenText>
+        </div>
+        <Separator/>
+        <div class="col-6 align-self-center">
+            <RadzenText TextStyle="TextStyle.H4" Text="@WebsiteLoc.SubmitYourResults" Style="margin-bottom:5px;"></RadzenText>
+        </div>
+        <div class="row">
+            <div class="col-6 align-self-center">
+                <RadzenText Text="@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.Nickname)]" Style="margin-bottom:0px;">
+                </RadzenText>
+            </div>
+            <div class="col-6 align-self-center">
+                <RadzenTextBox class="w-100" @bind-Value="@ViewModel.Nickname"></RadzenTextBox>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6 align-self-center">
+                <RadzenText Text="@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.RecordKey)]" Style="margin-bottom:0px;"></RadzenText>
+            </div>
+            <div class="col-6 align-self-center">
+                <RadzenTextBox class="w-100" @bind-Value="this.Key"></RadzenTextBox>
+            </div>
+
+            <div class="d-block justify-content-center" style="margin:10px 0 0 0">
+                <RadzenCard class="rz-background-color-primary-lighter p-2" style="font-style:italic; font-size:small">
+                    <RadzenText style="text-align:justify;text-justify:inter-word">
+                        @loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.RecordKeyExplanation)]
+                    </RadzenText>
+                </RadzenCard>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.QueryStart)]</RadzenText>
+            </div>
+            <div class="col-6">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.StartTime</RadzenText>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.QueryEnd)]</RadzenText>
+            </div>
+            <div class="col-6">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.EndTime</RadzenText>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.QueryExecutionTime)]</RadzenText>
+            </div>
+            <div class="col-6">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.ExecutionTime</RadzenText>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6 d-flex">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.PerformanceFactor)]</RadzenText>
+            </div>
+            <div class="col-6 d-block">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.Factor</RadzenText>
+            </div>
+            <div class="d-block justify-content-center" style="margin:10px 0 0 0">
+                <RadzenCard class="rz-background-color-primary-lighter p-2" style="font-style:italic; font-size:small">
+                    <RadzenText style="text-align:justify;text-justify:inter-word">
+                        @loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.PerformanceFactorExplanation)]
+                    </RadzenText>
+                </RadzenCard>
+            </div>
+        </div>        
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.Threads)]</RadzenText>
+            </div>
+            <div class="col-6">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.Threads</RadzenText>
+            </div>
+        </div>
+        <Separator LineStyle="dashed"></Separator>
+        <div class="row">
+            <div class="col-6">
+                <RadzenText>@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.Source)]</RadzenText>
+            </div>
+            <div class="col-6">
+                <RadzenText TextAlign="TextAlign.Right">@ViewModel.Source</RadzenText>
+            </div>
+        </div>
+    </div>
+    <Separator></Separator>
+    <div class="row w-100 d-flex" style="margin:10px 0 0 0;">
+        <div class="col-6 d-flex justify-content-center">
+            <RadzenButton Variant="Variant.Outlined" type="submit" Text="@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.Submit)]" Click="(o) => Submit()" Icon="check">
+            </RadzenButton>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+            <RadzenButton Variant="Variant.Outlined" type="submit" Click="(o) => Close()" Text="@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.Cancel)]" Icon="close">
+            </RadzenButton>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public QueryViewModel Query { get; set; } = new QueryViewModel();
+
+    private string key = string.Empty;
+    public string Key
+    {
+        get { return this.key; }
+        set {this.key = value; this.StateHasChanged(); }
+    }
+
+    public LeaderboardSender()
+    {
+        
+    }
+
+    public LeaderboardSender(QueryViewModel query)
+    {
+        this.Query = query;
+    }
+
+    public LeaderboardRecordViewModel ViewModel { get; set; } = new LeaderboardRecordViewModel();
+
+    private void Close() => DialogService.Close(true);
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (Query == null) this.Close();
+
+        this.ViewModel.Source = Resource.Browser;
+        this.ViewModel.QueryCount = this.Query.QueriedRecordsCount;
+        this.ViewModel.StartTime = this.Query.StartTime;
+        this.ViewModel.EndTime = this.Query.EndTime;
+        this.ViewModel.Factor = GUS.CalculateTimesFasterFactor((this.ViewModel.EndTime - this.ViewModel.StartTime), this.ViewModel.QueryCount) ?? 0;
+
+        await base.OnInitializedAsync();
+        return;
+    }
+
+    private async Task Submit()
+    {
+        if (this.Key == string.Empty || this.Key == null)
+        {
+            await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultKeyEmptyExplanation } });
+            return;
+        }
+        if(this.ViewModel.QueryCount < 1000000)
+        {
+            await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
+            return;
+        }
+
+        var result = await this.LeaderboardService.AddEntry(new Tuple<LeaderboardRecord, string>(this.ViewModel.Model, this.Key));
+        switch (result)
+        {
+            case LeaderboardRecord.eChangeResult.Success:
+                this.NavigationManager.NavigateTo("/Leaderboard");
+                NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Success, Summary = SymulatorNSP.Core.Resources.Resource.eChangeResultSuccessExplanation, Duration = 3000});
+                break;
+            case LeaderboardRecord.eChangeResult.WorseFactor:
+                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWorseFactorExplanation } });
+                break;
+            case LeaderboardRecord.eChangeResult.TooFewRecords:
+                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
+                break;
+            case LeaderboardRecord.eChangeResult.KeyEmpty:
+                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultKeyEmptyExplanation } });
+                break;
+            case LeaderboardRecord.eChangeResult.WrongKey:
+                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWrongKeyExplanation } });
+                break;
+            default:
+                NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Error, Summary = "??", Duration = 3000 });
+                break;
+        }
+    }
+}

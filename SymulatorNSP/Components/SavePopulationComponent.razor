@@ -1,0 +1,38 @@
+﻿@inject IStringLocalizer<Resource> loc
+@inject GUSViewModel ViewModel
+@inject IJSRuntime JSRuntime
+@inject DialogService DialogService
+
+<div class="row d-flex justify-content-center"> 
+    <div class="row">
+        <RadzenText>@loc[nameof(Resource.EnterFileName)]</RadzenText>
+        <RadzenTextBox @bind-value="@FileTitle"></RadzenTextBox>
+    </div>
+    <div class="row-cols-sm-3 d-flex p-1 justify-content-around">
+        <RadzenButton Click="@(async (a)=> await Confirm())">@loc[nameof(Resource.Confirm)]</RadzenButton>
+        <RadzenButton Click="@((a)=> Close())">@loc[nameof(Resource.Cancel)]</RadzenButton>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Message { get; set; }
+    [Parameter] public string? FileTitle { get; set; }
+
+    private void Close() => DialogService.Close(false);
+    private async Task Confirm()
+    {
+        try
+        {
+            var fileName = FileTitle;
+            var extension = Path.GetExtension(fileName);
+            if (extension != "json") fileName = Path.ChangeExtension(fileName,"json");
+            await JSRuntime.InvokeAsync<object>("saveFile", new[] { fileName, this.ViewModel.SerializePopulation() });
+            this.ViewModel.AddLogEntry(Resource.SaveSuccess);
+            DialogService.Close(true);
+        }
+        catch (Exception ex)
+        {
+            this.ViewModel.AddLogEntry(Resource.SaveFailed);
+        }
+    }
+}

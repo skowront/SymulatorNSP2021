@@ -1,0 +1,43 @@
+﻿@inject IStringLocalizer<Resource> loc
+@inject GUSViewModel ViewModel
+@inject IJSRuntime JSRuntime
+@inject DialogService DialogService
+
+<div> 
+    <div class="row">
+        <RadzenText bind="@this.File?.File.Name"></RadzenText>
+    </div>
+    <div class="row m-1">
+        <RadzenFileInput Change="@OnClickLoadPopulation" TValue="InputFileChangeEventArgs" disabled="@ViewModel.IsGenerating">@loc[nameof(Resource.Load)]</RadzenFileInput>
+    </div>
+    <div class="row-cols-3 d-flex p-1 justify-content-around">
+        <RadzenButton Click="@(async (a)=>await Confirm())">@loc[nameof(Resource.Confirm)]</RadzenButton>
+        <RadzenButton Click="@((a)=>Close())">@loc[nameof(Resource.Cancel)]</RadzenButton>
+    </div>
+</div>
+
+@code {
+    [Parameter] 
+    public string? Message { get; set; }
+
+    private InputFileChangeEventArgs File { get; set; }
+
+    private void Close() => DialogService.Close(false);
+    private async Task Confirm()
+    {
+        try
+        {
+            await this.ViewModel.LoadPopulation(this.File);
+            DialogService.Close(true);
+        }
+        catch (Exception ex)
+        {
+            this.ViewModel.AddLogEntry(Resource.SaveFailed);
+        }
+    }
+
+    public async Task OnClickLoadPopulation(InputFileChangeEventArgs e)
+    {
+        this.File = e;
+    }
+}

@@ -1,0 +1,68 @@
+﻿@using SymulatorNSP.GUI.Core.ViewModels;
+@inject IStringLocalizer<Resource> loc
+
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        <RadzenIcon Icon="alarm_on" Style="color:var(--rz-text-color)"></RadzenIcon>
+        <RadzenText Text="@loc[nameof(Resource.QueryStart)]"></RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenText TextAlign="TextAlign.Right">@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.StartTime)</RadzenText>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        <RadzenIcon Icon="alarm_off" Style="color:var(--rz-text-color)"></RadzenIcon>
+        <RadzenText Text="@loc[nameof(Resource.QueryEnd)]"></RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenText TextAlign="TextAlign.Right">@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.EndTime)</RadzenText>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        
+        <RadzenIcon Icon="av_timer" Style="color:var(--rz-text-color)"></RadzenIcon>
+        <RadzenText Text="@loc[nameof(Resource.QueryExecutionTime)]"></RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenText>@string.Format("{0:c}",ViewModel.ExecutionTime)</RadzenText>
+    </div>
+</div>
+<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        <RadzenText>@loc[nameof(Resource.QueryResultsCount)]</RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenText TextAlign="TextAlign.Right">@ViewModel.Result</RadzenText>
+    </div>
+</div>
+@*<div class="row p-0 m-0">
+    <div class="col-6 d-flex">
+        @loc[nameof(Resource.QueryValue)]
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <div class="col-6 d-flex justify-content-end">
+            <select class="form-select" @bind="ViewModel.Value">
+                @foreach (var item in AvailableNationalities)
+                {
+                    <option value="@item">@loc[item]</option>
+                }
+            </select>
+        </div>
+    </div>
+</div>*@
+
+
+@code {
+    [Parameter]
+    public List<string> AvailableNationalities
+    {
+        get; set;
+    } = new List<string>();
+    [Parameter]
+    public QueryViewModel ViewModel
+    {
+        get; set;
+    } = new QueryViewModel();
+}

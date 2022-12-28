@@ -1,0 +1,49 @@
+﻿@page "/GUS-PC"
+@inherits PageComponent
+@inject IJSRuntime JSRuntime
+@inject SymulatorNSP.ViewModels.GUSViewModel ViewModel
+@using SymulatorNSP.GUI.Core.ViewModels
+
+<RadzenSteps>
+    <Steps>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step1)">
+            <RadzenText Text="@(WindowsTutorial.Step1)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step1Description)" Style="display:inline"></RadzenText>
+            <RadzenLink Path="@(WindowsTutorial.Step1DownloadLink)" target="_blank" Style="color:var(--rz-primary)">
+                <div class="row d-inline p-0 m-0">
+                    <i class="fa fa-github d-inline m-0 p-0" style="color:var(--rz-primary)"></i>
+                    <RadzenText Text="Github" Style="display:inline; margin-bottom:0px; padding:0; color:var(--rz-primary)"></RadzenText>
+                </div>
+            </RadzenLink>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step2)">
+            <RadzenText Text="@(WindowsTutorial.Step2)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step2Description)" Style="display:inline"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step2FileName)" Style="display:inline; margin-bottom:0px; padding:0; color:var(--rz-primary)"></RadzenText>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step3)">
+            <RadzenText Text="@(WindowsTutorial.Step3)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step3Description)" Style="display:inline"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step3FileName)" Style="display:inline; margin-bottom:0px; padding:0; color:var(--rz-primary)"></RadzenText>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step4)">
+            <RadzenText Text="@(WindowsTutorial.Step4)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step4Description)" Style="display:inline"></RadzenText>
+            <RadzenImage Path="/images/windowsTutorial/step4.png"></RadzenImage>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step5)">
+            <RadzenText Text="@(WindowsTutorial.Step5)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step5Description)" Style="display:inline"></RadzenText>
+            <RadzenImage Path="/images/windowsTutorial/step5.png"></RadzenImage>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="@(WindowsTutorial.Step6)">
+            <RadzenText Text="@(WindowsTutorial.Step6)" TextStyle="TextStyle.DisplayH5"></RadzenText>
+            <RadzenText Text="@(WindowsTutorial.Step6Description)" Style="display:inline"></RadzenText>
+            <RadzenImage Path="/images/windowsTutorial/step6.png"></RadzenImage>
+        </RadzenStepsItem>
+    </Steps>
+</RadzenSteps>
+
+@code {
+    
+}

@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+		<SignAssembly>False</SignAssembly>
+		<Copyright> Copyright (c) Tomasz Skowron 2022</Copyright>
+		<PackageProjectUrl>https://github.com/skowront/SymulatorNSP</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/skowront/SymulatorNSP</RepositoryUrl>
+		<FileVersion>1.0.0.0</FileVersion>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.0" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.0" />
+		<PackageReference Include="Radzen.Blazor" Version="4.4.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SymulatorNSP.Client.Shared\SymulatorNSP.Client.Shared.csproj" />
+		<ProjectReference Include="..\SymulatorNSP.Core\SymulatorNSP.Core.csproj" />
+		<ProjectReference Include="..\SymulatorNSP.GUI.Core\SymulatorNSP.GUI.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Shared\LanguageResources\LangLoc.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>LangLoc.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Shared\WebsiteLocResources\WebsiteLoc.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>WebsiteLoc.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Shared\WindowsTutorialResources\WindowsTutorial.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>WindowsTutorial.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Update="wwwroot\css\noto-color-emoji\NotoColorEmoji-Regular.ttf">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\images\pl-PL.svg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\images\windowsTutorial\step4.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\images\windowsTutorial\step5.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\images\windowsTutorial\step6.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\_content\remote-config.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Update="wwwroot\_content\SaveFile.js">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Shared\LanguageResources\LangLoc.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>LangLoc.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Shared\WebsiteLocResources\WebsiteLoc.resx">
+		  <Generator>ResXFileCodeGenerator</Generator>
+		  <LastGenOutput>WebsiteLoc.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Shared\WindowsTutorialResources\WindowsTutorial.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>WindowsTutorial.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\content\" />
+	  <Folder Include="wwwroot\images\regios\" />
+	</ItemGroup>
+
+</Project>

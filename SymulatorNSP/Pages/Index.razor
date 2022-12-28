@@ -1,0 +1,268 @@
+﻿@page "/"
+@inject IStringLocalizer<WebsiteLoc> wloc
+@inject IStringLocalizer<Resource> loc
+@inject GUSViewModel ViewModel
+@inject NavigationManager NavigationManager
+@inject DialogService DialogService
+<PageTitle>@wloc[nameof(WebsiteLoc.WebsiteTitle)]</PageTitle>
+
+
+<div class="row d-inline-block">
+
+    <div class="text-center">
+        <RadzenText TextStyle="TextStyle.H1">@WebsiteLoc.WelcomeHeader</RadzenText>
+        <RadzenText TextStyle="TextStyle.Subtitle1" clas="my-3">@wloc[nameof(WebsiteLoc.WelcomeSubHeader)]</RadzenText>
+    </div>
+    <Separator/>
+    <RadzenText TextStyle="TextStyle.H5">@wloc[nameof(WebsiteLoc.BackgroundHeader)]</RadzenText>
+
+    <RadzenText style="text-align:justify;text-justify:inter-word">
+        @wloc[nameof(WebsiteLoc.BackgroundDescription)]
+    </RadzenText>
+
+    <div class="row m-0">
+        <div class="row m-0">
+            <div class="d-flex justify-content-center p-2">
+                <RadzenButton Text="@loc[nameof(Resource.Generate)]" Style="margin-left:auto; margin-right:auto;" Icon="query_builder" Variant="Variant.Outlined" type="submit" disabled="@ViewModel.IsGenerating" Click="@(async (o) =>{ await OnGenerateSubmit();})"></RadzenButton>
+            </div>
+            <div class="justify-content-center" style="margin-bottom:10px">
+                <RadzenProgressBar Value="@(progressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+            </div>
+        </div>
+
+        <RadzenCard class="m-0" style="margin-top:10px" hidden="@(populationGenerated ? false:true)">
+            <Separator />
+            <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.QueryNationality)]</RadzenText>
+            <div class="row m-0">
+                <div class="col-md-4 p-1 d-flex align-self-center">
+                    <RadzenText TextStyle="TextStyle.Body1">@wloc[nameof(WebsiteLoc.SelectQueryAmountDescription)]</RadzenText>
+                </div>
+                <div class="col-md-6 p-2 p-md-1 d-block align-self-center">
+                    <div style="">
+                        <RadzenSlider TValue="int" @bind-Value=@ViewModel.VirtualCount Min="1000000" Max="38000001" Step="1000000" Style="width:100%; display:block;"></RadzenSlider>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2 col-2 p-1 d-flex align-self-center">
+                    <RadzenText TextStyle="TextStyle.Body1" Style="width:100%; height:100%; text-align:end;">@ViewModel.VirtualCount</RadzenText>
+                </div>
+            </div>
+            <div class="row d-block justify-content-center m-0 mt-2 mb-2">
+                <RadzenCard class="rz-background-color-primary-lighter p-2">
+                    <RadzenText TextStyle="TextStyle.Overline" TextAlign="TextAlign.Justify" style="font-size:medium">
+                        @wloc[nameof(WebsiteLoc.Hint)]
+                    </RadzenText>
+                    <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">
+                        @wloc[nameof(WebsiteLoc.QueryAmountRemark)]
+                    </RadzenText>
+                </RadzenCard>
+            </div>
+            <RadzenText TextStyle="TextStyle.H5" class="col-6 d-flex">
+                @loc[nameof(Resource.QueryValue)]
+            </RadzenText>
+            <div class="col-12 d-flex justify-content-end">
+                <RadzenDropDown class="form-select" @bind-Value="@ViewModel.NationalityQuery.Value" Data="@ViewModel.AvailableNationalities" >
+                    <Template>
+                        <span style="color:var(--rz-text-color)">@loc[context]</span>
+                    </Template>
+                    @*@foreach (var item in ViewModel.AvailableNationalities)
+                    {
+                        <option value="@item">@loc[item]</option>
+                    }*@
+                </RadzenDropDown>
+            </div>
+            <div class="d-flex justify-content-center p-2">
+                <RadzenButton Text="@loc[nameof(Resource.ExecuteQuery)]" Icon="search" Variant="Variant.Outlined" type="submit" disabled="@ViewModel.IsGenerating" Click="@(async (o) =>{ await ExecuteNationalityQuery();})" class="btn btn-primary m-1"></RadzenButton>
+            </div>
+
+            <div>
+                <RadzenProgressBar Value="@(queryProgressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@queryProgressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+            </div>
+            <div hidden="@(queryResultsReady ? false:true)">
+                <Separator />
+                <div class="row p-0 m-0">
+                    <div class="col-6 d-flex">
+                        <RadzenText Text="@loc[nameof(Resource.QueryStart)]"></RadzenText>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <RadzenText TextAlign="TextAlign.Right">
+                            <label>@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.NationalityQuery.StartTime)</label>
+                        </RadzenText>
+                    </div>
+                </div>
+                <Separator LineStyle="dashed" Color="var(--rz-primary-darker)"/>
+                <div class="row p-0 m-0">
+                    <div class="col-6 d-flex">
+                        <RadzenText>
+                            @loc[nameof(Resource.QueryEnd)]
+                        </RadzenText>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <RadzenText TextAlign="TextAlign.Right">
+                            <label>@string.Format("{0:dd/MM/yyyy hh:mm:ss.ffff}",ViewModel.NationalityQuery.EndTime)</label>
+                        </RadzenText>
+                    </div>
+                </div>
+                <Separator LineStyle="dashed" Color="var(--rz-primary-darker)" />
+                <div class="row p-0 m-0">
+                    <div class="col-6 d-flex">
+                        <RadzenText Text="@loc[nameof(Resource.QueryExecutionTime)]"></RadzenText>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <RadzenText TextAlign="TextAlign.Right">
+                            <label>@string.Format("{0:c}",ViewModel.NationalityQuery.ExecutionTime)</label>
+                        </RadzenText>
+                    </div>
+                </div>
+                <Separator LineStyle="dashed" Color="var(--rz-primary-darker)" />
+                <div class="row p-0 m-0">
+                    <div class="col-6 d-flex">
+                        <RadzenText>
+                            @loc[nameof(Resource.QueryValue)]
+                        </RadzenText>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <RadzenText TextAlign="TextAlign.Right">
+                            <label>@ViewModel.NationalityQuery.Value</label>
+                        </RadzenText>
+                    </div>
+                </div>
+                <Separator LineStyle="dashed" Color="var(--rz-primary-darker)" />
+                <div class="row p-0 m-0">
+                    <div class="col-6 d-flex">
+                        <RadzenText>
+                            @loc[nameof(Resource.QueryResultsCount)]
+                        </RadzenText>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <RadzenText TextAlign="TextAlign.Right">
+                            <label>@ViewModel.NationalityQuery.Result</label>
+                        </RadzenText>
+                    </div>
+                </div>
+                <Separator LineStyle="dashed" Color="var(--rz-primary-darker)" />
+                <div class="d-flex justify-content-center">
+                    <RadzenButton Text="@loc[nameof(Resource.SendResultsToLeaderboard)]" Icon="send" Variant="Variant.Outlined" disabled="@ViewModel.IsGenerating" Click="@(async (o) => await SendResultToLeaderboard())"></RadzenButton>
+                </div>
+            </div>
+            <div class="row mt-3 justify-content-center" hidden="@(queryDoneOnce ? false:true)">
+                <Separator />
+                <RadzenText TextStyle="TextStyle.H4" TextAlign="TextAlign.Center">@wloc[nameof(WebsiteLoc.CheckOutMoreHeader)]</RadzenText>
+                <RadzenText TextAlign="TextAlign.Justify" Text="@wloc[nameof(WebsiteLoc.CheckOutMoreValue)]"></RadzenText>
+                <div class="row w-100 d-flex" style="margin-top:10px;">
+                    <div class="col-sm-6 d-flex justify-content-center">
+                        <RadzenButton Text="@wloc[nameof(WebsiteLoc.GUSOnlineLabel)]" Icon="web_asset" Variant="Variant.Outlined" type="submit" Click="(o) => GotoOnline()">
+                            
+                        </RadzenButton>
+                    </div>
+                    <div class="col-sm-6 d-flex justify-content-center">
+                        <RadzenButton Text="@wloc[nameof(WebsiteLoc.GUSForPCLabel)]" Icon="desktop_windows" Variant="Variant.Outlined" type="submit" Click="(o) => GotoPC()">
+                            
+                        </RadzenButton>
+                    </div>
+                </div>
+            </div>
+        </RadzenCard>
+    </div>
+</div>
+
+@code {
+    private int progressValue { get; set; }
+    private int queryProgressValue { get; set; }
+    private bool queryResultsReady { get; set; } = false;
+    private bool populationGenerated { get; set; } = false;
+    private bool queryDoneOnce { get; set; } = false;
+    IProgress<ProgressValue>? OnGenerationProgressChangedAsync { get; set; } = null;
+
+    IEnumerable<int> populationValues = new int[] { 14, 78 };
+
+    protected override Task OnInitializedAsync()
+    {
+        this.ViewModel.DesiredPopulationCount = GUS.DefaultCacheSize;
+        this.ViewModel.VirtualCount = 1000000; 
+        this.ViewModel.NationalityQuery.Value = this.ViewModel.model.GenerationConfiguration.Nationalities.FirstOrDefault()?.Value ?? string.Empty;
+        this.ViewModel.model.GenerationConfiguration.NationalityErrorRateMaxImpact = 0;
+        this.ViewModel.model.GenerationConfiguration.NationalityErrorRate = 0;
+
+        this.OnGenerationProgressChangedAsync = new Progress<ProgressValue>(async (progress) =>
+        {
+            await Task.Run(async () =>
+            {
+                if (progress.StepReport == false)
+                {
+                    if ((progress.Current) % (0.1 * progress.End) == 0 || progress.Current == progress.End)
+                    {
+                        this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                        ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                        Console.WriteLine(progress.Current / progress.End);
+                        await InvokeAsync(StateHasChanged);
+                    }
+                }
+                else
+                {
+                    this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                    ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                    Console.WriteLine(progress.Current / progress.End);
+                    await InvokeAsync(StateHasChanged);
+                }
+            });
+        });
+
+
+        return base.OnInitializedAsync();
+    }
+
+    public async Task OnGenerateSubmit()
+    {
+        this.progressValue = 0;
+        this.queryProgressValue = 0;
+        await InvokeAsync(StateHasChanged);
+        if (ViewModel.DesiredPopulationCount > 1000000)
+        {
+            ViewModel.DesiredPopulationCount = 1000000;
+            await DialogService.OpenAsync<SimpleModal>(WebsiteLoc.BrowserLimitHeader, new Dictionary<string, object>() { { nameof(SimpleModal.Message), WebsiteLoc.BrowserLimitExplanation } });
+            return;
+        }
+
+        this.ViewModel.IsGenerating = true;
+        await ViewModel.GenerateAsync(ViewModel.DesiredPopulationCount, 10000, this.OnGenerationProgressChangedAsync);
+        this.ViewModel.IsGenerating = false;
+
+        this.populationGenerated = true;
+    }
+
+    public void GotoOnline()
+    {
+        NavigationManager.NavigateTo("/GUS-Online");
+    }
+
+    public void GotoPC()
+    {
+        NavigationManager.NavigateTo("/GUS-PC");
+    }
+
+    public async Task SendResultToLeaderboard()
+    {
+        await DialogService.OpenAsync<LeaderboardSender>(
+            loc[nameof(Resource.Congratulations)], 
+            new Dictionary<string, object>() { { nameof(LeaderboardSender.Query), ViewModel.NationalityQuery}});
+    }
+
+    public async Task ExecuteNationalityQuery()
+    {
+        this.ViewModel.IsGenerating = true;
+        this.queryResultsReady = false;
+        ViewModel.NationalityQuery.Result = (await ViewModel.VirtualCountingNationality(ViewModel.NationalityQuery.Value.ToLower(), ViewModel.VirtualCount, new Action<int>(
+            async (current) =>
+            {
+                this.queryProgressValue = Convert.ToInt32((1 - (Convert.ToDouble(current) / Convert.ToDouble(this.ViewModel.VirtualCount))) * 100);
+                Console.WriteLine(current + " out of " + this.ViewModel.VirtualCount);
+                await InvokeAsync(StateHasChanged);
+            }
+        ))).ToString() + " | " + ViewModel.VirtualCount;
+        await DialogService.OpenAsync<LeaderboardSender>(Resource.Congratulations, new Dictionary<string, object>() { { nameof(LeaderboardSender.Query), ViewModel.NationalityQuery } });
+        this.queryProgressValue = 100;
+        this.queryResultsReady = true;
+        this.queryDoneOnce = true;
+        this.ViewModel.IsGenerating = false;
+    }
+}

@@ -1,0 +1,19 @@
+﻿<mah:MetroWindow x:Class="SymulatorNSP.Startup.CongratulationsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SymulatorNSP.Startup"
+        mc:Ignorable="d"
+        xmlns:viewmodels="clr-namespace:SymulatorNSP.GUI.WPF.WPFViewModels;assembly=SymulatorNSP.GUI.WPF"
+        xmlns:converters="clr-namespace:SymulatorNSP.Startup.Converters"
+        xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeextension"
+        xmlns:lexp="clr-namespace:WPFLocalizeExtension.Providers;assembly=WPFLocalizeextension"
+        lexp:ResxLocalizationProvider.DefaultAssembly="SymulatorNSP.Startup"
+        lexp:ResxLocalizationProvider.DefaultDictionary="SR"
+        Title="{lex:Loc SymulatorNSP.GUI.Core:Resource:RealLifeComparisonStringTitle }" Height="150" Width="300">
+    <Grid Margin="5">
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Message}" TextWrapping="Wrap"></TextBlock>
+    </Grid>
+</mah:MetroWindow>

@@ -1,0 +1,117 @@
+﻿@page "/Leaderboard"
+@using System.Collections.ObjectModel;
+@inject ILeaderboardService LeaderboardService
+@inject IStringLocalizer<SymulatorNSP.GUI.Core.Resources.Resource> rloc;
+@inject NotificationService NotificationService;
+
+<RadzenDataGrid TItem="LeaderboardRecord" Data="@LeaderboardService.Leaderboard" AllowColumnResize="true">
+    <Columns>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Title="#" Width="50px">
+            <Template Context="data">
+                <RadzenText Style="@($"color:{this.PositionToStyle(this.RecordToPosition(data))}")">
+                    @this.RecordToPosition(data)
+                </RadzenText>
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Factor" Title="@Resource.PerformanceFactor"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Nickname" Title="@Resource.Nickname" Width="200px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="QueryCount" Title="@Resource.QueriedRecordsCount" Width="300px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Title="@Resource.ExecutionTime">
+            <Template Context="data">
+                <RadzenText>
+                    @data.ExecutionTime();
+                </RadzenText>
+            </Template>
+        </RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Threads" Title="@Resource.Threads"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Source" Title="@Resource.Source">
+            <Template Context="data">
+                <RadzenText>
+                    @rloc[data.Source.ToString()]
+                </RadzenText>
+            </Template>
+        </RadzenDataGridColumn>
+    </Columns>
+</RadzenDataGrid>
+
+<div>
+    @if (this.LeaderboardService.CurrentPage != 0)
+    {
+        <RadzenButton Click="@((a)=>GoToFirst())">@("<<")</RadzenButton>
+    }
+    @if(this.LeaderboardService.CurrentPage > 0)
+    {
+        <RadzenButton Click="@((a)=>GoToPrevious())">@(this.LeaderboardService.CurrentPage)</RadzenButton>
+    }
+    <RadzenButton Disabled="true">@(this.LeaderboardService.CurrentPage + 1)</RadzenButton>
+    @if (this.LeaderboardService.CurrentPage < this.LeaderboardService.PagesCount - 1 && this.LeaderboardService.PagesCount > 1)
+    {
+        <RadzenButton Click="@((a)=>GoToNext())">@(this.LeaderboardService.CurrentPage+2)</RadzenButton>
+    }
+    @if (this.LeaderboardService.CurrentPage != this.LeaderboardService.PagesCount -1 && this.LeaderboardService.PagesCount > 1)
+    {
+        <RadzenButton Click="@((a)=>GoToLast())">@(">>")</RadzenButton>
+    }
+</div>
+
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            await this.LeaderboardService.Initialize();
+            await base.OnInitializedAsync();
+            return;
+        }
+        catch(Exception ex)
+        {
+            NotificationService.Notify(NotificationSeverity.Error,WebsiteLoc.ServerUnavailable,WebsiteLoc.TryAgainLater);
+        }
+    }
+
+    public async Task GoToFirst()
+    {
+        await this.LeaderboardService.GoToFirst();
+        await InvokeAsync(this.StateHasChanged);
+    }
+    public async Task GoToNext()
+    {
+        await this.LeaderboardService.GoToNext();
+        await InvokeAsync(this.StateHasChanged);
+    }
+    public async Task GoToPrevious()
+    {
+        await this.LeaderboardService.GoToPrevious();
+        await InvokeAsync(this.StateHasChanged);
+    }
+    public async Task GoToLast()
+    {
+        await this.LeaderboardService.GoToLast();
+        await InvokeAsync(this.StateHasChanged);
+    }
+    //public async Task GoToPage(int index)
+    //{
+
+    //}
+
+    private int RecordToPosition(LeaderboardRecord record)
+    {
+        var collection = new Collection<LeaderboardRecord>(this.LeaderboardService.Leaderboard);
+        var i = collection.IndexOf(record); 
+        return (this.LeaderboardService.CurrentPage * this.LeaderboardService.GetPageSize()) + i + 1;
+    }
+
+    public string PositionToStyle(int position)
+    {
+        if(position < 4)
+        {
+            return "var(--rz-success)";
+        }
+        if (position < 7)
+        {
+            return "var(--rz-warning)";
+        }
+        return "var(--rz-text-color)";
+    }
+}

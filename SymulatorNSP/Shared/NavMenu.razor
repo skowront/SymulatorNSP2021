@@ -1,0 +1,60 @@
+﻿@inject IStringLocalizer<WebsiteLoc> wloc
+@inject NavigationManager NavigationManager
+
+@*<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">SymulatorNSP</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>*@
+
+<div class="@NavMenuCssClass" style="background:var(--rz-base-900); width:auto; height:100%; display:block; white-space:nowrap;" @onclick="ToggleNavMenu">
+    <nav>
+        <div class="nav-item" style="display:block">
+            <NavLink class="nav-link rz-color-white" href="" Match="NavLinkMatch.All" style="border-radius:0" ActiveClass="nav-active">
+                <span class="oi oi-home" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.HomePage)]
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link rz-color-white" href="@(NavigationManager.BaseUri+"GUS-Online")" style="border-radius:" ActiveClass="nav-active">
+                <span class="oi oi-browser" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.GUSOnlineLabel)]
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link rz-color-white" href="@(NavigationManager.BaseUri+"GUS-PC")" style="border-radius:0;" ActiveClass="nav-active">
+                <span class="oi oi-terminal" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.GUSForPCLabel)]
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link rz-color-white" href="@(NavigationManager.BaseUri+"leaderboard")" style="border-radius:0;" ActiveClass="nav-active">
+                <span class="oi oi-bar-chart" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.LeaderboardLabel)]
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link rz-color-white" href="@(NavigationManager.BaseUri+"about")" style="border-radius:0;" ActiveClass="nav-active">
+                <span class="oi oi-info" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.AboutLabel)]
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            <NavLink class="nav-link rz-color-white" href="@(NavigationManager.BaseUri+"contact")" style="border-radius:0;" ActiveClass="nav-active">
+                <span class="oi oi-envelope-open" aria-hidden="true"></span> @wloc[nameof(WebsiteLoc.ContactLabel)]
+            </NavLink>
+        </div>
+        <LanguageSelector></LanguageSelector>
+    </nav>
+</div>
+
+@code {
+    private string languageSrc = string.Empty;
+
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

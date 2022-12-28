@@ -1,0 +1,18 @@
+﻿@page "/Test"
+@using SymulatorNSP.GUI.Core.ViewModels;
+@inject ILeaderboardService LeaderboardService
+
+<PageTitle>Test</PageTitle>
+
+<button class="btn btn-primary" @onclick="OnClick">Click me</button>
+<LeaderboardSender Query="@(new QueryViewModel())"></LeaderboardSender>
+
+@code {
+    private int currentCount = 0;
+
+    private async Task OnClick()
+    {
+        await this.LeaderboardService.AddEntry(new Tuple<LeaderboardRecord, string>(new LeaderboardRecord() { QueryCount = LeaderboardRecord.MinAcceptedQueries + 1 },string.Empty));
+        //await this.LeaderboardService.GetRecords();
+    }
+}

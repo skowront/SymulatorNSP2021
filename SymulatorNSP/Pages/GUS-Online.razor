@@ -1,0 +1,533 @@
+﻿@page "/GUS-Online"
+@inherits PageComponent
+@inject IStringLocalizer<Resource> loc
+@inject IStringLocalizer<WebsiteLoc> wloc
+@inject IJSRuntime JSRuntime
+@inject SymulatorNSP.ViewModels.GUSViewModel ViewModel
+@inject DialogService DialogService
+@inject TooltipService TooltipService
+@inject SingletonService SingletonService
+@using Newtonsoft.Json;
+@using SymulatorNSP.GUI.Core.ViewModels
+
+<div class="container d-block">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                    <RadzenText TextStyle="TextStyle.H3">@loc[nameof(Resource.Welcome)]</RadzenText>
+                </div>
+            </div>
+            <RadzenSteps SelectedIndex="@this.SelectedStep" Change="@OnStepChanged" NextText="@WebsiteLoc.NextLabel" PreviousText="@WebsiteLoc.PreviousLabel">
+                <Steps>
+                    <RadzenStepsItem Text="@Resource.Step1" Style="display:block">
+                        <EditForm Model="@ViewModel" OnValidSubmit="OnGenerateSubmit">
+                            <DataAnnotationsValidator />
+                            <div class="form-group">
+                                <RadzenText>@loc[nameof(Resource.DesiredPopulationCount)]</RadzenText>
+                                <RadzenNumeric id="DesiredPopulationCount" @bind-Value="ViewModel.DesiredPopulationCount" class="form-control"></RadzenNumeric>
+                                <ValidationMessage For="(()=>ViewModel.DesiredPopulationCount)"></ValidationMessage>
+                            </div>
+                            <RadzenCard class="rz-background-color-primary-lighter p-2">
+                                <RadzenText TextStyle="TextStyle.Overline" TextAlign="TextAlign.Justify" style="font-size:medium">
+                                    @wloc[nameof(WebsiteLoc.Hint)]
+                                </RadzenText>
+                                <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">
+                                    @wloc[nameof(WebsiteLoc.RecommendedPopulationSize)]
+                                </RadzenText>
+                            </RadzenCard>
+                            <div class="row m-1">
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Text="@loc[nameof(Resource.Generate)]" Variant="Variant.Outlined" type="submit" disabled="@ViewModel.IsGenerating"></RadzenButton>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Variant="Variant.Outlined" Click="@(() => this.OnClickSavePopulation())">@loc[nameof(Resource.Save)]</RadzenButton>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Variant="Variant.Outlined" Click="@(async () => await this.OnClickLoadPopulation())">@loc[nameof(Resource.Load)]</RadzenButton>
+                                </div>
+                            </div>
+                        </EditForm>
+                        <div class="justify-content-center" style="margin-bottom:10px">
+                            <RadzenProgressBar Value="@(progressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+                        </div>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step2"  Disabled="@(this.StepsCompleted<1)" Visible="@(true||this.StepsCompleted>=1)" Style="display:block">
+                        <PopulationSampleView OnStepCompleted="@OnPopulationLoggedStep2" ViewModel="@ViewModel"></PopulationSampleView>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step3"  Disabled="@(this.StepsCompleted<2)" Visible="@(true||this.StepsCompleted>=2)" Style="display:block">
+                        <RadzenCard class="m-0" style="margin-top:10px">
+                            <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.QueryNationality)]</RadzenText>
+                            <Separator/>
+                            <div class="row m-0">
+                                <div class="col-md-4 p-1 d-flex align-self-center">
+                                    <RadzenText TextStyle="TextStyle.Body1">@wloc[nameof(WebsiteLoc.SelectQueryAmountDescription)]</RadzenText>
+                                </div>
+                                <div class="col-md-6 p-2 p-md-1 d-block align-self-center">
+                                    <div style="">
+                                        <RadzenSlider TValue="int" @bind-Value=@ViewModel.VirtualCount Min="100000" Max="39000000" Step="100000" Style="width:100%; display:block;"></RadzenSlider>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-2 col-2 p-1 d-flex align-self-center">
+                                    <RadzenText TextStyle="TextStyle.Body1" Style="width:100%; height:100%; text-align:end;">@ViewModel.VirtualCount</RadzenText>
+                                </div>
+                            </div>
+                            <Separator LineStyle="dashed"/>
+                            <RadzenText TextStyle="TextStyle.Body1" class="col-6 d-flex">
+                                @loc[nameof(Resource.QueryValue)]
+                            </RadzenText>
+                            <div class="col-12 d-flex justify-content-end">
+                                <RadzenDropDown class="form-select" @bind-Value="@ViewModel.NationalityQuery.Value" Data="@ViewModel.AvailableNationalities">
+                                    <Template>
+                                        <span style="color:var(--rz-text-color)">@loc[context]</span>
+                                    </Template>
+                                </RadzenDropDown>
+                            </div>
+                            <div class="d-flex justify-content-center p-2">
+                                <RadzenButton Text="@loc[nameof(Resource.ExecuteQuery)]" Icon="search" Variant="Variant.Outlined" type="submit" disabled="@(ViewModel.IsGenerating||ViewModel.VirtualCount<1000)" Click="@(async (o) =>{ await ExecuteNationalityQuery();})" class="btn btn-primary m-1"></RadzenButton>
+                            </div>
+                            <div style="margin-bottom:5px">
+                                <RadzenProgressBar Value="@(queryProgressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@queryProgressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+                            </div>
+                            <Separator LineStyle="dashed" />
+                            <QueryComponent ViewModel="@ViewModel.NationalityQuery" AvailableNationalities="@ViewModel.AvailableNationalities"></QueryComponent>
+                            <div class="d-flex justify-content-center" style="margin-top:10px">
+                                <RadzenButton Text="@loc[nameof(Resource.SendResultsToLeaderboard)]" Icon="send" Variant="Variant.Outlined" disabled="@((ViewModel.IsGenerating)||(!this.queryDoneOnce))" Click="@((o) => SendResultToLeaderboard())"></RadzenButton>
+                            </div>
+                        </RadzenCard>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step4"  Disabled="@(this.StepsCompleted<3)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <div class="d-flex justify-content-center">
+                            <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.GenerationConfiguration)]</RadzenText>
+                        </div>
+                        <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">
+                            @Resource.GenerationConfigurationDescription
+                        </RadzenText>
+                        <RadzenDropDown class="form-select" @bind-Value="@ViewModel.SelectedGenerationConfiguration" Data="@ViewModel.AvailableGenerationConfigurations">
+                            <Template>
+                                <span style="color:var(--rz-text-color)">@loc[context]</span>
+                            </Template>
+                        </RadzenDropDown>
+                        <HintComponent HintSubtitle="@($"{Resource.GenerationConfiguration}: {ViewModel.SelectedGenerationConfiguration}")" HintText="@(ViewModel.SelectedGenerationConfigurationDescription)"/>
+                        <RadzenCard>
+                            <RadzenSteps NextText="@WebsiteLoc.NextLabel" PreviousText="@WebsiteLoc.PreviousLabel" Style="margin-top:5px;">
+                                <Steps>
+                                    <RadzenStepsItem Text="@Resource.Step4p1" Style="display:block">
+                                        <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">@loc[nameof(Resource.Step4p1Explanation)]</RadzenText>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 align-self-center">
+                                                <RadzenText Text="@loc[nameof(Resource.NationalityErrorRate)]" Style="margin-bottom:0px;">
+                                                </RadzenText>
+                                            </div>
+                                            <div class="col-12 col-sm-6 align-self-center">
+                                                <RadzenNumeric class="w-100" @bind-Value="ViewModel.NationalityErrorRate" Min="0" Max="1" TValue="double" Step="0.05"></RadzenNumeric>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 align-self-center">
+                                                <RadzenText Text="@loc[nameof(Resource.NationalityMaxErrorImpact)]" Style="margin-bottom:0px;">
+                                                </RadzenText>
+                                            </div>
+                                            <div class="col-12 col-sm-6 align-self-center">
+                                                <RadzenNumeric class="w-100" @bind-Value="ViewModel.NationalityMaxImpact" Min="0" Max="1" TValue="int" Step="1"></RadzenNumeric>
+                                            </div>
+                                        </div>
+                                    </RadzenStepsItem>
+                                    <RadzenStepsItem Text="@Resource.Step4p2" Style="">
+                                        <HintComponent HintText="@Resource.Step4p2Explanation"></HintComponent>
+                                        <div class="d-block" style="height: 300px;">
+                                            <RadzenTextArea  @bind-Value="ViewModel.GenerationConfiguration" Style="min-height:200px;" Class="w-100 h-100"></RadzenTextArea>
+                                        </div>
+                                    </RadzenStepsItem>
+                                    <RadzenStepsItem Text="@Resource.Step4p3" Style="display:block;">
+                                        <RadzenDropDown TValue="int" @bind-Value="@ViewModel.RequestedThreads" Data="@SymulatorNSP.GUI.Core.ViewModels.GUSViewModel.AvailableThreadsList" Style="width:100%;">
+                                        </RadzenDropDown>
+                                        <HintComponent HintText="@WebsiteLoc.BrowserLimitOneThread"></HintComponent>
+                                    </RadzenStepsItem>
+                                </Steps>
+                            </RadzenSteps>
+                            <div class="d-flex justify-content-center">
+                                <RadzenButton Text="@Resource.Step4Finish" Click="@((a)=>this.FinishStep4())" Variant="Variant.Outlined"></RadzenButton>
+                            </div>
+                        </RadzenCard>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step5"  Disabled="@(this.StepsCompleted<4)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <EditForm Model="@ViewModel" OnValidSubmit="OnGenerateSubmitOpt">
+                            <DataAnnotationsValidator />
+                            <div class="form-group">
+                                <RadzenText>@loc[nameof(Resource.DesiredPopulationCount)]</RadzenText>
+                                <RadzenNumeric id="DesiredPopulationCount" @bind-Value="ViewModel.DesiredPopulationCount" class="form-control"></RadzenNumeric>
+                                <ValidationMessage For="(()=>ViewModel.DesiredPopulationCount)"></ValidationMessage>
+                            </div>
+                            <RadzenCard class="rz-background-color-primary-lighter p-2">
+                                <RadzenText TextStyle="TextStyle.Overline" TextAlign="TextAlign.Justify" style="font-size:medium">
+                                    @wloc[nameof(WebsiteLoc.Hint)]
+                                </RadzenText>
+                                <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">
+                                    @wloc[nameof(WebsiteLoc.RecommendedPopulationSize)]
+                                </RadzenText>
+                            </RadzenCard>
+                            <div class="row m-1">
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Text="@loc[nameof(Resource.Generate)]" Variant="Variant.Outlined" type="submit" disabled="@ViewModel.IsGenerating"></RadzenButton>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Variant="Variant.Outlined" Click="@(() => this.OnClickSavePopulation())">@loc[nameof(Resource.Save)]</RadzenButton>
+                                </div>
+                                <div class="col-sm-4 d-flex justify-content-center m-1 m-sm-0">
+                                    <RadzenButton Variant="Variant.Outlined" Click="@(async () => await this.OnClickLoadPopulationOpt())">@loc[nameof(Resource.Load)]</RadzenButton>
+                                </div>
+                            </div>
+                        </EditForm>
+                        <div class="justify-content-center" style="margin-bottom:10px">
+                            <RadzenProgressBar Value="@(progressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@progressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+                        </div>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step6"  Disabled="@(this.StepsCompleted<5)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.Settings)]</RadzenText>
+                        <div class="row">
+                            <div class="col-6">
+                                <RadzenText Style="color:var(--rz-danger); font-style:italic;">@loc[nameof(Resource.TransparencyMode)]</RadzenText>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <RadzenCheckBox TValue="bool" @bind-Value="ViewModel.TransparencyMode" MouseEnter="@(args=>{TooltipService.Open(args, Resource.TransparencyModeWaringingTooltip, new TooltipOptions(){ Delay = 0, Duration = 10000 });})"></RadzenCheckBox>
+                            </div>
+                        </div>
+                        <HintComponent HintText="@loc[Resource.TransparencyModeExplanation]"></HintComponent>
+                        <div class="d-flex justify-content-center" style="margin-top:5px;">
+                            <RadzenButton Text="@Resource.FinishStep" Click="@((a)=>this.FinishStep6())" Variant="Variant.Outlined"></RadzenButton>
+                        </div>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step7"  Disabled="@(this.StepsCompleted<6)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <div class="row">
+                            <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.Queries)]</RadzenText>
+                            <div class="col-12 col-sm-6 align-self-center">
+                                <RadzenText Style="margin-bottom:0px">@loc[nameof(Resource.DistanceCalculationMethod)]</RadzenText>
+                            </div>
+                            <div class="col-12 col-sm-6 d-flex justify-content-end">
+                                <RadzenDropDown TValue="string" @bind-Value="ViewModel.SelectedDistanceCalculator" Data="@ViewModel.AvailableDistanceCalculators" Style="width:100%;">
+                                    <Template>
+                                        <span style="color:var(--rz-text-color)">@context</span>
+                                    </Template>
+                                </RadzenDropDown>
+                            </div>
+                        </div>
+                        <HintComponent HintText="@loc[nameof(Resource.DistanceExaplanation)]" Style="margin-top:10px"/>
+                        <div class="d-flex justify-content-center" style="margin-top:5px;">
+                            <RadzenButton Text="@Resource.FinishStep" Click="@((a)=>this.FinishStep7())" Variant="Variant.Outlined"></RadzenButton>
+                        </div>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step8"  Disabled="@(this.StepsCompleted<7)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <PopulationSampleView OnStepCompleted="@OnPopulationLoggedStep8" ViewModel="@ViewModel"></PopulationSampleView>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step9"  Disabled="@(this.StepsCompleted<8)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <RadzenCard class="m-0" style="margin-top:10px">
+                            <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.QueryNationality)]</RadzenText>
+                            <Separator />
+                            <div class="row m-0">
+                                <div class="col-md-4 p-1 d-flex align-self-center">
+                                    <RadzenText TextStyle="TextStyle.Body1">@wloc[nameof(WebsiteLoc.SelectQueryAmountDescription)]</RadzenText>
+                                </div>
+                                <div class="col-md-6 p-2 p-md-1 d-block align-self-center">
+                                    <div style="">
+                                        <RadzenSlider TValue="int" @bind-Value=@ViewModel.VirtualCount Min="100000" Max="39000000" Step="100000" Style="width:100%; display:block;"></RadzenSlider>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-2 col-2 p-1 d-flex align-self-center">
+                                    <RadzenText TextStyle="TextStyle.Body1" Style="width:100%; height:100%; text-align:end;">@ViewModel.VirtualCount</RadzenText>
+                                </div>
+                            </div>
+                            <Separator LineStyle="dashed" />
+                            <RadzenText TextStyle="TextStyle.Body1" class="col-6 d-flex">
+                                @loc[nameof(Resource.QueryValue)]
+                            </RadzenText>
+                            <div class="col-12 d-flex justify-content-end">
+                                <RadzenDropDown class="form-select" @bind-Value="@ViewModel.NationalityQuery.Value" Data="@ViewModel.AvailableNationalities">
+                                    <Template>
+                                        <span style="color:var(--rz-text-color)">@loc[context]</span>
+                                    </Template>
+                                </RadzenDropDown>
+                            </div>
+                            <div class="d-flex justify-content-center p-2">
+                                <RadzenButton Text="@loc[nameof(Resource.ExecuteQuery)]" Icon="search" Variant="Variant.Outlined" type="submit" disabled="@(ViewModel.IsGenerating||ViewModel.VirtualCount<1000)" Click="@(async (o) =>{ await ExecuteNationalityQuery();})" class="btn btn-primary m-1"></RadzenButton>
+                            </div>
+                            <div style="margin-bottom:5px">
+                                <RadzenProgressBar Value="@(queryProgressValue)" Mode=ProgressBarMode.Determinate aria-valuenow="@queryProgressValue" aria-valuemin="0" aria-valuemax="100"></RadzenProgressBar>
+                            </div>
+                            <Separator LineStyle="dashed" />
+                            <QueryComponent ViewModel="@ViewModel.NationalityQuery" AvailableNationalities="@ViewModel.AvailableNationalities"></QueryComponent>
+                            <div class="d-flex justify-content-center" style="margin-top:10px">
+                                <RadzenButton Text="@loc[nameof(Resource.SendResultsToLeaderboard)]" Icon="send" Variant="Variant.Outlined" disabled="@((ViewModel.IsGenerating)||(!this.queryDoneOnce))" Click="@((o) => SendResultToLeaderboard())"></RadzenButton>
+                            </div>
+                        </RadzenCard>
+                    </RadzenStepsItem>
+                    <RadzenStepsItem Text="@Resource.Step10" Disabled="@(this.StepsCompleted<3)" Visible="@(true||this.StepsCompleted>=3)" Style="display:block">
+                        <LeaderboardSender Query="@this.ViewModel.NationalityQuery"></LeaderboardSender>
+                    </RadzenStepsItem>
+                </Steps>
+            </RadzenSteps>
+        </div>
+    </div>
+</div>
+
+@code {
+    ElementReference TransparencyModeCheckboxReference;
+    private int progressValue { get; set; }
+    private int queryProgressValue { get; set; }
+    private bool queryDoneOnce { get; set; } = false;
+    private int stepsCompleted { get; set; } = 0;
+    private int StepsCompleted 
+    {
+        get { return this.stepsCompleted; }
+        set { this.stepsCompleted = value; this.SingletonService.FurthestStepsCompletedOnGUSOnline = value; this.StateHasChanged(); }
+    }
+
+    private int selectedStep { get; set; } = 0;
+    private int SelectedStep
+    {
+        get { return this.selectedStep; }
+        set { this.selectedStep = value; this.SingletonService.LastSelectedStep = value; this.StateHasChanged(); }
+    }
+
+    IProgress<ProgressValue>? OnGenerationProgressChangedAsync { get; set; }
+    Action<ProgressValue>? OnGenerationProgressChanged { get; set; }
+    Action OnPopulationLoggedStep2 { get; set; }
+    Action OnPopulationLoggedStep8 { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        this.StepsCompleted = this.SingletonService.FurthestStepsCompletedOnGUSOnline;
+        this.SelectedStep = this.SingletonService.LastSelectedStep;
+        ViewModel.PropertyChanged += async (sender, e) =>
+        {
+            await InvokeAsync(() =>
+            {
+                StateHasChanged();
+            });
+        };
+        await base.OnInitializedAsync();
+        this.ViewModel.SelectedGenerationConfiguration = SymulatorNSP.Core.Resources.Resource.SimpleGenerationConfiguration;
+
+        this.ViewModel.OnException = new Action<Exception>((ex)=>{
+            this.DialogService.OpenAsync<SimpleModal>(Resource.Error, new Dictionary<string, object>() {{ nameof(SimpleModal.Message), ex.Message }});
+        });
+
+        this.OnPopulationLoggedStep2 = new Action(() =>
+        {
+            if (this.StepsCompleted < 2)
+            {
+                this.StepsCompleted = 2;
+            }
+        });
+
+        this.OnPopulationLoggedStep8 = new Action(() =>
+        {
+            if (this.StepsCompleted < 8)
+            {
+                this.StepsCompleted = 8;
+            }
+        });
+
+        this.OnGenerationProgressChangedAsync = new Progress<ProgressValue>(async (progress) =>
+        {
+            await Task.Run(async () =>
+            {
+                if (progress.StepReport == false)
+                {
+                    if ((progress.Current) % (0.1 * progress.End) == 0 || progress.Current == progress.End)
+                    {
+                        this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                        ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                        Console.WriteLine(progress.Current / progress.End);
+                        await InvokeAsync(StateHasChanged);
+                    }
+                }
+                else
+                {
+                    this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                    ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                    Console.WriteLine(progress.Current / progress.End);
+                    await InvokeAsync(StateHasChanged);
+                }
+            });
+        });
+
+        this.OnGenerationProgressChanged = new Action<ProgressValue>(async (progress) =>
+        {
+            await Task.Run(async () =>
+            {
+                if (progress.StepReport == false)
+                {
+                    if ((progress.Current) % (0.1 * progress.End) == 0 || progress.Current == progress.End)
+                    {
+                        this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                        ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                        Console.WriteLine(progress.Current / progress.End);
+                        await InvokeAsync(StateHasChanged);
+                    }
+                }
+                else
+                {
+                    this.progressValue = (int)(progress.Current / (progress.End - progress.Start) * 100);
+                    ViewModel.AddLogEntry(String.Format(loc[nameof(Resource.CreationProgressUpdate)], progress.Current, progress.End));
+                    Console.WriteLine(progress.Current / progress.End);
+                    await InvokeAsync(StateHasChanged);
+                }
+            });
+        });
+    }
+
+    public void Dispose()
+    {
+        ViewModel.PropertyChanged -= OnPropertyChangedHandler;
+    }
+
+    public async Task OnGenerateSubmit()
+    {
+        this.progressValue = 0;
+        //await InvokeAsync(StateHasChanged);
+        if (ViewModel.DesiredPopulationCount > 1000000)
+        {
+            ViewModel.DesiredPopulationCount = 1000000;
+            await DialogService.OpenAsync<SimpleModal>(WebsiteLoc.BrowserLimitHeader, new Dictionary<string, object>() { { nameof(SimpleModal.Message), WebsiteLoc.BrowserLimitExplanation } });
+            return;
+        }
+
+        this.ViewModel.IsGenerating = true;
+        await ViewModel.GenerateAsync(ViewModel.DesiredPopulationCount, 10000, this.OnGenerationProgressChangedAsync);
+        this.ViewModel.IsGenerating = false;
+        if (this.ViewModel.model.Population.People.Count > 0 && this.StepsCompleted < 1)
+        {
+            this.StepsCompleted = 1;
+            this.SelectedStep = 1;
+        }
+    }
+
+    public async Task OnGenerateSubmitOpt()
+    {
+        this.progressValue = 0;
+        //await InvokeAsync(StateHasChanged);
+        if (ViewModel.DesiredPopulationCount > 1000000)
+        {
+            ViewModel.DesiredPopulationCount = 1000000;
+            await DialogService.OpenAsync<SimpleModal>(WebsiteLoc.BrowserLimitHeader, new Dictionary<string, object>() { { nameof(SimpleModal.Message), WebsiteLoc.BrowserLimitExplanation } });
+            return;
+        }
+
+        this.ViewModel.IsGenerating = true;
+        await ViewModel.GenerateAsync(ViewModel.DesiredPopulationCount, 10000, this.OnGenerationProgressChangedAsync);
+        this.ViewModel.IsGenerating = false;
+        if (this.ViewModel.model.Population.People.Count > 0 && this.StepsCompleted < 5)
+        {
+            this.StepsCompleted = 5;
+            this.SelectedStep = 5;
+        }
+    }
+
+    public void OnStepChanged(int step)
+    {
+        this.SelectedStep = step;
+    }
+
+    public void OnClickClearLogs()
+    {
+        this.ViewModel.ClearLogs();
+    }
+
+    public async Task ExecuteNationalityQuery()
+    {
+        var fittingResults = new List<FittingResult>();
+        this.ViewModel.IsGenerating = true;
+        this.queryProgressValue = 0;
+        ViewModel.NationalityQuery.Result = (await ViewModel.VirtualCountingNationality(ViewModel.NationalityQuery.Value.ToLower(), ViewModel.VirtualCount, new Action<int>(
+            async (current) =>
+            {
+                this.queryProgressValue = Convert.ToInt32((1 - (Convert.ToDouble(current) / Convert.ToDouble(this.ViewModel.VirtualCount))) * 100);
+                Console.WriteLine(current + " out of " + this.ViewModel.VirtualCount);
+                await InvokeAsync(StateHasChanged);
+            }
+        ), this.ViewModel.TransparencyMode ? new Action<FittingResult>((fr) =>
+        {
+            if(fittingResults.Count<100) fittingResults.Add(fr);
+        }):null)).ToString() + " | " + ViewModel.VirtualCount;
+        this.queryProgressValue = 100;
+        this.queryDoneOnce = true;
+        this.ViewModel.IsGenerating = false;
+        if(this.ViewModel.TransparencyMode == true)
+        {
+            await this.DialogService.OpenAsync<FittingResultsComponent>(Resource.TransparencyMode, new Dictionary<string, object>(){{nameof(FittingResultsComponent.FittingResults),fittingResults}});
+        }
+        if(this.StepsCompleted < 3)
+        {
+            this.StepsCompleted = 3;
+        }
+    }
+
+    public void SendResultToLeaderboard()
+    {
+        this.SelectedStep = 9;
+    }
+
+    private void OnClickSavePopulation()
+    {
+        DialogService.OpenAsync<SavePopulationComponent>(loc[nameof(Resource.Save)]);
+    }
+
+    private async Task OnClickLoadPopulation()
+    {
+        var result = await DialogService.OpenAsync<LoadPopulationComponent>(loc[nameof(Resource.Load)]);
+        if(this.ViewModel.model.Population.People.Count > 0 && this.StepsCompleted <1 && result == true)
+        {
+            this.StepsCompleted = 1;
+            this.SelectedStep = 2;
+        }
+    }
+
+    
+    private async Task OnClickLoadPopulationOpt()
+    {
+        var result = await DialogService.OpenAsync<LoadPopulationComponent>(loc[nameof(Resource.Load)]);
+        if(this.ViewModel.model.Population.People.Count > 0 && this.StepsCompleted < 5 && result == true)
+        {
+            this.StepsCompleted = 5;
+            this.SelectedStep = 5;
+        }
+    }
+
+    private void FinishStep4()
+    {
+        if(this.stepsCompleted <4)
+        {
+            this.StepsCompleted= 4;
+            this.SelectedStep = 4;
+        }
+    }
+
+    private void FinishStep6()
+    {
+        if (this.stepsCompleted < 6)
+        {
+            this.StepsCompleted = 6;
+            this.SelectedStep = 6;
+        }
+    }
+
+    private void FinishStep7()
+    {
+        if (this.stepsCompleted < 7)
+        {
+            this.StepsCompleted = 7;
+            this.SelectedStep = 7;
+        }
+    }
+
+    //public void ExecuteEthnicityQuery()
+    //{
+    //    ViewModel.ExecuteQueryEthnicityCount();
+    //}
+
+    //public void ExecuteNationalityOrEthnicityQuery()
+    //{
+    //    ViewModel.ExecuteQueryNationalityOrEthnicityCount();
+    //}
+}

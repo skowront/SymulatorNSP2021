@@ -1,0 +1,23 @@
+﻿<RadzenCard class="rz-background-color-primary-lighter p-2" Style="@Style">
+    <RadzenText TextStyle="TextStyle.Overline" TextAlign="TextAlign.Justify" style="font-size:medium">@HintTitle</RadzenText>
+    
+@if(HintSubtitle!=string.Empty && HintSubtitle!=null)
+{
+    <RadzenText TextAlign="TextAlign.Justify">
+        @HintSubtitle
+    </RadzenText>  
+}
+    <RadzenText TextAlign="TextAlign.Justify" style="font-style:italic;">
+        @HintText
+    </RadzenText>
+</RadzenCard>
+@code {
+    [Parameter]
+    public string HintTitle { get; set; } = WebsiteLoc.Hint;    
+    [Parameter]
+    public string HintSubtitle { get; set; } = string.Empty;
+    [Parameter]
+    public string HintText { get; set; } = string.Empty;
+    [Parameter]
+    public string Style { get; set; } = string.Empty;
+}

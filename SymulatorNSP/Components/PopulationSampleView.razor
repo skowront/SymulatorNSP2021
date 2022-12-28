@@ -1,0 +1,60 @@
+﻿@inject IStringLocalizer<Resource> loc
+@inject DialogService DialogService
+
+<div class="row">
+    <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.LogPopulationSample)]</RadzenText>
+    <div>
+        <RadzenText>@loc[nameof(Resource.ChooseRandom)]</RadzenText>
+    </div>
+    <div hidden ="@(this.PersonModel == null)">
+        <PersonComponent Model="@PersonModel"></PersonComponent>
+    </div>
+    <div class="d-flex justify-content-center" style="margin-top:5px">
+        <RadzenButton Click="@(()=>{ChooseRandom();})" Variant="Variant.Outlined">@loc[nameof(Resource.ExecuteQuery)]</RadzenButton>
+    </div>
+@*    <div>
+        <RadzenText TextStyle="TextStyle.H5">@loc[nameof(Resource.Or)]</RadzenText>
+    </div>
+    <div class="col-6 align-self-center">
+        <RadzenText Style="margin-bottom:0px">@loc[nameof(Resource.NumberOfRecords)]</RadzenText>
+    </div>
+    <div class="col-6 d-flex justify-content-end">
+        <RadzenNumeric class="form-control" @bind-Value="ViewModel.PopulationSampleLogCount"></RadzenNumeric>
+    </div>
+    <div class="d-block justify-content-end">
+        <RadzenButton Click="@(()=>{ShowSample();})" Variant="Variant.Outlined">@loc[nameof(Resource.ExecuteQuery)]</RadzenButton>
+    </div>*@
+</div>
+
+
+@code {
+    [Parameter]
+    public GUSViewModel ViewModel
+    {
+        get; set;
+    } = new GUSViewModel();
+
+    [Parameter]
+    public Action OnStepCompleted { get; set; }
+
+    private Person PersonModel { get; set; }
+
+    public void ShowSample()
+    {
+        this.ViewModel.LogPopulationSample();
+    }
+
+    public void ChooseRandom()
+    {
+        var p = this.ViewModel.GetRandomPerson();
+        if(p==null)
+        {
+            DialogService.OpenAsync<SimpleModal>(Resource.Error, new Dictionary<string, object>() { { nameof(SimpleModal.Message), Resource.GeneratePopulationFirst } });
+            return;
+        }
+
+        this.OnStepCompleted?.Invoke();
+        this.PersonModel = p;
+        this.StateHasChanged();
+    }
+}

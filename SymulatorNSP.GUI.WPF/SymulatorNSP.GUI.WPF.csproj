@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <PackageProjectUrl>https://github.com/skowront/SymulatorNSP</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/skowront/SymulatorNSP</RepositoryUrl>
+    <Copyright> Copyright (c) Tomasz Skowron 2022</Copyright>
+    <SignAssembly>False</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FamFamFam.Flags.Wpf" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SymulatorNSP.Client.Shared\SymulatorNSP.Client.Shared.csproj" />
+    <ProjectReference Include="..\SymulatorNSP.GUI.Core\SymulatorNSP.GUI.Core.csproj" />
+    <ProjectReference Include="..\WPFLocalizeextension\WPFLocalizeextension.csproj" />
+  </ItemGroup>
+
+</Project>
