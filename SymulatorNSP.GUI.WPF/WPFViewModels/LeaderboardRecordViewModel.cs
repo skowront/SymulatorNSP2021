@@ -21,6 +21,8 @@ namespace SymulatorNSP.GUI.WPF.WPFViewModels
     {
         public RelayCommand CancelCommand { get; set; } = new RelayCommand((_) => { });
         public RelayCommand ShareCommand { get; set; } = new RelayCommand((_) => { });
+        public RelayCommand OpenLeaderboardCommand { get; set; }
+
 
         public Action<string, string> MessageCallback = new Action<string, string>((t, m) => { });
 
@@ -94,6 +96,13 @@ namespace SymulatorNSP.GUI.WPF.WPFViewModels
                 }
 
             });
+
+            this.OpenLeaderboardCommand = new RelayCommand((o) =>
+            {
+                string url = "http://symulatornsp2021.regios.org.pl//leaderboard";
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+            });
+
         }
     }
 }
