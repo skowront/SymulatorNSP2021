@@ -117,4 +117,67 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>Ò projekce</value>
+  </data>
+  <data name="ApplicationContact" xml:space="preserve">
+    <value>Ùtwórca aplikacëji: tomasz.skowron@regios.org.pl</value>
+  </data>
+  <data name="BrowserLimitHeader" xml:space="preserve">
+    <value>Limit przezérnika òstôł òsygniãti</value>
+  </data>
+  <data name="CheckOutMoreHeader" xml:space="preserve">
+    <value>Pamiãtôj że to je blós przezérnik!</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamkni</value>
+  </data>
+  <data name="ContactLabel" xml:space="preserve">
+    <value>Kòntakt</value>
+  </data>
+  <data name="GDPRContact" xml:space="preserve">
+    <value>GDPR: rodo@regios.org.pl</value>
+  </data>
+  <data name="GithubREPOLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021</value>
+  </data>
+  <data name="GUSForPCLabel" xml:space="preserve">
+    <value>Symùlatór NSP na Windows</value>
+  </data>
+  <data name="GUSOnlineLabel" xml:space="preserve">
+    <value>Symùlatór NSP Online (fùl wersëjô)</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Wskôza</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jãzëk</value>
+  </data>
+  <data name="LeaderboardLabel" xml:space="preserve">
+    <value>Tabela rezultatów</value>
+  </data>
+  <data name="MediaContact" xml:space="preserve">
+    <value>Media: biuro@regios.org.pl</value>
+  </data>
+  <data name="NextLabel" xml:space="preserve">
+    <value>Nôstãpny</value>
+  </data>
+  <data name="OtherContact" xml:space="preserve">
+    <value>Jinszé: biuro@regios.org.pl</value>
+  </data>
+  <data name="PreviousLabel" xml:space="preserve">
+    <value>Pòprzédny</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Òdswieżë</value>
+  </data>
+  <data name="TryAgainLater" xml:space="preserve">
+    <value>Spróbùj znôù pózni</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>Symùlatór NSP 2021</value>
+  </data>
+  <data name="WelcomeHeader" xml:space="preserve">
+    <value>Witómë na stronie Symùlatora NSP 2021!</value>
+  </data>
 </root>

@@ -423,6 +423,15 @@ namespace SymulatorNSP.Shared.WebsiteLocResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Translations.
+        /// </summary>
+        internal static string Translations {
+            get {
+                return ResourceManager.GetString("Translations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Try again later....
         /// </summary>
         internal static string TryAgainLater {

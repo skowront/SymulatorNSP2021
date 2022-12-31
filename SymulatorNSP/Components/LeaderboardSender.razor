@@ -29,7 +29,7 @@
                 <RadzenText Text="@loc[nameof(SymulatorNSP.GUI.Core.Resources.Resource.RecordKey)]" Style="margin-bottom:0px;"></RadzenText>
             </div>
             <div class="col-6 align-self-center">
-                <RadzenTextBox class="w-100" @bind-Value="this.Key"></RadzenTextBox>
+                <RadzenPassword class="w-100" @bind-Value="this.Key"></RadzenPassword>
             </div>
 
             <div class="d-block justify-content-center" style="margin:10px 0 0 0">
@@ -127,12 +127,12 @@
 
     public LeaderboardSender()
     {
-        
+        this.Query ??= new QueryViewModel();
     }
 
     public LeaderboardSender(QueryViewModel query)
     {
-        this.Query = query;
+        this.Query = query ?? new QueryViewModel();
     }
 
     public LeaderboardRecordViewModel ViewModel { get; set; } = new LeaderboardRecordViewModel();
@@ -141,53 +141,63 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if (Query == null) this.Close();
+        await base.OnInitializedAsync();
+        if (this.Query == null)
+        {
+            this.Close();
+        }
 
         this.ViewModel.Source = Resource.Browser;
-        this.ViewModel.QueryCount = this.Query.QueriedRecordsCount;
-        this.ViewModel.StartTime = this.Query.StartTime;
-        this.ViewModel.EndTime = this.Query.EndTime;
+        this.ViewModel.QueryCount = this.Query?.QueriedRecordsCount ?? 0;
+        this.ViewModel.StartTime = this.Query?.StartTime ?? DateTime.Now;
+        this.ViewModel.EndTime = this.Query?.EndTime ?? DateTime.Now;
         this.ViewModel.Factor = GUS.CalculateTimesFasterFactor((this.ViewModel.EndTime - this.ViewModel.StartTime), this.ViewModel.QueryCount) ?? 0;
 
-        await base.OnInitializedAsync();
         return;
     }
 
     private async Task Submit()
     {
-        if (this.Key == string.Empty || this.Key == null)
-        {
-            await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultKeyEmptyExplanation } });
-            return;
-        }
-        if(this.ViewModel.QueryCount < 1000000)
-        {
-            await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
-            return;
-        }
-
-        var result = await this.LeaderboardService.AddEntry(new Tuple<LeaderboardRecord, string>(this.ViewModel.Model, this.Key));
-        switch (result)
-        {
-            case LeaderboardRecord.eChangeResult.Success:
-                this.NavigationManager.NavigateTo("/Leaderboard");
-                NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Success, Summary = SymulatorNSP.Core.Resources.Resource.eChangeResultSuccessExplanation, Duration = 3000});
-                break;
-            case LeaderboardRecord.eChangeResult.WorseFactor:
-                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWorseFactorExplanation } });
-                break;
-            case LeaderboardRecord.eChangeResult.TooFewRecords:
-                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
-                break;
-            case LeaderboardRecord.eChangeResult.KeyEmpty:
+        //try
+        //{
+            if (this.Key == string.Empty || this.Key == null)
+            {
                 await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultKeyEmptyExplanation } });
-                break;
-            case LeaderboardRecord.eChangeResult.WrongKey:
-                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWrongKeyExplanation } });
-                break;
-            default:
-                NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Error, Summary = "??", Duration = 3000 });
-                break;
-        }
+                return;
+            }
+            if (this.ViewModel.QueryCount < 1000000)
+            {
+                await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
+                return;
+            }
+
+            var result = await this.LeaderboardService.AddEntry(new LeaderboardRecordContract() { Record = this.ViewModel.Model, Key = this.Key });
+            switch (result)
+            {
+                case LeaderboardRecord.eChangeResult.Success:
+                    this.NavigationManager.NavigateTo("/Leaderboard",false);
+                    NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Success, Summary = SymulatorNSP.Core.Resources.Resource.eChangeResultSuccessExplanation, Duration = 3000 });
+                    break;
+                case LeaderboardRecord.eChangeResult.WorseFactor:
+                    await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWorseFactorExplanation } });
+                    break;
+                case LeaderboardRecord.eChangeResult.TooFewRecords:
+                    await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultTooFewRecordsExplanation } });
+                    break;
+                case LeaderboardRecord.eChangeResult.KeyEmpty:
+                    await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultKeyEmptyExplanation } });
+                    break;
+                case LeaderboardRecord.eChangeResult.WrongKey:
+                    await DialogService.OpenAsync<SimpleModal>(loc[nameof(Resource.Error)], new Dictionary<string, object>() { { nameof(SimpleModal.Message), SymulatorNSP.Core.Resources.Resource.eChangeResultWrongKeyExplanation } });
+                    break;
+                default:
+                    NotificationService.Notify(new NotificationMessage() { Severity = NotificationSeverity.Error, Summary = "??", Duration = 3000 });
+                    break;
+            }
+        //}
+        //catch(Exception ex)
+        //{
+        //    Console.WriteLine(ex.Message);
+        //}
     }
 }

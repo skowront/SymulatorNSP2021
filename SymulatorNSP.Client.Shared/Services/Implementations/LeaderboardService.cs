@@ -43,9 +43,14 @@ namespace SymulatorNSP.Client.Shared.Services.Implementations
             this.PagingHelper = new PagingHelper(new PagingInfo() { PageSize = 3, RecordsCount = this.Leaderboard.Count });
         }
 
-        public async Task<eChangeResult> AddEntry(Tuple<LeaderboardRecord, string> recordKey)
+        public async Task<eChangeResult> AddEntry(LeaderboardRecordContract record)
         {
-            var result = await this.httpClient.PostAsJsonAsync((await configService.GetRemoteAddresss()) + "/Leaderboard" , recordKey);
+            var baseAddress = (await configService.GetRemoteAddresss());
+            Console.Write(baseAddress);
+
+            var result = await this.httpClient.PostAsJsonAsync(baseAddress + "/Leaderboard" , record);
+            if(result == null) Console.WriteLine("result null");
+            
             if(result.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 return await result.Content.ReadFromJsonAsync<eChangeResult>();

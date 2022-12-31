@@ -10,7 +10,7 @@
     </div>
 </div>*@
 
-<div class="@NavMenuCssClass" style="background:var(--rz-base-900); width:auto; height:100%; display:block; white-space:nowrap;" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass" style="background:var(--rz-base-900); width:auto; height:100%; display:block; white-space:nowrap;display: flex;flex-flow: column;" @onclick="ToggleNavMenu">
     <nav>
         <div class="nav-item" style="display:block">
             <NavLink class="nav-link rz-color-white" href="" Match="NavLinkMatch.All" style="border-radius:0" ActiveClass="nav-active">
@@ -44,6 +44,9 @@
         </div>
         <LanguageSelector></LanguageSelector>
     </nav>
+    <div style="flex: 1 1 auto; justify-content:flex-end; display: flex; flex-direction:column;">
+        <RadzenImage Path="/images/regios/REGIOS-logo.png" Style="width:200px; height:200px; margin-left:auto; margin-right:auto; display:flex; opacity:0.5; margin-top:auto; margin-bottom:0px;"></RadzenImage>
+    </div>
 </div>
 
 @code {

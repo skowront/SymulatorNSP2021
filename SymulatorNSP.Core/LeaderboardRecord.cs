@@ -7,8 +7,8 @@ namespace SymulatorNSP.Core
     {
         public string Nickname { get; set; } = string.Empty;
         public int QueryCount { get; set; } = -1;
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime StartTime { get; set; } = DateTime.Now;
+        public DateTime EndTime { get; set; } = DateTime.Now;
         public DateTime Timestamp { get; set; } = DateTime.Now;
         public double Factor { get; set; } = 0;
         public int Threads { get; set; } = 1;

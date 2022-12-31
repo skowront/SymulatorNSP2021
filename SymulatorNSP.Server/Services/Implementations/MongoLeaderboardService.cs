@@ -25,10 +25,10 @@ namespace SymulatorNSP.Server.Services.Implementations
             LeaderboardCollection =  mongoDatabase.GetCollection<MongoLeaderboardRecord>(settings.Value.LeaderboardCollectionName);
         }
          
-        public async Task<LeaderboardRecord.eChangeResult> AddEntry(Tuple<LeaderboardRecord, string> recordKey)
+        public async Task<LeaderboardRecord.eChangeResult> AddEntry(LeaderboardRecordContract contract)
         {
-            var record = recordKey.Item1;
-            var Key = recordKey.Item2;
+            var record = contract.Record;
+            var Key = contract.Key;
             if (Key == null || Key == string.Empty)
                 return eChangeResult.KeyEmpty;
             record.Timestamp = DateTime.Now;

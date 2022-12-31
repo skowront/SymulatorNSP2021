@@ -66,7 +66,7 @@ namespace SymulatorNSP.GUI.WPF.WPFViewModels
                     var httpClient = new HttpClient();
                     var leaderboardService = new LeaderboardService(httpClient, new ConfigService(proxyHttpClient));
 
-                    var result = await leaderboardService.AddEntry(new Tuple<LeaderboardRecord, string>(this.Model, this.Key));
+                    var result = await leaderboardService.AddEntry(new LeaderboardRecordContract() { Record = this.Model, Key = this.Key });
                     switch (result)
                     {
                         case LeaderboardRecord.eChangeResult.Success:

@@ -239,6 +239,9 @@ On this website you can check how much faster your browser is than whole GUS off
   <data name="ThisCanTakeAWhileExplanation" xml:space="preserve">
     <value>Querying 38 mln records with a browser can take several minutes. The same can be done in seconds if you will use our NSP Simulator for Windows PC. Remember to check it out later.</value>
   </data>
+  <data name="Translations" xml:space="preserve">
+    <value>Translations</value>
+  </data>
   <data name="TryAgainLater" xml:space="preserve">
     <value>Try again later...</value>
   </data>

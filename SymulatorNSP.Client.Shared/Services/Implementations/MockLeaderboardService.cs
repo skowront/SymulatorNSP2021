@@ -45,12 +45,12 @@ namespace SymulatorNSP.Client.Shared.Services.Implementations
             this.PagingHelper = new PagingHelper(new PagingInfo() { PageSize = 10, RecordsCount = this.Storage.Count });
         }
 
-        public async Task<eChangeResult> AddEntry(Tuple<LeaderboardRecord, string> recordKey)
+        public async Task<eChangeResult> AddEntry(LeaderboardRecordContract contract)
         {
             try
             {
-                var record = recordKey.Item1;
-                var Key = recordKey.Item2;
+                var record = contract.Record;
+                var Key = contract.Key;
                 if (Key == null || Key == string.Empty)
                     return eChangeResult.KeyEmpty;
                 record.Factor = GUS.CalculateTimesFasterFactor(record.ExecutionTime(), record.QueryCount) ?? 0;

@@ -79,7 +79,7 @@ namespace SymulatorNSP.Shared.WindowsTutorialResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to [url].
+        ///   Looks up a localized string similar to https://github.com/skowront/SymulatorNSP2021/releases/tag/major.
         /// </summary>
         public static string Step1DownloadLink {
             get {

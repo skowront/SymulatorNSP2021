@@ -47,9 +47,9 @@ namespace SymulatorNSP.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddRecord(Tuple<LeaderboardRecord,string> recordKey)
+        public async Task<IActionResult> AddRecord(LeaderboardRecordContract record)
         {
-            return Ok(await this.leaderboardService.AddEntry(recordKey));
+            return Ok(await this.leaderboardService.AddEntry(record));
         }
     }
 }

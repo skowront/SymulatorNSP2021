@@ -124,7 +124,7 @@
     <value>Download latest version of Simulator NSP for Windows from</value>
   </data>
   <data name="Step1DownloadLink" xml:space="preserve">
-    <value>[url]</value>
+    <value>https://github.com/skowront/SymulatorNSP2021/releases/tag/major</value>
   </data>
   <data name="Step2" xml:space="preserve">
     <value>Unzip</value>

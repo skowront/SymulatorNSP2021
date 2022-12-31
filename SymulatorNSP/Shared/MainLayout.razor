@@ -7,13 +7,14 @@
 <RadzenNotification></RadzenNotification>
 <RadzenTooltip></RadzenTooltip>
 
-<div class="row">
-    <div class="col-lg-12">
-        <RadzenLayout class="rz-shadow-3">
+<div class="row m-0 p-0">
+    <div class="col-lg-12 m-0 p-0">
+        <RadzenLayout class="rz-shadow-3" Style="background-color:transparent">
             <RadzenHeader>
-                <div class="row">
+                <div>
                     <div class="d-flex align-items-center">
                         <RadzenSidebarToggle Click="@(() => sidebar1Expanded = !sidebar1Expanded)" />
+                        <RadzenImage Path="/images/regios/REGIOS-logo.png" Style="width:40px"></RadzenImage>
                         <RadzenLabel Text="@wloc[nameof(WebsiteLoc.WebsiteTitle)]" />
                         <LanguageSelectorMenu Style="margin-left:auto; margin-right:25px;"></LanguageSelectorMenu>
                     </div>
@@ -22,7 +23,7 @@
             <div hidden="@sidebar1Expanded">
                 <NavMenu></NavMenu>
             </div>
-            <RadzenBody Style="background:var(--rz-base-700)">
+            <RadzenBody Style="background-color:var(--rz-base-900) ">
                 @Body
             </RadzenBody>
             @*    <main>
@@ -31,41 +32,65 @@
             @Body
             </article>
             </main>*@
-            <RadzenFooter>
-                <div class="row opacity-75">
-                    <div class="col-md-4 text-center align-self-center">
-                        <RadzenText Text="@rloc[nameof(Resource.GDPRAdminTitle)]" Style="display:block; height:100%;"></RadzenText>
-                        <RadzenText Style="display:block; height:100%;">
-                            <a href="https://www.regios.org.pl" style="text-decoration:none; color:var(--rz-primary)">@rloc[nameof(Resource.GDPRAdmin)]</a>
-                        </RadzenText>
-                    </div>
-                    <div class="col-md-4 align-self-center text-center">
-                        <RadzenText>
-                            © 2022 Copyright:
-                        </RadzenText>
-                        <a href="https://www.github.com/skowront" style="text-decoration:none">
-                            <RadzenText Style="color:var(--rz-primary)">Tomasz Skowron</RadzenText>
-                        </a>
-                    </div>
-                    <div class="col-md-4 text-center align-self-center">
-                        <a href="https://regios.org.pl/index.php/rodo/" style="text-decoration:none">
-                            <RadzenText Text="@rloc[nameof(Resource.GDRPLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
-                        </a>
-                        <a href="https://regios.org.pl/index.php/polityka-prywatnosci/" style="text-decoration:none">
-                            <RadzenText Text="@rloc[nameof(Resource.GDPRPrivacyPolicyLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
-                        </a>
-                    </div>
-                </div>
-            </RadzenFooter>
+            
         </RadzenLayout>
+       
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="page-footer font-small blue">
+@*<RadzenFooter>
+    <div class="row opacity-75">
+        <div class="col-md-4 text-center align-self-center">
+            <RadzenText Text="@rloc[nameof(Resource.GDPRAdminTitle)]" Style="display:block; height:100%;"></RadzenText>
+            <RadzenText Style="display:block; height:100%;">
+                <a href="https://www.regios.org.pl" style="text-decoration:none; color:var(--rz-primary)">@rloc[nameof(Resource.GDPRAdmin)]</a>
+            </RadzenText>
+        </div>
+        <div class="col-md-4 align-self-center text-center">
+            <RadzenText>
+                © 2022 Copyright:
+            </RadzenText>
+            <a href="https://www.github.com/skowront" style="text-decoration:none">
+                <RadzenText Style="color:var(--rz-primary)">Tomasz Skowron</RadzenText>
+            </a>
+        </div>
+        <div class="col-md-4 text-center align-self-center">
+            <a href="https://regios.org.pl/index.php/rodo/" style="text-decoration:none">
+                <RadzenText Text="@rloc[nameof(Resource.GDRPLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+            </a>
+            <a href="https://regios.org.pl/index.php/polityka-prywatnosci/" style="text-decoration:none">
+                <RadzenText Text="@rloc[nameof(Resource.GDPRPrivacyPolicyLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+            </a>
+        </div>
+    </div>
+</RadzenFooter>*@
 
-    <!-- Copyright -->
-    <!-- Copyright -->
+<!-- Footer -->
+<footer class="page-footer" style="background-color:var(--rz-base-800)">
+    <div class="row p-1 opacity-100 m-0" >
+        <div class="col-md-4 text-center align-self-center">
+            <RadzenText Text="@rloc[nameof(Resource.GDPRAdminTitle)]" Style="display:block; height:100%;"></RadzenText>
+            <RadzenText Style="display:block; height:100%;">
+                <a href="https://www.regios.org.pl" style="text-decoration:none; color:var(--rz-primary)">@rloc[nameof(Resource.GDPRAdmin)]</a>
+            </RadzenText>
+        </div>
+        <div class="col-md-4 align-self-center text-center">
+            <RadzenText>
+                © 2022 Copyright:
+            </RadzenText>
+            <a href="https://www.github.com/skowront" style="text-decoration:none">
+                <RadzenText Style="color:var(--rz-primary)">Tomasz Skowron</RadzenText>
+            </a>
+        </div>
+        <div class="col-md-4 text-center align-self-center">
+            <a href="https://regios.org.pl/index.php/rodo/" style="text-decoration:none">
+                <RadzenText Text="@rloc[nameof(Resource.GDRPLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+            </a>
+            <a href="https://regios.org.pl/index.php/polityka-prywatnosci/" style="text-decoration:none">
+                <RadzenText Text="@rloc[nameof(Resource.GDPRPrivacyPolicyLabel)]" Style="display:block; height:100%; color:var(--rz-primary)"></RadzenText>
+            </a>
+        </div>
+    </div>
 
 </footer>
 <!-- Footer -->
