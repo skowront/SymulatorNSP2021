@@ -136,7 +136,7 @@
     <value>Kòntakt</value>
   </data>
   <data name="GDPRContact" xml:space="preserve">
-    <value>GDPR: rodo@regios.org.pl</value>
+    <value>RODO: rodo@regios.org.pl</value>
   </data>
   <data name="GithubREPOLink" xml:space="preserve">
     <value>https://github.com/skowront/SymulatorNSP2021</value>
@@ -179,5 +179,56 @@
   </data>
   <data name="WelcomeHeader" xml:space="preserve">
     <value>Witómë na stronie Symùlatora NSP 2021!</value>
+  </data>
+  <data name="AboutContent" xml:space="preserve">
+    <value>Projekt òstôł zaczãti z ùdbë zrzeszeniégò REGIOS, żebë pòkazac nieefektiwnosc Głównégò Statisticznégò Ùrzãdu (GUS) w Pòlsce. Procëmno do GUSu më wierzimë we fùl przezérnotã ë dzelimë sã zdrzódłowim kòdã aplikacëji w składowiszczu Github </value>
+  </data>
+  <data name="BackgroundDescription" xml:space="preserve">
+    <value>W 2021 w Pòlsce Główny Statisticzny Ùrząd (GUS) przeprowadzył Nôrodny Pòwszedny Spisënk. Leno òni nie ògłoszëlë niżódnëch rezultatów ò etniczny ë nôrodnoscowi sztrukturze  przez pònad rok òd kóńca spisënkù. Je wôrt nadczidnąc, że përznã niecałownëch jinformacëjów òstało òpùblikòwonëch w czwiôrtim kwartale 2022, jaczé òstałë wëkòrzëstóné abë ùtworzëc tą aplikacëjã. Nó ti stronie të mòżesz sprôwdzëc na wiele twój kómpùter je  chùtszi òd cawnégò bióra GUS, co nie sfórtowało z analizą rezultatów przeszło rok!</value>
+  </data>
+  <data name="BackgroundHeader" xml:space="preserve">
+    <value>Wprowadzenié</value>
+  </data>
+  <data name="BrowserLimitExplanation" xml:space="preserve">
+    <value>Niestetë wersëjô na przezérnik wspierô do 1.000.000 wëgenerowanëch pòdôwków. Pózny të mòżesz wëbrac jich wicy, le w wersëji na przezérnik analiza mdze ùżiwac tëch samëch pòdôwków, blós zwielonëch. Wersëjô symùlatóra na kòmpùtrë PC (z WIndows) ni mô taczégò ògrańczeniégò, më rôczimë sã z nią  zapòznac.</value>
+  </data>
+  <data name="BrowserLimitOneThread" xml:space="preserve">
+    <value>Niestetë w tim sztóce przezérnikòwô aplikacëjô wspierô maksymalno 1 wątk. Jeżlë të chcesz przetestowac swój kómpùter ùżiwającë wielowątkòwosc procesora, zapòznôj są z wersëją Symùlatóra NSP dlô kòmpùtrów PC (z Windows).</value>
+  </data>
+  <data name="CheckOutMoreValue" xml:space="preserve">
+    <value>Czej më testowalë wersëjô symùlatóra na kòmpùtrë PC (z Windowsa), më dalë radã przeanalizowac 38 milëjónów pëtaniów w mni jak 5 sekùndów! Zachãcómë  do pòznaniégò  fùl wersëji Symùlatóra NSP dlô przezérników a Symùlatóra NSP dlô kòpùterów (z Windows) dze të mòżesz skònfigùrowac spòsób generowaniégò pòdôwków, zbadérowac wëdatnosc algòritmów co ùżiwają edicëjné dôle (Levensteina ë Hamminga) do klasyfikòwaniégò pòdôwków z felama do dostãpnëch òptacëjów.</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Przédnô strona</value>
+  </data>
+  <data name="QueryAmountRemark" xml:space="preserve">
+    <value>Start small, go big! Pamiãtôj, że przezérnikòwé aplikacëje są pòmalszé òd sztandardowëch programów, jaczé të jinstalujesz na kòmpùterze. Zapòznôj sã z wersëją Symùlatóra NSP dlô kòmpùterów PC (z Windows) ë òbaczë prôwdzéwą òbrachùnkòwą mòc dzysdniowëch maszinów. Le równo w przézernikù, jak ë w aplikacëji dlô Windows twój kómpùter ë tak òstawi GUS slôdë.</value>
+  </data>
+  <data name="RecommendedPopulationSize" xml:space="preserve">
+    <value>Dlô przezérników radzymë wëgenerowac conômni 10000 pòdôwków.</value>
+  </data>
+  <data name="SelectQueryAmountDescription" xml:space="preserve">
+    <value>Wëbierzë lëczbã pòdôwków do przefiltrowaniégò</value>
+  </data>
+  <data name="ServerUnavailable" xml:space="preserve">
+    <value>Serwer je niedostãpny</value>
+  </data>
+  <data name="SubmitYourResults" xml:space="preserve">
+    <value>Pòslë do tabelë rezultatów</value>
+  </data>
+  <data name="ThisCanTakeAWhile" xml:space="preserve">
+    <value>To mòże sztót zajic</value>
+  </data>
+  <data name="ThisCanTakeAWhileExplanation" xml:space="preserve">
+    <value>Òdpëtanié 38 milëjónów pòdôwków w przezérnikù zôjmie czile minutów. To  samò mòżna òsygnąc w czile sekùndów z aplikacëją Symùlatóra NSP dlô kòmpùterów PC (z Windows), nie zabôczë sã z nią zapòznac.</value>
+  </data>
+  <data name="UnhandledErrorMessage" xml:space="preserve">
+    <value>Wëbôczë le pòjawiła sã fela. Proszã zladuj znowa stronã... </value>
+  </data>
+  <data name="WelcomeSubHeader" xml:space="preserve">
+    <value>Tuwò të mòżesz sprôwdzëc na wiele twój kómpùter je chùtszi òd Głównégò Statisticznégò Urzãdu (GUS)</value>
+  </data>
+  <data name="Translations" xml:space="preserve">
+    <value>`</value>
   </data>
 </root>

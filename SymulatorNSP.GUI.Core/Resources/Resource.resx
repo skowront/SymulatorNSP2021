@@ -166,7 +166,7 @@
     <value>Select difference calculation method</value>
   </data>
   <data name="DistanceExaplanation" xml:space="preserve">
-    <value>Some people might have an error in their entries. For example misspelling in nationality like "german" they might have an entry "g3rman". Here you can select an algorithm that will tolerate errors (up to a few characters changed). Select "-" if you want to see only exact matches in the query matching process and disable any tolerance to errors. By searching "unrecognized" in filter field for a specific query you can check how many entries had too big differences from options defined in generator configuration and would need to be manually classified to a group. Try doing the queries with and without Editing Distance calculation algorithms and see what you will get. This is just a simple example of what we can achieve with modern computing power and algorithms. In real life scenarios it is not a problem to automatically sort, bucket and minimize the amount of outliers for manual classifications. If you want to learn more check out unsupervised machine learning algorithms.</value>
+    <value>Some people might have an error in their entries. For example misspelling in nationality like "german" they might have an entry "g3rman". Here you can select an algorithm that will tolerate errors (up to a few characters changed). Select "-" if you want to see only exact matches in the query matching process and disable any tolerance to errors. By searching "unrecognized" in filter field for a specific query you can check how many entries had too big differences from options defined in generator configuration and would need to be manually classified to a group. Try doing the queries with and without Editing Distance calculation algorithms and see what you will get. This is just a simple example of what we can achieve with modern computing power and algorithms. In real life scenarios it is not a problem to automatically sort, bucket and minimize the amount of outliers for manual classifications. If you want to learn more check out unsupervised machine learning algorithms and fuzzy string matching.</value>
   </data>
   <data name="EditingDistance" xml:space="preserve">
     <value>Editing distance</value>
@@ -223,7 +223,7 @@
     <value>Generation Configuration</value>
   </data>
   <data name="GenerationConfigurationDescription" xml:space="preserve">
-    <value>Depending on the records that are randomly generated you will get various query execution times. Each record has a few properties (eg. Name, Surname, Nationality...) and each property value (eg. Smith or De-La-Rosa-Ramirez) length will also impact the execution times. You can change the list of property values that will be available to the generator and probability with which they will be chosen.  Configurations also contain some properties that simulate (real-life scenario) misspelings in Nationality property values for the generated population. Feel free to change these preset values and edit the configuration in next steps.</value>
+    <value>Depending on the records that are randomly generated you will get various query execution times. Each record has a few properties (eg. Name, Surname, Nationality...) and each property value (eg. Smith or De-La-Rosa-Ramirez) length will also impact the execution times. You can change the list of property values that will be available to the generator and probability with which they will be chosen. Configurations also contain some properties that simulate (real-life scenario) misspelings in Nationality property values for the generated population. Feel free to change these preset values and edit the configuration in next steps.</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
@@ -291,7 +291,7 @@ Surname: {1}
 Address: {2}
 Religion: {3} 
 Nationality: {4} 
-Job: {5} </value>
+Job: {5}</value>
   </data>
   <data name="QueriedRecordsCount" xml:space="preserve">
     <value>Number of records queried</value>
@@ -450,7 +450,7 @@ Job: {5} </value>
     <value>Transparency mode results</value>
   </data>
   <data name="TransparencyModeResultsExplanation" xml:space="preserve">
-    <value>These results show how an algorithm can deal with custom user input and automatically classify misspelled string to existing bucket. Sometimes you will experience better fits and sometimes they will not be absolutely correct, but Levenstein and Hamming algorithms are the simplest of simplest. There are lots of algorithms that not only can classify data, but also themselves create groups for new data. So for example if GUS has not forseen that "european" or "opolean" or "wilamovian" nationality can be an option  these algorithms could create these buckets themselves - all that would be left for GUS would be to accept or decline such a group.</value>
+    <value>These results show how an algorithm can deal with custom user input and automatically classify misspelled string to existing bucket. Sometimes you will experience better fits and sometimes they will not be absolutely correct, but Levenstein and Hamming algorithms are the simplest of simplest. There are lots of algorithms that not only can classify data, but also themselves create groups for new data. So for example if GUS has not forseen that "european" or "opolean" or "wilamovian" nationality can be an option these algorithms could create these buckets themselves - all that would be left for GUS would be to accept or decline such a group.</value>
   </data>
   <data name="TransparencyModeResultsLimitation" xml:space="preserve">
     <value>For optimization purposes this list may contain up to 100 fitting results, even though the querying process might have generated more.</value>

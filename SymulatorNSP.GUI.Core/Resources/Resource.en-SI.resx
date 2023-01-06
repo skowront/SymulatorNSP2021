@@ -117,4 +117,436 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="Algorithm" xml:space="preserve">
+    <value>Algorytm</value>
+  </data>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Przeziyrŏczka</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anluluj</value>
+  </data>
+  <data name="ChooseRandom" xml:space="preserve">
+    <value>Ôbier losowo</value>
+  </data>
+  <data name="ClassifiedAs" xml:space="preserve">
+    <value>Zaklasyfikowany za</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wyczyjść</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zawrzij</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Zatwiyrdź</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Gratulacyje!</value>
+  </data>
+  <data name="CreationProgressUpdate" xml:space="preserve">
+    <value>Utowrzōno {0} z {1}</value>
+  </data>
+  <data name="Credits" xml:space="preserve">
+    <value>Tomasz Skowron</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Ustŏw ôczekowanõ
+wielkojść populacyje</value>
+  </data>
+  <data name="DesiredPopulationCountRangeError" xml:space="preserve">
+    <value>Populacyjŏ musi być z zakresu
+0 do 10000000</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Ustŏw metodã ôbliczaniŏ
+ôdległojści edycyjnyj</value>
+  </data>
+  <data name="DistanceExaplanation" xml:space="preserve">
+    <value>Niykere perzōny mogōm mieć
+literōwkã we swojim spisie. Bez prziklŏd
+we nŏrodowojści "miymieckŏ" mogło być
+"miymi3ckŏ". Sam mogesz ôbrać algorytm, kery bydzie
+tolerowoł felrery (do pŏru smiyniōnych znakōw). Ôbier
+"-" jeźli interesujōm ciã yno rekordy akuratne, kere pasujōm
+do ôpcyje, co włōnczy tolerancyjõ. Przi wyszukŏwaniu "niyustalōnŏ" we filtrze
+wybadŏsz wiela z rekordōw niy pasowało do żŏdnyj z ôpcyjōw a niy udoło sie jejich
+zaklasyfikować nawet z wykorzistanym algorytmym (te musiały'by być zaklasyfikowane manualniy).
+To je, yno prosty przikłŏd algorytmōw, kere mogōm autōmatyzować proces klasyfikacyje rekordōw.
+We scynaryjuszach ryalnych użwŏ sie algorytmu niynadzorowanego uczyniŏ maszinowego, kere niy yno
+potrefiōm same klasyfikować rekordy, nale tyż tworzić skupiny, kerych niy przewidziano wczaśnij
+(bp. nŏrodowojść warszawskŏ. Jeli chcesz sie dowiedzieć wiyncyj, poznej sie z "algorytmama niynadzorowanego
+uczyniŏ maszinowego" abo "fuzzy string matching".</value>
+  </data>
+  <data name="EditingDistance" xml:space="preserve">
+    <value>Dystans edycyjny</value>
+  </data>
+  <data name="EnterFileName" xml:space="preserve">
+    <value>Wpisz miano ôd pliku</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Feler</value>
+  </data>
+  <data name="EthnicityErrorRate" xml:space="preserve">
+    <value>Procynt felerōw etnicznojście</value>
+  </data>
+  <data name="EthnicityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalnŏ liczba literōwek</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Wykōnej zapytaniy</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>Czas wykōnywaniŏ zapytaniŏ</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Porażka</value>
+  </data>
+  <data name="FinishStep" xml:space="preserve">
+    <value>Zakōńcz krok</value>
+  </data>
+  <data name="FitFailure" xml:space="preserve">
+    <value>FELER: Ôryginał {0} niy mōg być
+zaklasyfikowany. Nojmyńszy dystans edycyjny wyniōs {2}
+dlŏ ôpcyje {1} przi wykorzistaniu algorytmu {3}</value>
+  </data>
+  <data name="FitSuccess" xml:space="preserve">
+    <value>SUKCES: Ôryginał {0} ôstoł
+zaklasyfikowany za {1).
+Ôdległojść edycyjnŏ wyniōsła {2}
+dlŏ algorytmu {3}</value>
+  </data>
+  <data name="GDPRAdminTitle" xml:space="preserve">
+    <value>Administratōr danych ôsobowych</value>
+  </data>
+  <data name="GDPRPrivacyPolicyLabel" xml:space="preserve">
+    <value>Polityka prywatnojści</value>
+  </data>
+  <data name="GDRPLabel" xml:space="preserve">
+    <value>GDPR</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Gyneruj populacyjõ</value>
+  </data>
+  <data name="GeneratePopulationFirst" xml:space="preserve">
+    <value>Nojprzōd wygyneruj populacyjõ</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Kōnfiguracyjŏ gynerowaniŏ</value>
+  </data>
+  <data name="GenerationConfigurationDescription" xml:space="preserve">
+    <value>We znŏleżnojście ôd wygynerowanych rekordōw, cas wykōnywaniŏ zapytaniōw może sie rōżnić.
+Kożdy rekord mŏ pŏrã włŏsnojściōw (Miano, Nazwisko, atd.) a kożdŏ włŏsnojść mŏ wertość (Smith, Ramirez,...),
+keryj dugojść może mieć wpływ na wydajnojść. Mogesz smiynić listã wertōw, z kerych bydzie korzistoł gyneratōr
+a prŏwdopodobiyństwo z jakym ôstanōm wylosowane. Kōnfiguracyjŏ mŏ tyż włŏsnojści, kere ôkryślajōm szansã
+na feler a ônego wpływ na liczbã literōwek dlŏ włŏsnojści jakōm je nŏrodowojść. Smiyń ta włŏsnojść podug uznaniŏ.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Pōmoc</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Robota</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Gŏdka</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Wczytej populacyjõ</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>Plik niy ôstoł załadowany</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>Plik ôstoł załadowany</value>
+  </data>
+  <data name="LogPopulationSample" xml:space="preserve">
+    <value>Podyjzdrzij prōbkã populacyje</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logi</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Wiyncyj</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Miano</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nŏrodowojść</value>
+  </data>
+  <data name="NationalityErrorRate" xml:space="preserve">
+    <value>Procynt felerōw we 
+nŏrodowojści</value>
+  </data>
+  <data name="NationalityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalnŏ liczba literōwek we 
+nŏrodowojści</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Pseudōnim</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>Liczba rekordōw, kere społniajōm
+warōnek, liczba wszyjstkich</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>abo</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>Ôryginał</value>
+  </data>
+  <data name="PerformanceFactor" xml:space="preserve">
+    <value>Spōłczynnik wydajnojści</value>
+  </data>
+  <data name="PerformanceFactorExplanation" xml:space="preserve">
+    <value>Przi bazowaniu na twojim casie wykōnaniŏ zapytaniŏ a licbie rekordōw, kere'ś przeanalizowoł, ôblicyli'my
+spōłcynnik wydajnojście w przirōwnaniu z casym jaki GUS potrzebowoł na podaniy wynikōw. Spōłcynnik je ôblicalny
+relatywniy do licby rekordōw, z kerymi mierzōł sie GUS, cyli jeźli twōj cas wyniōs 5 sekōnd dlŏ 1 milijōna rekordōw 
+to podzieli'my go bez ~38.</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Perzōna</value>
+  </data>
+  <data name="PersonStringified" xml:space="preserve">
+    <value>Miano: {0}
+Nazwisko: {1}
+Adresa: {2}
+Religijŏ: {3}
+Nŏrodowojść: {4}
+Robota: {5}</value>
+  </data>
+  <data name="QueriedRecordsCount" xml:space="preserve">
+    <value>Liczba przyanalizowanych rekordōw</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Zapytania</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Kōniec zapytaniōw</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Zapytaniy ô etnicznojść</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Czas wykōnywaniŏ zapytaniŏ</value>
+  </data>
+  <data name="QueryLimitThousandSamples" xml:space="preserve">
+    <value>Niy mogesz wpisać wiyncyj jak
+tauzyn prōbkōw</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Zapytaniy ô nŏrodowojść</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Zapytaniy ô nŏrodowojść
+a etnicznojść</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Liczba rekordōw, kere społniajōm
+warōnek [ Liczba wszyjstkich</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Poczōntek zapytaniŏ
+</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Filtr zapytaniŏ</value>
+  </data>
+  <data name="RealLifeComparisonStringCotent" xml:space="preserve">
+    <value>Przenalizowoł'ś {0} rekordōw
+w (1) sekōnd. Głōwny Amt Statystyczny
+potrzebowoł {2} sekōnd coby wybadać -38 mln
+rekordōw. Wiynszujymy, je żeś {3} wartszy!</value>
+  </data>
+  <data name="RealLifeComparisonStringTitle" xml:space="preserve">
+    <value>Gratulacyje!</value>
+  </data>
+  <data name="RecordKey" xml:space="preserve">
+    <value>Klucz</value>
+  </data>
+  <data name="RecordKeyExplanation" xml:space="preserve">
+    <value>Jeźli to twōj piyrszy rŏz kej wysyłŏsz
+wynik, to tyn klucz ôstaniy wykorzistany
+do ôchrōny twojigo rekordu przed
+nadpisaniym. We prociwnym razie użyj 
+teho samego klucza, kerego'ś używoł
+piyrwyj, coby poprawić wynik
+spod teho Pseudōnimu.</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religijŏ
+</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Rezultat</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz populacyjõ</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Plik niy ôstoł zapisany</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Plik ôstoł zapisany</value>
+  </data>
+  <data name="SendResultsToLeaderboard" xml:space="preserve">
+    <value>Poślij do tabule wynikōw</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawiynia</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Podziel sie</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Zdrzōdło</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Krok 1. Gyneruj Populacyjõ</value>
+  </data>
+  <data name="Step10" xml:space="preserve">
+    <value>Krok 10. Poślij wyniki do tabule wynikōw</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Krok 2. Podejzdrzij prōbkã populacyje</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Krok 3. Wykōnej zapytania</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Krok 4. (Ôpcyjōnalny) Smiyń kōnfiguracyjõ</value>
+  </data>
+  <data name="Step4Finish" xml:space="preserve">
+    <value>Ukōńcz krok 4</value>
+  </data>
+  <data name="Step4nExplanation" xml:space="preserve">
+    <value>Sprōbuj wykōnać smiany we kōnfiguracyji.
+Dodej ôpcyje do gynerowanych ôbiektōw, smiyń
+szansã na feler i wpływ feleru.
+Niyskorzij mogesz użyć roztōmajtych
+algorytmōw edycyjnych do automatyzacyji
+klasyfikowaniŏ wpisōw do ôpcyjōw co istniejōm.</value>
+  </data>
+  <data name="Step4p1" xml:space="preserve">
+    <value>Krok 4.1 (Ôpcyjōnalny) Smiyń szansã na feler</value>
+  </data>
+  <data name="Step4p1Explanation" xml:space="preserve">
+    <value>Mogesz smiynić szansã na literōwkã we rekordzie. W tyn spusōb zasymulujes ryalny scynaryjusz, we kerym
+wpis mōg niy pasować do ôpcyjōw kere istniejōm. Przi smiynianiu maksymalnego wpływu feleru ôkryślŏsz wiela znakōw
+idzie ôstać smiyniōnych w tym procesie. Pamiyntej, iże fōnkcyje kere klasyfikujōm we tyj aplikacyji majōm ustalōny sztajfny
+prōg tolerancyje kery wynosi 3. Rekordy, kere majōm wiyncyj jak 2 smiyniōne znaki ôstanōm niyklasyfikowalne automatyczniy.</value>
+  </data>
+  <data name="Step4p2" xml:space="preserve">
+    <value>Krok 4.2 (Ôpcyjōnalny) Smiyń kōnfiguracyjõ</value>
+  </data>
+  <data name="Step4p2Explanation" xml:space="preserve">
+    <value>Tukej mogesz smiynić szczygōły kōnfiguracyje. Sōm zaprezyntowane we formacie JSON. Wejzdzrzij sie,
+iże niy ôdklikujesz pola edycyjnego jeli mŏ ôno felery. Felernŏ kōnfiguracyjŏ ôstaniy ôdciepanŏ społym ze wszyjstkimi
+smianōma. Coby uniknōńć felerōw formatowaniŏ skorzistej z zewnytrznych nŏrzyńdziōw jak: https://jsonformatter.curiousconcept.com/</value>
+  </data>
+  <data name="Step4p3" xml:space="preserve">
+    <value>Krok 4.3 (Ôpcyjōnalny) Smiyń 
+liczbã wōntkōw ôd procesora</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Krok  5. (Ôpcyjōnalny) Zajś wygeneruj populacyjõ</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Krok 6. (Ôpcyjōnalny) Włōncz
+tryb transparentny</value>
+  </data>
+  <data name="Step7" xml:space="preserve">
+    <value>Krok 7. (Ôpcyjōnalny) Ôbier
+algorytm edycyjny</value>
+  </data>
+  <data name="Step8" xml:space="preserve">
+    <value>Krok 8. (Ôpcyjōnalny) Podejzdrzij prōbkã populacyje</value>
+  </data>
+  <data name="Step9" xml:space="preserve">
+    <value>Krok 9 (Ôpcyjōnalny)
+Wykōnej zapytania ze
+smiyniōnōm kōnfiguracyjōm</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Poślij</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Miano</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Wōntki</value>
+  </data>
+  <data name="TotalNumberOfRecords" xml:space="preserve">
+    <value>Liczba rekordōw</value>
+  </data>
+  <data name="TransparenceModePrerequisites" xml:space="preserve">
+    <value>Tryb tansparyntny pokŏże ci wyniki jeli społnisz wszyjske miyniōne warōnki: Szansa na feler we nŏrodowojście je wiynkszŏ
+ôd zera, twoje rekordy majōm literōwki (mogōm niy mieć, jeli twoja populacyjŏ a szansa na feler sōm małe),
+maksymalnŏ liczba literōwek we nŏrodowojści je wiynkszŏ aniżeli zero, tryb transparyntny je włōnczōny, wykorzistujesz 
+algorytm ôd Levensteina abo Hamminga (jeli korzistŏsz z "-" niy baje zŏdnych rekordōw do pokŏzaniŏ, bo
+klasyfikujesz yno akuratne dopasowania).</value>
+  </data>
+  <data name="TransparenctModeOFF" xml:space="preserve">
+    <value>Tryb transparentny włōnczōny!</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Tryb transparentny</value>
+  </data>
+  <data name="TransparencyModeExplanation" xml:space="preserve">
+    <value>Tryb transparenty pŏkoże ci
+infomracyje ô napasowaniach
+rekordōw z literōwkōma (kere
+kōnfigurowoł'ś we piyrwyjszych krokach.
+Pamiyntej, iże tyn tryb może negatywniy
+wpłynōńć na czas wykōnywaniŏ zapytaniōw.</value>
+  </data>
+  <data name="TransparencyModeON" xml:space="preserve">
+    <value>Tryb transparentny wyłōnczōny!</value>
+  </data>
+  <data name="TransparencyModeResults" xml:space="preserve">
+    <value>Rezultaty trybu transparyntnego</value>
+  </data>
+  <data name="TransparencyModeResultsExplanation" xml:space="preserve">
+    <value>Te wyniki pokazujōm jak algortym może
+sie radzić z niysztandardowymi ôdpedziama
+używŏcza do ôpcyje co istnieje. Niykerzi
+ôbŏczōm lejpsze, inksi gorsze napasowania,
+bo algorytmy Levensteina a Hamminga 
+nŏleżōm do nojprostszych z nojprostszych.
+Istnieje moc inkszych algorytmōw, kere niy
+yno potrefiōm klasyfikować dane, nale tyż 
+tworzić nowe skupiny danych.
+Tym samym jeli GUS niy przewidzioł
+nŏrodowojści "ôpolskij" abo "wilamowskij"
+, taki algorytm sōm mōgby utworzić
+skupiny, kere GUS musioł'by yno zatwiyrdzić abo ôdciepać</value>
+  </data>
+  <data name="TransparencyModeResultsLimitation" xml:space="preserve">
+    <value>Na potrzeby ôptymalizacyje lista może
+mieć do 100 wpisōw, nawet jeli samych przikładōw dopasowań
+wygenerowano wiyncyj.</value>
+  </data>
+  <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
+    <value>To wpłyniy na czas 
+wykōnywaniŏ zapytaniōw!</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Niyznōne</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Witōmy we Niyustalōnym 
+Amcie Statystycznym!</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Aplikacyjŏ na Windows</value>
+  </data>
 </root>

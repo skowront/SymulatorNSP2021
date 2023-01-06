@@ -117,4 +117,79 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>NSP 2021-Simulator (Windows)</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="ComplexMode" xml:space="preserve">
+    <value>Fortgeschrittener Modus</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Legen Sie die erwartete Populationsgröße fest</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Legen Sie die Berechnungsmethode für die Entfernung fest</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Mache eine Anfrage</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Erstellen Sie eine Bevölkerung</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Generationsaufbau</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="OpenLeaderboard" xml:space="preserve">
+    <value>Öffne die Anzeigetafel</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Anfragen</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Ende der Abfrage</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Abfrage der Staatsangehörigkeit</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Ausführungszeit der Abfrage</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Abfrage der Staatsangehörigkeit</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Abfrage nach Nationalität und ethnischer Zugehörigkeit</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Die Anzahl der Datensätze, die die |-Bedingung erfüllen Anzahl aller:</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Der Beginn der Abfrage</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Filterbedingung</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="SimpleMode" xml:space="preserve">
+    <value>einfacher Modus</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Transparenter Modus</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Herzlich Willkommen beim Statistischen Amt der Unetablierten!</value>
+  </data>
 </root>

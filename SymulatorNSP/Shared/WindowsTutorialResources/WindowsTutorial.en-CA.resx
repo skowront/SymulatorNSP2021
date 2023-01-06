@@ -117,4 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Step1" xml:space="preserve">
+    <value>Zladuj</value>
+  </data>
+  <data name="Step1Description" xml:space="preserve">
+    <value>Zladëj tą nônowszą wersëjã Symùlatóra NSP dlô Windows z</value>
+  </data>
+  <data name="Step1DownloadLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021/releases/tag/major</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Rozpakùj</value>
+  </data>
+  <data name="Step2Description" xml:space="preserve">
+    <value>Rozpakùj lopk</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Zrësze</value>
+  </data>
+  <data name="Step3Description" xml:space="preserve">
+    <value>Zrëszë</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Wëbierzë ôrt</value>
+  </data>
+  <data name="Step4Description" xml:space="preserve">
+    <value>Wëbierzë prosti abò zaawansowóny ôrt. Prosti ôrt je pòdobny do przédny stronë w przezérnikòwi wersëji, a zaawansowóny ôrt  do rozszerzony, jaką të mòżesz wëbrac na stronie z nawigacyjnégò menu.</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Òptimalizuj</value>
+  </data>
+  <data name="Step5Description" xml:space="preserve">
+    <value>Sprôwdzë jak chùtczi je twój kómpùter. Pamiãtôj, bë spróbòwac zwikszëc lëczbã wątków procesora ë pòbawic sã kònfigùracyjnyma nastôwama.</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Pòslë nama rezultatë</value>
+  </data>
+  <data name="Step6Description" xml:space="preserve">
+    <value>Wëkònôj czile pëtaniów ë pòslë do tabelë rezultatów</value>
+  </data>
 </root>

@@ -117,4 +117,327 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Adresa</value>
+  </data>
+  <data name="Algorithm" xml:space="preserve">
+    <value>Algòritm</value>
+  </data>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Przezérnik</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Òprzestóń</value>
+  </data>
+  <data name="ChooseRandom" xml:space="preserve">
+    <value>Wëbierzë kawlowò</value>
+  </data>
+  <data name="ClassifiedAs" xml:space="preserve">
+    <value>Zaklasyfikòwóny jakò</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Wëlozuj</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamkni</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Zacwierdzë</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Gratulacëje!</value>
+  </data>
+  <data name="CreationProgressUpdate" xml:space="preserve">
+    <value>{0} z {1} je ùtwòrzoné</value>
+  </data>
+  <data name="Credits" xml:space="preserve">
+    <value>Tomasz Skowron</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Nastôwi spragłą wiôlgòsc pòpùlacëji</value>
+  </data>
+  <data name="DesiredPopulationCountRangeError" xml:space="preserve">
+    <value>Pòpùlacëjô mùszi bëc w grańcach 0 do 100000000</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Nastôwi spòsób rachòwaniégò edicëjny dôle</value>
+  </data>
+  <data name="EditingDistance" xml:space="preserve">
+    <value>Edicëjnô dôlô</value>
+  </data>
+  <data name="EnterFileName" xml:space="preserve">
+    <value>Wpiszë miono lopka</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fela</value>
+  </data>
+  <data name="EthnicityErrorRate" xml:space="preserve">
+    <value>Procent felów etnicznoscë</value>
+  </data>
+  <data name="EthnicityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalnô lëczba lëterówków</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Wëkònôj pëtanié</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>Czas wëkònywaniégò pëtaniów</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Stracënk</value>
+  </data>
+  <data name="FinishStep" xml:space="preserve">
+    <value>Zakóńczë krok</value>
+  </data>
+  <data name="FitFailure" xml:space="preserve">
+    <value>FELA: Òriginał {0} nie móg bëc zaklasyfikòwóny. Nômniészô dôlô wëniosła: {2} dlô òptacëji {1} przë wëkòrzistanim algòritmù {3}</value>
+  </data>
+  <data name="FitSuccess" xml:space="preserve">
+    <value>ZWÉNËGA: Òriginał {0} òstôł zaklasyfikòwóny jakò {1}. Edicëjnô dôlô wëniosła {2} dlô algòritmù {3}</value>
+  </data>
+  <data name="GDPRAdmin" xml:space="preserve">
+    <value>Regios Association (KRS: 0000976963) www.regios.org.pl</value>
+  </data>
+  <data name="GDPRAdminTitle" xml:space="preserve">
+    <value>Administratór persónowëch pòdôwków</value>
+  </data>
+  <data name="GDPRPrivacyPolicyLabel" xml:space="preserve">
+    <value>Pòlitika priwatnoscë</value>
+  </data>
+  <data name="GDRPLabel" xml:space="preserve">
+    <value>RODO</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Generuj pòpùlacëjã</value>
+  </data>
+  <data name="GeneratePopulationFirst" xml:space="preserve">
+    <value>Nôpierwi wëgeneruj pòpùlacëjã</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Kònfigùracëjô generowaniégò</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Pòmòc</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Wark</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jãzëk</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Wladuj pòpùlacëjã</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>Lopk nie òstôł wladowany</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>Lopk òstôł wladowany</value>
+  </data>
+  <data name="LogPopulationSample" xml:space="preserve">
+    <value>Pòdezdrzi próbka pòpùlacëji</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logi</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Wicy</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Miono</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nôrodnosc</value>
+  </data>
+  <data name="NationalityErrorRate" xml:space="preserve">
+    <value>Procent felów w nôrodnoscë</value>
+  </data>
+  <data name="NationalityMaxErrorImpact" xml:space="preserve">
+    <value>Maksymalnô lëczba lëterówków w nôrodnoscë </value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Pòzwa</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>Lëczba pòdôwków, co spełniają warunk | Lëczba wszëtczëch</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>abò</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>Òriginał</value>
+  </data>
+  <data name="PerformanceFactor" xml:space="preserve">
+    <value>Współdzejnik wëdatnoscë</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Persóna</value>
+  </data>
+  <data name="PersonStringified" xml:space="preserve">
+    <value>Miono: {0} 
+Nôzwëskò: {1} 
+Adresa: {2}
+Religijô: {3} 
+Nôrodnosc: {4} 
+Wark: {5}</value>
+  </data>
+  <data name="QueriedRecordsCount" xml:space="preserve">
+    <value>Lëczba przeanalizowónëch pòdôwków</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Pitania</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Kóńc pëtaniégò</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Pëtanié ò etnicznosc</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Czas wëkònywaniégò pëtaniów</value>
+  </data>
+  <data name="QueryLimitThousandSamples" xml:space="preserve">
+    <value>Të nie mòżesz wëpisac wicy jak 1000 próbków</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Pëtanié ò nôrodnosc</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Pëtanié ò nôrodnosc ë ò etnicznosc</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Lëczba pòdôwków, co spełniają warunk | Lëczba wszëtczëch</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Zôczątk pëtaniégò</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Filter pëtaniów</value>
+  </data>
+  <data name="RealLifeComparisonStringCotent" xml:space="preserve">
+    <value>Të przeanalizowôł {0} pòdôwków w {1} sekùndòw. Główny Statisticzny Ùrząd brëkòwôł {2} sekùndów abë sprawdzëc ~38 milëjónów pòdôwków. Brawò, të jes {3} razów chùtszi!</value>
+  </data>
+  <data name="RealLifeComparisonStringTitle" xml:space="preserve">
+    <value>Gratulacëje!</value>
+  </data>
+  <data name="RecordKey" xml:space="preserve">
+    <value>Klucz</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religijô</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Rezultat</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapiszë pòpùlacjã</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Lopk nie òstôł zapisóny</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Lopk òstôł zapisóny</value>
+  </data>
+  <data name="SendResultsToLeaderboard" xml:space="preserve">
+    <value>Pòslë do tabelë rezultatów</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Nastôwë</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Pòdôj dali</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Zdrzódło</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Krok 1. Generuj Pòpùlacëjã</value>
+  </data>
+  <data name="Step10" xml:space="preserve">
+    <value>Krok 10. Pòslë rezultatë ro tabelë rezultatów</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Krok 2. Pòdezdrzi próbka pòpùlacëji</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Krok 3. Wëkònôj pëtania</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Krok 4. (Òptacëjny) Zmieni kònfigùracëjã</value>
+  </data>
+  <data name="Step4Finish" xml:space="preserve">
+    <value>Ùkóńczë krok 4</value>
+  </data>
+  <data name="Step4p1" xml:space="preserve">
+    <value>Krok 4.1. (Òptacëjny) Zmieni szansã na felã</value>
+  </data>
+  <data name="Step4p2" xml:space="preserve">
+    <value>Krok 4.2. (Òptacëjny) Zmieni kònfigùracëjã</value>
+  </data>
+  <data name="Step4p3" xml:space="preserve">
+    <value>Krok 4.3. (Òptacëjny) Zmieni lëczba wątków procesora</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Krok 5. (Òptacëjny) Znowa wëgeneruj pòpùlacëjã</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Krok 6. (Òptacëjny) Włączë przezérny ôrt</value>
+  </data>
+  <data name="Step7" xml:space="preserve">
+    <value>Krok 7. (Òptacëjny) Wëbierzë edicëjny algòritm</value>
+  </data>
+  <data name="Step8" xml:space="preserve">
+    <value>Krok 8. (Òptacëjny) Pòdezdrzi próbka pòpùlacëji</value>
+  </data>
+  <data name="Step9" xml:space="preserve">
+    <value>Krok 8. (Òptacëjny) Wëkònôj pëtania ze zmienioną kònfigùracëją</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Pòslë</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Zwënéga</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nôzwëskò</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Wątczi</value>
+  </data>
+  <data name="TotalNumberOfRecords" xml:space="preserve">
+    <value>Lëczba pòdôwków</value>
+  </data>
+  <data name="TransparenctModeOFF" xml:space="preserve">
+    <value> Przezérny ôrt je wëłączony</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Przezérny ôrt</value>
+  </data>
+  <data name="TransparencyModeON" xml:space="preserve">
+    <value> Przezérny ôrt je włączony</value>
+  </data>
+  <data name="TransparencyModeResults" xml:space="preserve">
+    <value>Rezultatë przezérnégò ôrtu</value>
+  </data>
+  <data name="TransparencyModeResultsExplanation" xml:space="preserve">
+    <value>Te rezultate pòkazują jak algòritm mòże so radzëc z niesztandardowima òdpòwiedzama ùżëtkiwnika do jistniejącëch òptacëjów. Niechtërny òbôczą lepszé przëpasowania, jinszi lëchszé, bò algòritmë Levensteina ë Hamminga nôleżą do nôprostszëch z nôprostszëch. Jistnieje zacht jinszëch algòritmów, co nie blós rozmieją klasyfikòwac pòdôwczi, le téż tworzëc nowé karna pòdôwków. A tej jeżlë GUS nie przewidzôł "òpòlsczi" abò "wilamòwsczi' nôrodnoscë, taczi algòritm bë mógł ùtwòrzëc karna, co GUS bë miôł nót blos zacwierdzëc abò òdrzucëc.</value>
+  </data>
+  <data name="TransparencyModeResultsLimitation" xml:space="preserve">
+    <value>Na brëkùnczi òptimalizacëji lësta mòże miec do 100 wpisënków, nawetka  jeżlë pasownëch wëgenerowanëch przikładów je wicy.</value>
+  </data>
+  <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
+    <value>To wpłinie na czas wëkònywanywaniégò pëtaniów</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Nieznóné</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Witómë w Nieùznôwónym Statisticznym Ùrzãdze!</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Aplikacëjô na Windows</value>
+  </data>
 </root>

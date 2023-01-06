@@ -376,7 +376,7 @@ namespace SymulatorNSP.GUI.Core.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Depending on the records that are randomly generated you will get various query execution times. Each record has a few properties (eg. Name, Surname, Nationality...) and each property value (eg. Smith or De-La-Rosa-Ramirez) length will also impact the execution times. You can change the list of property values that will be available to the generator and probability with which they will be chosen.  Configurations also contain some properties that simulate (real-life scenario) misspelings in Nationality prope [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to Depending on the records that are randomly generated you will get various query execution times. Each record has a few properties (eg. Name, Surname, Nationality...) and each property value (eg. Smith or De-La-Rosa-Ramirez) length will also impact the execution times. You can change the list of property values that will be available to the generator and probability with which they will be chosen. Configurations also contain some properties that simulate (real-life scenario) misspelings in Nationality proper [rest of string was truncated]&quot;;.
         /// </summary>
         public static string GenerationConfigurationDescription {
             get {
@@ -570,7 +570,7 @@ namespace SymulatorNSP.GUI.Core.Resources {
         ///Address: {2}
         ///Religion: {3} 
         ///Nationality: {4} 
-        ///Job: {5} .
+        ///Job: {5}.
         /// </summary>
         public static string PersonStringified {
             get {

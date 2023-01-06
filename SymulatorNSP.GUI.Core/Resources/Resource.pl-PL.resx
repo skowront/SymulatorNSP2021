@@ -166,7 +166,7 @@
     <value>Ustaw metodę obliczania odległości edycyjnej</value>
   </data>
   <data name="DistanceExaplanation" xml:space="preserve">
-    <value>Niektóre osoby mogą mieć literówkę w swoim wpisie. Na przykład w narodowości "niemiecka" mogło być "ni3miecka". Tutaj możesz wybrać algoryrm, który będzie tolerował błędy (do kilku zmienionych znaków). Wybierz "-" jeśli interesują cię tylko rekordy dokładnie pasujące do opcji, co wyłączy tolerancję. Wyszukując "nieustalona" w filtrze sprawdzisz ile z rekordów nie pasowało do żadnej opcji i nie udało się ich zaklasyfikować nawet z wykorzystanym algorytmem (te musiałyby być zaklasyfikowane manualnie). To jest, oczywiście, tylko prosty przykład algorytmów, które mogą automatyzować proces klasyfikacji rekordów. W scenariuszach rzeczywistych stosuje się algorytmy nienadzorowanego uczenia maszynowego, które nie tylko potrafią same klasyfikować rekordy, ale także tworzyć grupy, których nie przewidziano wcześniej (np. narodowość warszawska). Jeśli chcesz się dowiedzieć więcej, zapoznaj się z "algoryrmami nienadzorowanego uczenia maszynowego".</value>
+    <value>Niektóre osoby mogą mieć literówkę w swoim wpisie. Na przykład w narodowości "niemiecka" mogło być "ni3miecka". Tutaj możesz wybrać algoryrm, który będzie tolerował błędy (do kilku zmienionych znaków). Wybierz "-" jeśli interesują cię tylko rekordy dokładnie pasujące do opcji, co wyłączy tolerancję. Wyszukując "nieustalona" w filtrze sprawdzisz ile z rekordów nie pasowało do żadnej opcji i nie udało się ich zaklasyfikować nawet z wykorzystanym algorytmem (te musiałyby być zaklasyfikowane manualnie). To jest, oczywiście, tylko prosty przykład algorytmów, które mogą automatyzować proces klasyfikacji rekordów. W scenariuszach rzeczywistych stosuje się algorytmy nienadzorowanego uczenia maszynowego, które nie tylko potrafią same klasyfikować rekordy, ale także tworzyć grupy, których nie przewidziano wcześniej (np. narodowość warszawska). Jeśli chcesz się dowiedzieć więcej, zapoznaj się z "algoryrmami nienadzorowanego uczenia maszynowego" lub "fuzzy string matching".</value>
   </data>
   <data name="EditingDistance" xml:space="preserve">
     <value>Dystans edycyjny</value>
@@ -291,7 +291,7 @@ Nazwisko: {1}
 Adres: {2}
 Religia: {3} 
 Narodowość: {4} 
-Zawód: {5} </value>
+Zawód: {5}</value>
   </data>
   <data name="QueriedRecordsCount" xml:space="preserve">
     <value>Liczba przeanalizowanych rekordów</value>
@@ -327,7 +327,7 @@ Zawód: {5} </value>
     <value>Filtr zapytania</value>
   </data>
   <data name="RealLifeComparisonStringCotent" xml:space="preserve">
-    <value>Przeanalizowałeś {0} rekordów w {1} sekund. Główne Urząd Statystyczny potrzebował {2} sekund żeby sprawdić ~38 mln rekordów. Brawo, jesteś {3} razy szybszy!</value>
+    <value>Przeanalizowałeś {0} rekordów w {1} sekund. Główny Urząd Statystyczny potrzebował {2} sekund żeby sprawdzić ~38 mln rekordów. Brawo, jesteś {3} razy szybszy!</value>
   </data>
   <data name="RealLifeComparisonStringTitle" xml:space="preserve">
     <value>Gratulacje!</value>

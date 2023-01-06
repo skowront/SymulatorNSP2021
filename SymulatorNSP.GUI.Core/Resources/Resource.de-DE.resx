@@ -117,4 +117,354 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Algorithm" xml:space="preserve">
+    <value>Algorithmus</value>
+  </data>
+  <data name="Any" xml:space="preserve">
+    <value>[Any]</value>
+  </data>
+  <data name="Browser" xml:space="preserve">
+    <value>Browser</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Stornieren</value>
+  </data>
+  <data name="ChooseRandom" xml:space="preserve">
+    <value>zufällig auswählen</value>
+  </data>
+  <data name="ClassifiedAs" xml:space="preserve">
+    <value>Klassifiziert als</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Bestätigen</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Glückwünsche!</value>
+  </data>
+  <data name="CreationProgressUpdate" xml:space="preserve">
+    <value>{0} aus {1} erstellt.</value>
+  </data>
+  <data name="Credits" xml:space="preserve">
+    <value>Tomasz Skowron</value>
+  </data>
+  <data name="DesiredPopulationCount" xml:space="preserve">
+    <value>Legen Sie die erwartete Populationsgröße fest</value>
+  </data>
+  <data name="DesiredPopulationCountRangeError" xml:space="preserve">
+    <value>Die Bevölkerung muss im Bereich von 0 bis 100000000 liegen</value>
+  </data>
+  <data name="DistanceCalculationMethod" xml:space="preserve">
+    <value>Legen Sie die Berechnungsmethode für die Entfernung fest</value>
+  </data>
+  <data name="DistanceExaplanation" xml:space="preserve">
+    <value>Einige Leute haben möglicherweise einen Tippfehler in ihrem Eintrag. Beispielsweise könnte in der Nationalität „deutsch“ „ni3deutsch“ sein. Hier können Sie einen Algorithmus auswählen, der Fehler toleriert (bis auf wenige geänderte Zeichen). Wählen Sie "-", wenn Sie nur an Datensätzen interessiert sind, die genau mit der Option übereinstimmen, wodurch die Toleranz deaktiviert wird. Indem Sie im Filter nach „undefiniert“ suchen, prüfen Sie, wie viele der Datensätze zu keiner Option passen und auch mit dem verwendeten Algorithmus nicht klassifiziert werden konnten (diese müssten manuell klassifiziert werden). Dies ist natürlich nur ein einfaches Beispiel für Algorithmen, die den Datensatzklassifizierungsprozess automatisieren können. In realen Szenarien werden unüberwachte maschinelle Lernalgorithmen verwendet, die nicht nur in der Lage sind, Aufzeichnungen selbst zu klassifizieren, sondern auch Gruppen zu erstellen, die zuvor nicht vorhergesagt wurden (z. B. Warschauer Nationalität). Wenn Sie mehr erfahren möchten, sehen Sie sich „unbeaufsichtigte Algorithmen für maschinelles Lernen“ oder „fuzzy string matching“ an.</value>
+  </data>
+  <data name="EditingDistance" xml:space="preserve">
+    <value>Abstand bearbeiten</value>
+  </data>
+  <data name="EnterFileName" xml:space="preserve">
+    <value>Geben Sie einen Dateinamen ein</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="EthnicityErrorRate" xml:space="preserve">
+    <value>Ethnizitätsfehler Prozentsatz:</value>
+  </data>
+  <data name="EthnicityMaxErrorImpact" xml:space="preserve">
+    <value>Maximale Anzahl Tippfehler:</value>
+  </data>
+  <data name="ExecuteQuery" xml:space="preserve">
+    <value>Mache eine Anfrage</value>
+  </data>
+  <data name="ExecutionTime" xml:space="preserve">
+    <value>Ausführungszeit der Abfrage</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Ausfall</value>
+  </data>
+  <data name="FinishStep" xml:space="preserve">
+    <value>Beenden Sie den Schritt</value>
+  </data>
+  <data name="FitFailure" xml:space="preserve">
+    <value>FEHLER: Original {0} konnte nicht klassifiziert werden. Der kleinste Bearbeitungsabstand war: {2} für Option {1} unter Verwendung des {3}-Algorithmus</value>
+  </data>
+  <data name="FitSuccess" xml:space="preserve">
+    <value>ERFOLG: Original {0} wurde als {1} klassifiziert. Die Bearbeitungsdistanz war {2} für den {3}-Algorithmus</value>
+  </data>
+  <data name="GDPRAdmin" xml:space="preserve">
+    <value>Regios Association (KRS: 0000976963) www.regios.org.pl</value>
+  </data>
+  <data name="GDPRAdminTitle" xml:space="preserve">
+    <value>Administrator personenbezogener Daten</value>
+  </data>
+  <data name="GDPRPrivacyPolicyLabel" xml:space="preserve">
+    <value>Datenschutz-Bestimmungen</value>
+  </data>
+  <data name="GDRPLabel" xml:space="preserve">
+    <value>DSGVO</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Bevölkerung generieren</value>
+  </data>
+  <data name="GeneratePopulationFirst" xml:space="preserve">
+    <value>Erstellen Sie zuerst eine Bevölkerung!</value>
+  </data>
+  <data name="GenerationConfiguration" xml:space="preserve">
+    <value>Generationsaufbau</value>
+  </data>
+  <data name="GenerationConfigurationDescription" xml:space="preserve">
+    <value>Abhängig von den generierten Datensätzen kann die Ausführungszeit der Abfrage variieren. Jeder Datensatz hat mehrere Eigenschaften (Vorname, Nachname usw.) und jede Eigenschaft hat einen Wert (Smith, Ramirez usw.), dessen Länge die Leistung beeinträchtigen kann. Sie können die Liste der Werte, die der Generator verwendet, und die Wahrscheinlichkeit, mit der sie gezeichnet werden, ändern. Die Konfiguration enthält auch Eigenschaften, die die Fehlerwahrscheinlichkeit und die Auswirkung des Fehlers auf die Anzahl der Tippfehler für die Nationalitätseigenschaft bestimmen. Ändern Sie diese Eigenschaften nach Belieben.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Beruf</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Bevölkerung laden</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>Die Datei wurde nicht geladen</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>Die Datei wurde geladen</value>
+  </data>
+  <data name="LogPopulationSample" xml:space="preserve">
+    <value>Sehen Sie sich eine Stichprobe der Bevölkerung an</value>
+  </data>
+  <data name="Logs" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Mehr</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Staatsangehörigkeit</value>
+  </data>
+  <data name="NationalityErrorRate" xml:space="preserve">
+    <value>Prozentsatz der Fehler bei der Staatsangehörigkeit</value>
+  </data>
+  <data name="NationalityMaxErrorImpact" xml:space="preserve">
+    <value>Maximale Anzahl Tippfehler bei der Nationalität</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Pseudonym</value>
+  </data>
+  <data name="NumberOfRecords" xml:space="preserve">
+    <value>Die Anzahl der Datensätze, die die Bedingung erfüllen|Anzahl aller</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>oder</value>
+  </data>
+  <data name="Original" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="PerformanceFactor" xml:space="preserve">
+    <value>Effizienzfaktor</value>
+  </data>
+  <data name="PerformanceFactorExplanation" xml:space="preserve">
+    <value>Basierend auf Ihrer Abfrageausführungszeit und der Anzahl der von Ihnen analysierten Datensätze haben wir den Leistungsfaktor im Vergleich zu der Zeit berechnet, die das Statistisches Hauptamt benötigt hat, um die Ergebnisse bereitzustellen. Der Koeffizient wird relativ zur Anzahl der Datensätze berechnet, die das Statistisches Hauptamt gemessen hat, d. h. wenn Ihre Zeit 5 Sekunden für 1 Million Datensätze betrug, teilen wir sie durch ~38.</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="PersonStringified" xml:space="preserve">
+    <value>Name: {0}
+Nachname: {1}
+Adresse {2}
+Religion: {3}
+Nationalität: {4}
+Beruf: {5}</value>
+  </data>
+  <data name="QueriedRecordsCount" xml:space="preserve">
+    <value>Die Anzahl der analysierten Datensätze</value>
+  </data>
+  <data name="Queries" xml:space="preserve">
+    <value>Anfragen</value>
+  </data>
+  <data name="QueryEnd" xml:space="preserve">
+    <value>Ende der Abfrage</value>
+  </data>
+  <data name="QueryEthnicity" xml:space="preserve">
+    <value>Ethnizitätsabfrage</value>
+  </data>
+  <data name="QueryExecutionTime" xml:space="preserve">
+    <value>Ausführungszeit der Abfrage</value>
+  </data>
+  <data name="QueryLimitThousandSamples" xml:space="preserve">
+    <value>Sie können nicht mehr als 1000 Muster drucken!</value>
+  </data>
+  <data name="QueryNationality" xml:space="preserve">
+    <value>Abfrage der Staatsangehörigkeit</value>
+  </data>
+  <data name="QueryNationalityOrEthnicity" xml:space="preserve">
+    <value>Nach Nationalität und ethnischer Zugehörigkeit gefragt</value>
+  </data>
+  <data name="QueryResultsCount" xml:space="preserve">
+    <value>Die Anzahl der Datensätze, die die |-Bedingung erfüllen Die Zahl aller</value>
+  </data>
+  <data name="QueryStart" xml:space="preserve">
+    <value>Der Beginn der Abfrage</value>
+  </data>
+  <data name="QueryValue" xml:space="preserve">
+    <value>Abfragefilter</value>
+  </data>
+  <data name="RealLifeComparisonStringCotent" xml:space="preserve">
+    <value>Sie haben {0} Datensätze in {1} Sekunden analysiert. Das Statistisches Hauptamt benötigte {2} Sekunden, um ~38 Millionen Datensätze zu prüfen. Bravo, du bist {3} mal schneller!</value>
+  </data>
+  <data name="RealLifeComparisonStringTitle" xml:space="preserve">
+    <value>Glückwünsche!</value>
+  </data>
+  <data name="RecordKey" xml:space="preserve">
+    <value>Taste</value>
+  </data>
+  <data name="RecordKeyExplanation" xml:space="preserve">
+    <value>Wenn Sie zum ersten Mal ein Ergebnis senden, wird dieser Schlüssel verwendet, um Ihren Datensatz vor dem Überschreiben zu schützen. Andernfalls geben Sie denselben Schlüssel ein, den Sie zuvor verwendet haben, um die Punktzahl unter diesem Spitznamen zu korrigieren.</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religion</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Ergebnis</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Speichern die Bevölkerung</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Die Datei wurde nicht gespeichert</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Die Datei wurde gespeichert</value>
+  </data>
+  <data name="SendResultsToLeaderboard" xml:space="preserve">
+    <value>An die Anzeigetafel senden</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>Teilen</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Quelle</value>
+  </data>
+  <data name="Step1" xml:space="preserve">
+    <value>Schritt 1. Bevölkerung generieren</value>
+  </data>
+  <data name="Step10" xml:space="preserve">
+    <value>Schritt 10. Senden Sie die Ergebnisse an das Scoreboard</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Schritt 2. Sehen Sie sich eine Stichprobe der Grundgesamtheit an</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Schritt 3. Führen Sie Abfragen aus</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Schritt 4. (Optional) Neu konfigurieren</value>
+  </data>
+  <data name="Step4Finish" xml:space="preserve">
+    <value>Schließen Sie Schritt 4 ab</value>
+  </data>
+  <data name="Step4nExplanation" xml:space="preserve">
+    <value>Versuchen Sie, Konfigurationsänderungen vorzunehmen. Optionen zu generierten Objekten hinzufügen, Fehlerwahrscheinlichkeit und Fehlerauswirkung ändern. Später können Sie verschiedene Bearbeitungsalgorithmen verwenden, um die Klassifizierung von Einträgen in vorhandene Optionen zu automatisieren.</value>
+  </data>
+  <data name="Step4p1" xml:space="preserve">
+    <value>Krok 4.1 (Opcjonalny) Zmień szansę na błąd</value>
+  </data>
+  <data name="Step4p1Explanation" xml:space="preserve">
+    <value>Sie können die Wahrscheinlichkeit eines Tippfehlers in einem Datensatz ändern. Dadurch wird ein reales Szenario simuliert, in dem ein Eintrag möglicherweise nicht mit den vorhandenen Optionen übereinstimmt. Durch Ändern der maximalen Fehlerausgabe legen Sie fest, wie viele Zeichen bei diesem Vorgang geändert werden können. Beachten Sie, dass die Klassifizierungsfunktionen dieser Anwendung eine feste Toleranz von 3 haben. Datensätze mit mehr als 2 geänderten Zeichen werden automatisch unklassifiziert.</value>
+  </data>
+  <data name="Step4p2" xml:space="preserve">
+    <value>Schritt 4.2 (Optional) Ändern Sie die Konfiguration</value>
+  </data>
+  <data name="Step4p2Explanation" xml:space="preserve">
+    <value>Hier können Sie Konfigurationsdetails ändern. Sie werden im JSON-Format dargestellt. Stellen Sie sicher, dass Sie ein Bearbeitungsfeld nicht deaktivieren, wenn es Fehler enthält. Die fehlerhafte Konfiguration wird bei allen Änderungen verworfen. Um Formatierungsfehler zu vermeiden, verwenden Sie externe Tools wie: https://jsonformatter.curiousconcept.com/</value>
+  </data>
+  <data name="Step4p3" xml:space="preserve">
+    <value>Schritt 4.3 (Optional) Ändern Sie die Anzahl der CPU-Threads</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Schritt 5. (Optional) Regenerieren Sie die Population</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Schritt 6. (Optional) Aktivieren Sie den transparenten Modus</value>
+  </data>
+  <data name="Step7" xml:space="preserve">
+    <value>Schritt 7. (Optional) Wählen Sie einen Bearbeitungsalgorithmus</value>
+  </data>
+  <data name="Step8" xml:space="preserve">
+    <value>Schritt 8. (Optional) Vorschau einer Stichprobe der Grundgesamtheit</value>
+  </data>
+  <data name="Step9" xml:space="preserve">
+    <value>Schritt 9. (Optional) Führen Sie Abfragen mit geänderter Konfiguration aus</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Schicken</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Erfolg</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Fäden</value>
+  </data>
+  <data name="TotalNumberOfRecords" xml:space="preserve">
+    <value>Anzahl der Datensätze</value>
+  </data>
+  <data name="TransparenceModePrerequisites" xml:space="preserve">
+    <value>Der transparente Modus zeigt Ihnen Ergebnisse, wenn alle der folgenden Bedingungen erfüllt sind: Nationalitätsfehlerwahrscheinlichkeit ist größer als Null, Ihre Datensätze enthalten Tippfehler (möglicherweise nicht, wenn Ihre Population und Fehlerwahrscheinlichkeit gering ist), Nationalitäts-Maximal-Tippfehler ist größer als Null, transparenter Modus aktiviert ist, verwenden Sie den Levenstein- oder Hamming-Algorithmus (wenn Sie "-" verwenden, werden keine Datensätze angezeigt, da Sie nur exakte Übereinstimmungen klassifizieren).</value>
+  </data>
+  <data name="TransparenctModeOFF" xml:space="preserve">
+    <value>Transparentmodus deaktiviert!</value>
+  </data>
+  <data name="TransparencyMode" xml:space="preserve">
+    <value>Transparenter Modus</value>
+  </data>
+  <data name="TransparencyModeExplanation" xml:space="preserve">
+    <value>Der transparente Modus zeigt Ihnen Informationen über Übereinstimmungen von Datensätzen mit Tippfehlern (die Sie in den vorherigen Schritten konfiguriert haben). Beachten Sie, dass sich dieser Modus negativ auf die Ausführungszeit der Abfrage auswirken kann.</value>
+  </data>
+  <data name="TransparencyModeON" xml:space="preserve">
+    <value>Transparentmodus aktiviert!</value>
+  </data>
+  <data name="TransparencyModeResults" xml:space="preserve">
+    <value>Ergebnisse im transparenten Modus</value>
+  </data>
+  <data name="TransparencyModeResultsExplanation" xml:space="preserve">
+    <value>Diese Ergebnisse zeigen, wie der Algorithmus mit nicht standardmäßigen Benutzerreaktionen auf vorhandene Optionen umgehen kann. Einige werden bessere und andere schlechtere Übereinstimmungen sehen, da Levenstein- und Hamming-Algorithmen zu den einfachsten der einfachsten gehören. Es gibt viele andere Algorithmen, die Daten nicht nur klassifizieren, sondern auch neue Gruppen von Daten erstellen können. Wenn also das Statistisches Hauptamt die Nationalität „Opole“ oder „Wilamowo“ nicht vorsah, könnte ein solcher Algorithmus selbst Gruppen erstellen, die das Statistisches Hauptamt nur noch genehmigen oder ablehnen müsste.</value>
+  </data>
+  <data name="TransparencyModeResultsLimitation" xml:space="preserve">
+    <value>Zu Optimierungszwecken kann die Liste bis zu 100 Einträge enthalten, auch wenn mehr Übereinstimmungsbeispiele generiert wurden.</value>
+  </data>
+  <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
+    <value>Dies wirkt sich auf die Ausführungszeit der Abfrage aus!</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Herzlich Willkommen beim unbestimmt Statistischen Amt!</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Windows-Anwendung</value>
+  </data>
 </root>

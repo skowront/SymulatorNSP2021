@@ -117,4 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Step1" xml:space="preserve">
+    <value>Pobier</value>
+  </data>
+  <data name="Step1Description" xml:space="preserve">
+    <value>Pobier nojnowszõ wersyjõ
+Symulatora NSP dlŏ Windows z</value>
+  </data>
+  <data name="Step1DownloadLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021/releases/tag/major</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Ôzpakuj</value>
+  </data>
+  <data name="Step2Description" xml:space="preserve">
+    <value>Ôzpakuj plik</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Włōncz</value>
+  </data>
+  <data name="Step3Description" xml:space="preserve">
+    <value>Włōncz</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Ôbier tryb</value>
+  </data>
+  <data name="Step4Description" xml:space="preserve">
+    <value>Ôbier tryb prosty abo zaawansowany. 
+Tryb prosty je podany do zajty głōwnyj we wersyji
+przeziyrŏczkowyj, a tryb zaawansowany do rozszyrzōnyj,
+kerōm mogesz ôbrać na zajcie z mynu nawigacyjnego</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Ôptymalizuj</value>
+  </data>
+  <data name="Step5Description" xml:space="preserve">
+    <value>Wybadej ô wiela gibszy je twōj kōmputer.
+Pamiyntej, coby sprōbować zwiynkszyć
+liczbã wōntkōw procesora a pobawić sie ustawiyniama
+kōnfiguracyjnymi</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Poślij nōm wyniki</value>
+  </data>
+  <data name="Step6Description" xml:space="preserve">
+    <value>Wykōnej pŏrã zapytaniōw
+a poślij wynik do tabule wynikōw</value>
+  </data>
 </root>

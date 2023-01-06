@@ -117,4 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutContent" xml:space="preserve">
+    <value>Das Projekt wurde von der REGIOS Gesellschaft initiiert, um die Ineffizienz des Statistischen Hauptamts (GUS) in Polen aufzuzeigen. Im Gegensatz zum Statistischen Hauptamt setzen wir auf Transparenz und stellen deshalb den Quellcode der Anwendung auf dem Github-Repository zur Verfügung.</value>
+  </data>
+  <data name="AboutLabel" xml:space="preserve">
+    <value>Über das Projekt</value>
+  </data>
+  <data name="ApplicationContact" xml:space="preserve">
+    <value>Anwendungsentwickler: tomasz.skowron@regios.org.pl</value>
+  </data>
+  <data name="BackgroundDescription" xml:space="preserve">
+    <value>Im Jahr 2021 führte das Statistische Hauptamt in Polen die Volkszählung durch. Ergebnisse zur national-ethnischen Struktur veröffentlichten sie jedoch erst mehr als ein Jahr nach Ende der Volkszählung. Im vierten Quartal 2022 gab es nur einige Restdaten, die zur Erstellung dieser App verwendet wurden. Auf dieser Seite sehen Sie, wie viel schneller Ihr Browser ist als das gesamte Statistische Hauptamt, das die Ergebnisse über ein Jahr lang nicht ausgewertet hat!</value>
+  </data>
+  <data name="BackgroundHeader" xml:space="preserve">
+    <value>Einführung</value>
+  </data>
+  <data name="BrowserLimitExplanation" xml:space="preserve">
+    <value>Leider unterstützt die Browserversion der Anwendung bis zu 1 Million generierte Datensätze. In den nächsten Schritten können Sie wählen, ob Sie mehr Datensätze analysieren möchten, als generiert werden, aber in der Browserversion wird es einfach eine mehrfache Ausführung von Abfragen auf dieselben Daten sein. Die PC-Version (Windows) des NSP-Simulators hat diese Einschränkung nicht. Wir laden Sie ein, sich damit vertraut zu machen.</value>
+  </data>
+  <data name="BrowserLimitHeader" xml:space="preserve">
+    <value>Browserlimit erreicht!</value>
+  </data>
+  <data name="BrowserLimitOneThread" xml:space="preserve">
+    <value>Leider unterstützt die Browseranwendung im Moment maximal 1 Thread. Wenn Sie Ihren Computer mit CPU-Multithreading testen möchten, sehen Sie sich den NSP-Simulator für PC (Windows) an.</value>
+  </data>
+  <data name="CheckOutMoreHeader" xml:space="preserve">
+    <value>Denken Sie daran, es ist nur ein Browser!</value>
+  </data>
+  <data name="CheckOutMoreValue" xml:space="preserve">
+    <value>Als wir die PC-Version des NSP-Simulators (Windows) getestet haben, erreichten wir 38 Millionen Abfragen in weniger als 5 Sekunden! Wir empfehlen Ihnen, sich mit der Vollversion des NSP-Simulators für Browser und des NSP-Simulators für PCs (Windows) vertraut zu machen, in denen Sie konfigurieren können, wie Datensätze generiert werden, und die Leistung von Algorithmen testen können, die Entfernungen bearbeiten (Levenstein und Hamming). Klassifizieren Sie Datensätze mit Fehlern in die verfügbaren Optionen.</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="ContactLabel" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="GDPRContact" xml:space="preserve">
+    <value>DSGVO: rodo@regios.org.pl</value>
+  </data>
+  <data name="GithubREPOLink" xml:space="preserve">
+    <value>https://github.com/skowront/SymulatorNSP2021</value>
+  </data>
+  <data name="GUSForPCLabel" xml:space="preserve">
+    <value>NSP-Simulator für Windows</value>
+  </data>
+  <data name="GUSOnlineLabel" xml:space="preserve">
+    <value>NSP Online-Simulator (Vollversion)</value>
+  </data>
+  <data name="Hint" xml:space="preserve">
+    <value>Tipp</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Startseite</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="LeaderboardLabel" xml:space="preserve">
+    <value>Anzeigetafel</value>
+  </data>
+  <data name="MediaContact" xml:space="preserve">
+    <value>Medien: biuro@regios.org.pl</value>
+  </data>
+  <data name="NextLabel" xml:space="preserve">
+    <value>Nächste</value>
+  </data>
+  <data name="OtherContact" xml:space="preserve">
+    <value>Andere: biuro@regios.org.pl</value>
+  </data>
+  <data name="PreviousLabel" xml:space="preserve">
+    <value>Vorherige</value>
+  </data>
+  <data name="QueryAmountRemark" xml:space="preserve">
+    <value>Start small, go big! Denken Sie daran, dass Browseranwendungen langsamer sind als ausführbare Standardprogramme, die Sie auf Ihrem Computer installieren. Werfen Sie einen Blick auf den NSP-Simulator für PC (Windows) und sehen Sie die echte Rechenleistung heutiger Maschinen. Sowohl im Browser als auch in der Windows-Anwendung lässt Ihr Rechner jedoch das Statistische Hauptamt hinter sich.</value>
+  </data>
+  <data name="RecommendedPopulationSize" xml:space="preserve">
+    <value>Für Browser empfehlen wir, mindestens 10.000 Datensätze zu generieren.</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Erfrischen</value>
+  </data>
+  <data name="SelectQueryAmountDescription" xml:space="preserve">
+    <value>Wählen Sie die Anzahl der zu filternden Datensätze aus</value>
+  </data>
+  <data name="ServerUnavailable" xml:space="preserve">
+    <value>Server nicht verfügbar</value>
+  </data>
+  <data name="SubmitYourResults" xml:space="preserve">
+    <value>An die Anzeigetafel senden</value>
+  </data>
+  <data name="ThisCanTakeAWhile" xml:space="preserve">
+    <value>Das kann eine Weile dauern.</value>
+  </data>
+  <data name="ThisCanTakeAWhileExplanation" xml:space="preserve">
+    <value>Das Abfragen von 38 Millionen Datensätzen in einem Browser dauert einige Minuten. Dasselbe kann in Sekundenschnelle mit der NSP-Simulator-Anwendung für PC (Windows) erreicht werden, vergessen Sie nicht, es auszuprobieren.</value>
+  </data>
+  <data name="TryAgainLater" xml:space="preserve">
+    <value>Bitte versuchen Sie es später noch einmal...</value>
+  </data>
+  <data name="UnhandledErrorMessage" xml:space="preserve">
+    <value>Ein Fehler ist aufgetreten, sorry! Seite neuladen...</value>
+  </data>
+  <data name="WebsiteTitle" xml:space="preserve">
+    <value>NSP 2021-Simulator</value>
+  </data>
+  <data name="WelcomeHeader" xml:space="preserve">
+    <value>Willkommen auf der NSP Simulator 2021-Website!</value>
+  </data>
+  <data name="WelcomeSubHeader" xml:space="preserve">
+    <value>Hier können Sie überprüfen, wie viel schneller Ihr Computer ist als das Statistische Hauptamt (GUS).</value>
+  </data>
 </root>

@@ -117,4 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Step1" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Step1Description" xml:space="preserve">
+    <value>Laden Sie die neueste Version von NSP Simulator für Windows von herunter</value>
+  </data>
+  <data name="Step1DownloadLink" xml:space="preserve">
+    <value>https://github.com/skowront/SimulatorNSP2021/releases/tag/major</value>
+  </data>
+  <data name="Step2" xml:space="preserve">
+    <value>Entpacken</value>
+  </data>
+  <data name="Step2Description" xml:space="preserve">
+    <value>Entpacken Sie die Datei</value>
+  </data>
+  <data name="Step2FileName" xml:space="preserve">
+    <value>SimulatorNSP-Release.1.x.0.0.zip</value>
+  </data>
+  <data name="Step3" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="Step3Description" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="Step3FileName" xml:space="preserve">
+    <value>SimulatorNSP.Startup.exe</value>
+  </data>
+  <data name="Step4" xml:space="preserve">
+    <value>Wählen Sie einen Modus aus</value>
+  </data>
+  <data name="Step4Description" xml:space="preserve">
+    <value>Wählen Sie den einfachen oder erweiterten Modus. Der einfache Modus ähnelt der Startseite in der Browserversion, und der erweiterte Modus ist der erweiterte Modus, den Sie auf der Seite aus dem Navigationsmenü auswählen können.</value>
+  </data>
+  <data name="Step5" xml:space="preserve">
+    <value>Optimieren</value>
+  </data>
+  <data name="Step5Description" xml:space="preserve">
+    <value>Überprüfen Sie, wie schnell Ihr Computer ist. Denken Sie daran, zu versuchen, die Anzahl der CPU-Threads zu erhöhen und mit den Konfigurationseinstellungen herumzuspielen.</value>
+  </data>
+  <data name="Step6" xml:space="preserve">
+    <value>Senden Sie uns die Ergebnisse</value>
+  </data>
+  <data name="Step6Description" xml:space="preserve">
+    <value>Führen Sie einige Abfragen durch und senden Sie das Ergebnis an das Scoreboard.</value>
+  </data>
 </root>

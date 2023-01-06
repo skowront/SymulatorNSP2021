@@ -13,18 +13,18 @@
                 </RadzenText>
             </Template>
         </RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Factor" Title="@Resource.PerformanceFactor"></RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Nickname" Title="@Resource.Nickname" Width="200px"></RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="QueryCount" Title="@Resource.QueriedRecordsCount" Width="300px"></RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Title="@Resource.ExecutionTime">
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Factor" Title="@Resource.PerformanceFactor" MinWidth="100px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Nickname" Title="@Resource.Nickname" Width="200px" MinWidth="100px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="QueryCount" Title="@Resource.QueriedRecordsCount" Width="300px" MinWidth="100px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Title="@Resource.ExecutionTime" MinWidth="100px">
             <Template Context="data">
                 <RadzenText>
                     @data.ExecutionTime();
                 </RadzenText>
             </Template>
         </RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Threads" Title="@Resource.Threads"></RadzenDataGridColumn>
-        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Source" Title="@Resource.Source">
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Threads" Title="@Resource.Threads" MinWidth="100px"></RadzenDataGridColumn>
+        <RadzenDataGridColumn TItem="LeaderboardRecord" Property="Source" Title="@Resource.Source" MinWidth="100px">
             <Template Context="data">
                 <RadzenText>
                     @rloc[data.Source.ToString()]

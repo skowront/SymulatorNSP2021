@@ -117,4 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ComplexGenerationConfiguration" xml:space="preserve">
+    <value>Skòmplikòwóny</value>
+  </data>
+  <data name="ComplexGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kònfigùracëjô mô na célu symùlowanié realnëch wôrtnoscë ë dodanié lëterówków</value>
+  </data>
+  <data name="eChangeResultKeyEmptyExplanation" xml:space="preserve">
+    <value>Klucz ni mòże bëc pùsti</value>
+  </data>
+  <data name="eChangeResultSuccessExplanation" xml:space="preserve">
+    <value>Zwënéga!</value>
+  </data>
+  <data name="eChangeResultTooFewRecordsExplanation" xml:space="preserve">
+    <value>Przechòwùjemë blós rezultatë pëtaniów co przeanalizowałë conamni 1 milëjón pòdôwków</value>
+  </data>
+  <data name="eChangeResultUnknownExplanation" xml:space="preserve">
+    <value>Nieznónô fela</value>
+  </data>
+  <data name="eChangeResultWorseFactorExplanation" xml:space="preserve">
+    <value>Twój aktualny współdzejnik wëdatnoscë je lechszi òd pòprzédnégò, òn nie òstanie wësłóny</value>
+  </data>
+  <data name="eChangeResultWrongKeyExplanation" xml:space="preserve">
+    <value>Rekòrd z taką pòzwą ju jistnieje. Të mùszisz pòdac jistny klucz, co të dôł òb pòprzédnégò wësëłaniégò rezultatu.</value>
+  </data>
+  <data name="OptimizedGenerationConfiguration" xml:space="preserve">
+    <value>Minimalnô</value>
+  </data>
+  <data name="OptimizedGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac pòdôwczi z pùstima włôsnoscama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są wëłączoné</value>
+  </data>
+  <data name="SimpleGenerationConfiguration" xml:space="preserve">
+    <value>Prostô</value>
+  </data>
+  <data name="SimpleGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac pòdôwczi z prostima, czilelëtorowima włôsnoscama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są włączoné.</value>
+  </data>
+  <data name="Unrecognized" xml:space="preserve">
+    <value>nierozpòznóny</value>
+  </data>
 </root>

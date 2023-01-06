@@ -61,7 +61,7 @@ namespace SymulatorNSP.Shared.WebsiteLocResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Projec was initiated by REGIOS Association to show the innefficiency of Central Statistical Office (GUS) in Poland. Unlike GUS we believe in full transparency and we share the source code of the application on a Github Repository..
+        ///   Looks up a localized string similar to Project was initiated by REGIOS Association to show the innefficiency of Central Statistical Office (GUS) in Poland. Unlike GUS we believe in full transparency and we share the source code of the application on a Github Repository..
         /// </summary>
         internal static string AboutContent {
             get {

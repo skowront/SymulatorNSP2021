@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutContent" xml:space="preserve">
-    <value>Projec was initiated by REGIOS Association to show the innefficiency of Central Statistical Office (GUS) in Poland. Unlike GUS we believe in full transparency and we share the source code of the application on a Github Repository.</value>
+    <value>Project was initiated by REGIOS Association to show the innefficiency of Central Statistical Office (GUS) in Poland. Unlike GUS we believe in full transparency and we share the source code of the application on a Github Repository.</value>
   </data>
   <data name="AboutLabel" xml:space="preserve">
     <value>About</value>

@@ -117,4 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ComplexGenerationConfiguration" xml:space="preserve">
+    <value>Złożōnŏ</value>
+  </data>
+  <data name="ComplexGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kōnfiguracyjŏ mŏ na cylu
+symulowaniy ryalnych wertōw a
+dodaniy literōwek</value>
+  </data>
+  <data name="eChangeResultKeyEmptyExplanation" xml:space="preserve">
+    <value>Klucz niy może być pusty!</value>
+  </data>
+  <data name="eChangeResultSuccessExplanation" xml:space="preserve">
+    <value>Suckes!</value>
+  </data>
+  <data name="eChangeResultTooFewRecordsExplanation" xml:space="preserve">
+    <value>Zbiyrōmy yno dane z kwerendōw,
+kere przeanalizowały aby 1 milijōn rekordōw</value>
+  </data>
+  <data name="eChangeResultUnknownExplanation" xml:space="preserve">
+    <value>Niyznōny feler</value>
+  </data>
+  <data name="eChangeResultWorseFactorExplanation" xml:space="preserve">
+    <value>Twōj terŏźny spōłczynnik
+wydajnojści je gorszy ôd 
+piyrwyjszego, niy ôstaniy posłany</value>
+  </data>
+  <data name="eChangeResultWrongKeyExplanation" xml:space="preserve">
+    <value>Rekord z takym Pseudōniymym
+istnieje. Musisz podać tyn sōm klucz,
+kery'ś podoł we czasie piyrwyjszego
+wysłaniŏ wynuku.</value>
+  </data>
+  <data name="OptimizedGenerationConfiguration" xml:space="preserve">
+    <value>Minimalnŏ</value>
+  </data>
+  <data name="OptimizedGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kōnfiguracyjŏ je zôptymalizowanŏ tak coby,
+gynerować rekordy z pustymi włŏsnościama, ôkrōm nŏrodowojściōm, by zminimalizować jejich wpływ na spotrzebowaniy
+pamiyńcie. Włōnczōno tyż literōwki</value>
+  </data>
+  <data name="SimpleGenerationConfiguration" xml:space="preserve">
+    <value>Prostŏ</value>
+  </data>
+  <data name="SimpleGenerationConfigurationDescription" xml:space="preserve">
+    <value>Ta kōnfiguracyjŏ je zôptymalizowanŏ tak coby,
+gynerować rekordy z pustymi włŏsnościama, ôkrōm nŏrodowojściōm, by zminimalizować jejich wpływ na spotrzebowaniy
+pamiyńcie. Włōnczōno tyż literōwki</value>
+  </data>
+  <data name="Unrecognized" xml:space="preserve">
+    <value>Niyrozpoznanŏ</value>
+  </data>
 </root>

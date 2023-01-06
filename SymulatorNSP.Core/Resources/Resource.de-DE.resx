@@ -117,4 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ComplexGenerationConfiguration" xml:space="preserve">
+    <value>Komplex</value>
+  </data>
+  <data name="ComplexGenerationConfigurationDescription" xml:space="preserve">
+    <value>Dieses Setup soll reale Werte simulieren und Tippfehler hinzufügen.</value>
+  </data>
+  <data name="eChangeResultKeyEmptyExplanation" xml:space="preserve">
+    <value>Der Schlüssel darf nicht leer sein!</value>
+  </data>
+  <data name="eChangeResultSuccessExplanation" xml:space="preserve">
+    <value>Erfolg!</value>
+  </data>
+  <data name="eChangeResultTooFewRecordsExplanation" xml:space="preserve">
+    <value>Wir erfassen nur Daten von Abfragen, die mindestens 1 Million Datensätze analysiert haben.</value>
+  </data>
+  <data name="eChangeResultUnknownExplanation" xml:space="preserve">
+    <value>Unbekannter Fehler!</value>
+  </data>
+  <data name="eChangeResultWorseFactorExplanation" xml:space="preserve">
+    <value>Ihre aktuelle Leistungszahl ist schlechter als die vorherige, sie wird nicht versendet.</value>
+  </data>
+  <data name="eChangeResultWrongKeyExplanation" xml:space="preserve">
+    <value>Es existiert ein Datensatz mit einem solchen Spitznamen. Sie müssen denselben Schlüssel eingeben, den Sie bei der vorherigen Übermittlung der Ergebnisse angegeben haben.</value>
+  </data>
+  <data name="OptimizedGenerationConfiguration" xml:space="preserve">
+    <value>Minimal</value>
+  </data>
+  <data name="OptimizedGenerationConfigurationDescription" xml:space="preserve">
+    <value>Diese Konfiguration ist optimiert, um Datensätze mit leeren Eigenschaften zu generieren, mit Ausnahme der Nationalität, um deren Auswirkungen auf den Speicherverbrauch zu minimieren. Tippfehler wurden ebenfalls deaktiviert.</value>
+  </data>
+  <data name="SimpleGenerationConfiguration" xml:space="preserve">
+    <value>Gerade</value>
+  </data>
+  <data name="SimpleGenerationConfigurationDescription" xml:space="preserve">
+    <value>Diese Konfiguration ist optimiert, um Datensätze mit einfachen, aus wenigen Buchstaben bestehenden Eigenschaften (mit Ausnahme der Nationalität) zu generieren, um deren Auswirkungen auf den Speicherverbrauch zu minimieren. Tippfehler aktiviert.</value>
+  </data>
+  <data name="Unrecognized" xml:space="preserve">
+    <value>unerkannt</value>
+  </data>
 </root>
