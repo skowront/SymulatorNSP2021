@@ -39,7 +39,7 @@
       "Snappier.dll": "sha256-7+iUMbT8Ae8amaAJEgiQ8U\/p6OQqf5zp4oy2zEDxxis=",
       "SymulatorNSP.Client.Shared.dll": "sha256-PU8mMZ9ONJr\/EYWfWKZDykoJAEDWVsz508nRltQ9Msc=",
       "SymulatorNSP.Core.dll": "sha256-CZApTGv9694xJbf7AnnpV3g9wr2PLEtfOaVbgJba0DM=",
-      "SymulatorNSP.dll": "sha256-3P9OnwePCaQ9GWZrk0cTh5F4638wDHqPYHETNx4qDDk=",
+      "SymulatorNSP.dll": "sha256-zbzaseWeLw4BsgftkeOXllQvfthvzICSg4Nz3g3VO1k=",
       "SymulatorNSP.GUI.Core.dll": "sha256-2iNaXHFSQs6otlteY361F+Q+kU4BIT7luSoYdAUhiX4=",
       "System.Collections.Concurrent.dll": "sha256-uDGt0hUrt3Y+6m3y4g\/bt4OVrv4y2nOF6mOHc+8ITrA=",
       "System.Collections.dll": "sha256-8CsDWC4Mf1YCqSSLwXsrRyNzX\/b739GJTpAXjXaugyM=",
@@ -137,9 +137,9 @@
         "de-DE\/SymulatorNSP.resources.dll": "sha256-pj41XQFqIUTnvYzEVchN4KA2rXvFsYrVuK0dMB5CKdE="
       },
       "en-CA": {
-        "en-CA\/SymulatorNSP.Core.resources.dll": "sha256-0floaMLXGWcO92tLBpMHMl4ujb1PKeUgGfsid5Vmrb4=",
-        "en-CA\/SymulatorNSP.GUI.Core.resources.dll": "sha256-fs6kMRjmWIiEos3HwaIYs1aE7VNIxFvf31Nbhh0Ujg4=",
-        "en-CA\/SymulatorNSP.resources.dll": "sha256-4e2z5\/gAL+4Bcy0C67dqOIZaMILXVET9NNPhtmqW1sY="
+        "en-CA\/SymulatorNSP.Core.resources.dll": "sha256-L9cC6znCPsIjiIUTfXqugdzZMAy2E6MBkzj4rf9QMZ4=",
+        "en-CA\/SymulatorNSP.GUI.Core.resources.dll": "sha256-Stol8o4xsCDelqqRGyDc9v0uJt+HTupTWOYTKtP39dw=",
+        "en-CA\/SymulatorNSP.resources.dll": "sha256-Zn1uLb3GBivMzbY7eHbZ82maJV0pH30QCrRyGPqe\/zY="
       },
       "en-SI": {
         "en-SI\/SymulatorNSP.Core.resources.dll": "sha256-8RBTb7wUz6lTIQx59tw4jfmYMlld8+PGfmIVEJ8LsNg=",
