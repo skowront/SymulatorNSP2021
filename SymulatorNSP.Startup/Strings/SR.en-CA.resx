@@ -163,7 +163,7 @@
     <value>Pëtanié ò etnicznosc</value>
   </data>
   <data name="QueryExecutionTime" xml:space="preserve">
-    <value>Czas wëkònywaniégò pëtaniégò</value>
+    <value>Czas wëkònëwaniégò pëtaniégò</value>
   </data>
   <data name="QueryNationality" xml:space="preserve">
     <value>Pëtanié ò nôrodnosc</value>
@@ -172,7 +172,7 @@
     <value>Pëtanié ò nôrodnosc ë etnicznosc</value>
   </data>
   <data name="QueryResultsCount" xml:space="preserve">
-    <value>Lëczba pòdôwków, co spełniają warunk | Lëczba wszëtczëch</value>
+    <value>Lëczba zapisënków, co spełniają warunk | Lëczba wszëtczëch</value>
   </data>
   <data name="QueryStart" xml:space="preserve">
     <value>Zôczątk pëtaniégò</value>

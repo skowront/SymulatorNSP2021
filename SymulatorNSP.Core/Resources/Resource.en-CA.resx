@@ -121,7 +121,7 @@
     <value>Skòmplikòwóny</value>
   </data>
   <data name="ComplexGenerationConfigurationDescription" xml:space="preserve">
-    <value>Ta kònfigùracëjô mô na célu symùlowanié realnëch wôrtnoscë ë dodanié lëterówków</value>
+    <value>Ta kònfigùracëjô mô na célu symùlowanié realnëch wôrtoscë ë dodanié lëterówków</value>
   </data>
   <data name="eChangeResultKeyEmptyExplanation" xml:space="preserve">
     <value>Klucz ni mòże bëc pùsti</value>
@@ -130,7 +130,7 @@
     <value>Zwënéga!</value>
   </data>
   <data name="eChangeResultTooFewRecordsExplanation" xml:space="preserve">
-    <value>Przechòwùjemë blós rezultatë pëtaniów co przeanalizowałë conamni 1 milëjón pòdôwków</value>
+    <value>Przechòwùjemë blós rezultatë pëtaniów co przeanalizowałë conamni 1 milëjón zapisënków</value>
   </data>
   <data name="eChangeResultUnknownExplanation" xml:space="preserve">
     <value>Nieznónô fela</value>
@@ -145,13 +145,13 @@
     <value>Minimalnô</value>
   </data>
   <data name="OptimizedGenerationConfigurationDescription" xml:space="preserve">
-    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac pòdôwczi z pùstima włôsnoscama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są wëłączoné</value>
+    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac zapisënczi z pùstima znankama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są wëłączoné</value>
   </data>
   <data name="SimpleGenerationConfiguration" xml:space="preserve">
     <value>Prostô</value>
   </data>
   <data name="SimpleGenerationConfigurationDescription" xml:space="preserve">
-    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac pòdôwczi z prostima, czilelëtorowima włôsnoscama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są włączoné.</value>
+    <value>Ta kònfigùracëjô je zòptimalizowónô tak bë generowac zapisënczi z prostima, czilelëtorowima znankama, òkróm nôrodnoscë, abë zminimalizowac jich wpłiw na zùżëcé pamiãcë.  Lëterówczi są włączoné.</value>
   </data>
   <data name="Unrecognized" xml:space="preserve">
     <value>nierozpòznóny</value>
