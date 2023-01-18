@@ -184,7 +184,7 @@
     <value>Wëkònôj pëtanié</value>
   </data>
   <data name="ExecutionTime" xml:space="preserve">
-    <value>Czas wëkònywaniégò pëtaniów</value>
+    <value>Czas wëkònëwaniégò pëtaniów</value>
   </data>
   <data name="Failure" xml:space="preserve">
     <value>Stracënk</value>
@@ -262,7 +262,7 @@
     <value>Pòzwa</value>
   </data>
   <data name="NumberOfRecords" xml:space="preserve">
-    <value>Lëczba pòdôwków, co spełniają warunk | Lëczba wszëtczëch</value>
+    <value>Lëczba zapisënków, co spełniają warunk | Lëczba wszëtczëch</value>
   </data>
   <data name="Or" xml:space="preserve">
     <value>abò</value>
@@ -285,7 +285,7 @@ Nôrodnosc: {4}
 Wark: {5}</value>
   </data>
   <data name="QueriedRecordsCount" xml:space="preserve">
-    <value>Lëczba przeanalizowónëch pòdôwków</value>
+    <value>Lëczba przeanalizowónëch zapisënków</value>
   </data>
   <data name="Queries" xml:space="preserve">
     <value>Pitania</value>
@@ -297,7 +297,7 @@ Wark: {5}</value>
     <value>Pëtanié ò etnicznosc</value>
   </data>
   <data name="QueryExecutionTime" xml:space="preserve">
-    <value>Czas wëkònywaniégò pëtaniów</value>
+    <value>Czas wëkònëwaniégò pëtaniów</value>
   </data>
   <data name="QueryLimitThousandSamples" xml:space="preserve">
     <value>Të nie mòżesz wëpisac wicy jak 1000 próbków</value>
@@ -309,7 +309,7 @@ Wark: {5}</value>
     <value>Pëtanié ò nôrodnosc ë ò etnicznosc</value>
   </data>
   <data name="QueryResultsCount" xml:space="preserve">
-    <value>Lëczba pòdôwków, co spełniają warunk | Lëczba wszëtczëch</value>
+    <value>Lëczba zapisënków, co spełniają warunk | Lëczba wszëtczëch</value>
   </data>
   <data name="QueryStart" xml:space="preserve">
     <value>Zôczątk pëtaniégò</value>
@@ -318,7 +318,7 @@ Wark: {5}</value>
     <value>Filter pëtaniów</value>
   </data>
   <data name="RealLifeComparisonStringCotent" xml:space="preserve">
-    <value>Të przeanalizowôł {0} pòdôwków w {1} sekùndòw. Główny Statisticzny Ùrząd brëkòwôł {2} sekùndów abë sprawdzëc ~38 milëjónów pòdôwków. Brawò, të jes {3} razów chùtszi!</value>
+    <value>Të przeanalizowôł {0} zapisënków w {1} sekùndòw. Główny Statisticzny Ùrząd brëkòwôł {2} sekùndów abë sprawdzëc ~38 milëjónów zapisënków. Brawò, të jes {3} razów chùtszi!</value>
   </data>
   <data name="RealLifeComparisonStringTitle" xml:space="preserve">
     <value>Gratulacëje!</value>
@@ -408,7 +408,7 @@ Wark: {5}</value>
     <value>Wątczi</value>
   </data>
   <data name="TotalNumberOfRecords" xml:space="preserve">
-    <value>Lëczba pòdôwków</value>
+    <value>Lëczba zapisënków</value>
   </data>
   <data name="TransparenctModeOFF" xml:space="preserve">
     <value> Przezérny ôrt je wëłączony</value>
@@ -423,13 +423,13 @@ Wark: {5}</value>
     <value>Rezultatë przezérnégò ôrtu</value>
   </data>
   <data name="TransparencyModeResultsExplanation" xml:space="preserve">
-    <value>Te rezultate pòkazują jak algòritm mòże so radzëc z niesztandardowima òdpòwiedzama ùżëtkiwnika do jistniejącëch òptacëjów. Niechtërny òbôczą lepszé przëpasowania, jinszi lëchszé, bò algòritmë Levensteina ë Hamminga nôleżą do nôprostszëch z nôprostszëch. Jistnieje zacht jinszëch algòritmów, co nie blós rozmieją klasyfikòwac pòdôwczi, le téż tworzëc nowé karna pòdôwków. A tej jeżlë GUS nie przewidzôł "òpòlsczi" abò "wilamòwsczi' nôrodnoscë, taczi algòritm bë mógł ùtwòrzëc karna, co GUS bë miôł nót blos zacwierdzëc abò òdrzucëc.</value>
+    <value>Te rezultatë pòkazują jak algòritm mòże so radzëc z niesztandardowima òdpòwiedzama ùżëtkòwnika do jistniejącëch òptacëjów. Niechtërny òbôczą lepszé przëpasowania, jinszi lëchszé, bò algòritmë Levensteina ë Hamminga nôleżą do nôprostszëch z nôprostszëch. Jistnieje zacht jinszëch algòritmów, co nie blós rozmieją klasyfikòwac pòdôwczi, le téż tworzëc nowé karna pòdôwków. A tej jeżlë GUS nie przewidzôł "òpòlsczi" abò "wilamòwsczi' nôrodnoscë, taczi algòritm bë mógł ùtwòrzëc karna, co GUS bë miôł nót blos zacwierdzëc abò òdrzucëc.</value>
   </data>
   <data name="TransparencyModeResultsLimitation" xml:space="preserve">
     <value>Na brëkùnczi òptimalizacëji lësta mòże miec do 100 wpisënków, nawetka  jeżlë pasownëch wëgenerowanëch przikładów je wicy.</value>
   </data>
   <data name="TransparencyModeWaringingTooltip" xml:space="preserve">
-    <value>To wpłinie na czas wëkònywanywaniégò pëtaniów</value>
+    <value>To wpłinie na czas wëkònëwanywaniégò pëtaniów</value>
   </data>
   <data name="Unknown" xml:space="preserve">
     <value>Nieznóné</value>
@@ -439,5 +439,32 @@ Wark: {5}</value>
   </data>
   <data name="Windows" xml:space="preserve">
     <value>Aplikacëjô na Windows</value>
+  </data>
+  <data name="DistanceExaplanation" xml:space="preserve">
+    <value>Niechtëné persónë mògą miec lëterówkã w swòjim wpisënkù. Na przikłôd w nôrodnoscë "miemieckô' mògło bëc "mi3mieckô". Tuwò të mòżesz wëbrac algòritm, co mdze tolerowôł fele (do czilu zmienionëch znaków). Wëbierzë "-" jeżlë jinteresują ce blós zapisënczi co akùrôtno pasëją do òptacëji, wëłãczającë tolerancëjã. Wëszëkùjącë "niegwësnô" w filtrze të sprawdzysz jak wiele z zapisënkòw nie pasowało do niżódny òptacëji ë nie ùdało sã jich zaklasyfikòwac wnet z wëkòrzistónym algòritmã (te bë bëło nót zaklasyfikòwac rãczno). To je, gwësno, blós prosti przikłôd algòritmów, co mògą aùtomatizowac proces klasyfikacëji zapisënków. W prowdzëwëch scenarnikach stosëje sã algòritmë niedozeróny maszinowi ùczbë, co nie leno rozmieją samé klasyfikòwac zapisënczi, le téż twòrzëc karna co nie bëłé rëchli spòdzóné (np. warszawskô nôrodnosc). Jeżlë të chcesz sã òdowiedzec wicy, zapòznôj sã z "algòritmama niedozeróny maszinowi ùczbë " abò "fuzzy string matching".</value>
+  </data>
+  <data name="GenerationConfigurationDescription" xml:space="preserve">
+    <value>W zależnoscë òd wëgenerowónëch zapisënkóé, czas wëkònëwaniégò pëtaniów mòże sã różnic. Kòżdi zapisënk mô czile znanków  (Miono,  Nôzwëskò, etc.), a kòżdô znanka ma wôrtosc (Smith, Ramirez,...), jaczi długosc mòże miec wpłiw na wëdatnosc . Të mòżesz zmienic lëstã wôrtoscë, z jaczëch mdze kòrzistôł generatór ë mòżebnosc z jaką òstaną wëkawlowónë. Kònfigùracëjó zawiérô téż znanczi, co òpisują szansã na felã ë wpłiw felë na lëczbã lëterówków dlô znankù jaczim je nôrodnosc. Zmieni te znanczi wedlą  swòjégò mësleniégò.</value>
+  </data>
+  <data name="PerformanceFactorExplanation" xml:space="preserve">
+    <value>Bazującë na twòjim czasu wëkònaniégò pëtaniégò ë lëczbie zapisënków, jaczé të przeanalizowôł, më pòrachòwalë współdzejnik wëdatnoscë w przërównanim z czasã jaczim GUS brëkòwôł na pòdanié rezultatów. Wpółdzejnik je rachòwóny relatiwno do lëczbë zapisënków, z jaczimi mierził sã GUS, tak tej jeżlë twój czas wëniós 5 sekùndów dlô 1 milëjóna zapisënków to pòdzëlimë gò przez ~38.</value>
+  </data>
+  <data name="RecordKeyExplanation" xml:space="preserve">
+    <value>Jeżlë to je twój pierszi rôz czedë pòséłôsz rezultat, tej ten klucz òstanie wëkòrzëstóny do òchronë twòjégò rekòrdu przed nadpisanim. W procëmnym razu pòdôj ten sóm klucz, jaczégò të ùżiwôł  rëchli, bë pòprawic rezultat spòd ti Pòzwë</value>
+  </data>
+  <data name="Step4nExplanation" xml:space="preserve">
+    <value>Spróbuj wëkònac zmianë w kònfigùracëji. Dodôj òptacëje do generowónëch òbiektów, zmieni szansã na felã ë wpłiw felë. Pózny mòżesz ùżic różnëch edicëjnëch algòritmów do aùtomatizacëji klasyfikòwaniégò wpisënków do jistniejącëch òptacëji.</value>
+  </data>
+  <data name="Step4p1Explanation" xml:space="preserve">
+    <value>Të mòżesz zmienic szansã na lëtërówkã w zapisënkù. W ten ôrt të zasymùlujesz rzecziwsity scenarnik, w jaczim wpisënk mógł niepasowac do jistniejącëch òptacëjów. Zmieniającëmaksymalny wpłiw felë të òpiszesz wile znaków mòże òstac zmienionëch w tim procesu. Pamiãtôj, że klasyfikùjącé fónkcëje z ti aplikacëji mają stałi sztiwny próg tolerancëji co wynosy 3. Zapisënczi jaczé mają wicy jak 2 zmienioné znaczi òstaną nieklasyfikòwalné aùtomaticzno.</value>
+  </data>
+  <data name="Step4p2Explanation" xml:space="preserve">
+    <value>Tuwò të mòżesz zmienic szczegółë kònfigùracëji. Òne są przedstawiónë w fòrmace JSON. Ùgwësni sã, że të nie òdklikùjesz edicëjnégò pòla jeżlë òno mô w so fele. Błãdnô kònfigùracëjô òstanie  òdrzuconô razã ze wszëtczima zmianama. Abë ùniknąc felów fòrmatowaniégò skòrzëstôj z bùtnowëch nôrzãdzów jak: https://jsonformatter.curiousconcept.com/</value>
+  </data>
+  <data name="TransparenceModePrerequisites" xml:space="preserve">
+    <value>Przezérny ôrt pòka cë rezulatë jeżlë të spełnisz wszëtczé pòniższé warunczi: Szansa na felã w nôrodnoscë je wikszô òd nula, twòjé zapisënczi mają lëterówczi (mògą ni miec, jeżlë twòja pòpùlacëjôi szansa na felã są môłé), maksymalnô lëczba lëterówków w nôrodnoscë je wikszô òd nula, przezérny ôrt je włączony, kòrzistôsz algòritm Levensteina abò Hamminga (jeżlë kòrzistôsz z "-" nie mdze niżódnëch zapisënków do pòkazaniégò, bò klasyfikùjesz blós akùrôtné przëpasowania)</value>
+  </data>
+  <data name="TransparencyModeExplanation" xml:space="preserve">
+    <value>Przezérny ôrt pòkôże cë jinfòrmacëje ò przëpasowaniach zapisënków (jaczé të kòfigùrowôł w pòprzédnëch krokach). Pamiãtôj, że ten ôrt mòże negatiwno wpłinąc na czas wëkònëwaniégò pëtaniów.</value>
   </data>
 </root>
